@@ -26,7 +26,7 @@ const projects = [
       title: "YiPaiJi - IT Equipment Auction Platform",
       description: "A high-concurrency auction and flash sale platform for IT equipment. Designed the system architecture and implemented key features.",
       technologies: ["Java", "Spring Boot", "Spring Cloud", "RocketMQ", "Redis", "Microservices"],
-      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/yipaiji.jpg",
+      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/yipaiji.svg",
       demoUrl: "https://pai.edianyun.com/",
       repoUrl: null, // Private repository
       featured: true,
@@ -59,7 +59,7 @@ const projects = [
       title: "Enterprise Access Control System",
       description: "RBAC + Position-Based Access Control system for 1K+ users across multiple business units with automated employee onboarding/offboarding.",
       technologies: ["Java", "Spring Security", "Redis", "RocketMQ", "HR System Integration"],
-      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/access-control.jpg",
+      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/access-control.svg",
       demoUrl: null, // Internal system
       repoUrl: null, // Private repository
       featured: false,
