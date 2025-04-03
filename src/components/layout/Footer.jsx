@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold mb-2">Yupo Niu</h2>
+            <h2 className="text-2xl font-bold mb-2">Yupo (Jason) Niu</h2>
             <p className="text-gray-400">Senior Java Engineer & Data Analyst</p>
           </div>
           
@@ -35,7 +35,7 @@ const Footer = () => {
               ))}
             </div>
             <p className="text-gray-500 text-sm">
-              &copy; {currentYear} Yupo Niu. All rights reserved.
+              &copy; {currentYear} Yupo (Jason) Niu. All rights reserved.
             </p>
           </div>
         </div>

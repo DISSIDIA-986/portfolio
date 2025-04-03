@@ -61,7 +61,7 @@ const Hero = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4"
               variants={itemVariants}
             >
-              <span className="text-primary-600">Hello,</span> I'm Yupo Niu
+              <span className="text-primary-600">Hello,</span> I'm Yupo (Jason) Niu
             </motion.h1>
             
             <motion.h2
@@ -121,7 +121,7 @@ const Hero = () => {
             <div className="relative rounded-full overflow-hidden border-4 border-primary-200 shadow-xl w-64 h-64 md:w-80 md:h-80">
               <img
                 src="https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/avatar.pic.jpg"
-                alt="Yupo Niu"
+                alt="Yupo (Jason) Niu"
                 className="w-full h-full object-cover"
               />
             </div>
