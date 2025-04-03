@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import useScrollAnimation from '../../hooks/useScrollAnimation';
+import useScrollAnimation from '../../hooks/useScrollAnimation.jsx';
 import { FaCode, FaServer, FaDatabase, FaChartBar, FaCloud } from 'react-icons/fa';
 
 const About = () => {
