@@ -12,7 +12,7 @@ import Contact from './components/sections/Contact';
 
 function App() {
   return (
-    <Router basename="/portfolio">
+    <Router basename={process.env.NODE_ENV === 'production' ? '/portfolio' : '/'}>
       <Layout>
         <div className="space-y-12">
           <Hero />
