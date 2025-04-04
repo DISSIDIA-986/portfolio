@@ -34,7 +34,7 @@ const certifications = [
         "title": "Get started with Microsoft data analytics",
         "issuer": "Microsoft",
         "date": "March 2025",
-        "description": "本课程提供了对微软数据分析工具和技术的入门介绍，涵盖 Power BI、Azure 数据服务等核心内容，帮助你掌握基础的数据可视化与商业智能技能。",
+        "description": "This course provides an introduction to Microsoft data analytics tools and techniques, covering core topics such as Power BI and Azure data services. It equips you with the essential skills in data visualization and business intelligence.",
         "imageUrl": "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/certifications/ms-data-analytics.jpg",
         "category": "Data Analytics",
         "featured": false
@@ -44,7 +44,7 @@ const certifications = [
         "title": "Creating your first web apps with React",
         "issuer": "Microsoft",
         "date": "March 2025",
-        "description": "通过本课程，你将学习如何使用 React 构建现代化 Web 应用程序，包括组件化开发、状态管理和与后端的交互等关键概念。",
+        "description": "This course guides you through building modern web applications using React. Learn about component-based development, state management, and integrating with backend services to create dynamic web apps.",
         "imageUrl": "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/certifications/ms-react-webapps.jpg",
         "category": "Web Development",
         "featured": false
@@ -54,7 +54,7 @@ const certifications = [
         "title": "Get Started Querying with Transact-SQL",
         "issuer": "Microsoft",
         "date": "March 2025",
-        "description": "本课程主要介绍使用 Transact-SQL 进行数据库查询的基础知识，包括 SELECT、JOIN、WHERE 等语句，以及在 SQL Server 中的一些常用操作。",
+        "description": "This course introduces the basics of querying databases using Transact-SQL. Topics include SELECT statements, JOIN operations, and filtering data with WHERE clauses, along with common SQL Server operations.",
         "imageUrl": "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/certifications/ms-t-sql.jpg",
         "category": "Database",
         "featured": false
