@@ -26,7 +26,7 @@ const projects = [
       title: "YiPaiJi - IT Equipment Auction Platform",
       description: "A high-concurrency auction and flash sale platform for IT equipment. Designed the system architecture and implemented key features.",
       technologies: ["Java", "Spring Boot", "Spring Cloud", "RocketMQ", "Redis", "Microservices"],
-      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/yipaiji.svg",
+      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/yipaiji.png",
       demoUrl: "https://pai.edianyun.com/",
       repoUrl: null, // Private repository
       featured: true,
@@ -37,7 +37,7 @@ const projects = [
       title: "Risk Control System",
       description: "A rule-based risk evaluation engine handling 5K+ daily risk assessments, improving automation rate by 40%.",
       technologies: ["Java", "Spring Boot", "Rule Engine", "Third-party API Integration"],
-      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/risk-control.jpg",
+      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/risk-control.png",
       demoUrl: null, // Internal system
       repoUrl: null, // Private repository
       featured: false,
@@ -45,10 +45,10 @@ const projects = [
     },
     {
       id: 5,
-      title: "Portfolio Website",
-      description: "This personal portfolio website showcasing my projects, skills, and experience.",
-      technologies: ["React", "TailwindCSS", "Framer Motion", "Responsive Design"],
-      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/portfolio.jpg",
+      title: "AI Career Advisor",
+      description: "An AI Agent that provides personalized career advice based on self managed knowledge base. Built using LLM and NLP technologies.",
+      technologies: ["Knowledge Base", "NLP", "LLM", "AI Agent", "Model Context Protocol"],
+      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/ai-career-advisor.png",
       demoUrl: "https://dissidia-986.github.io/portfolio/",
       repoUrl: "https://github.com/DISSIDIA-986/portfolio",
       featured: false,
@@ -59,7 +59,7 @@ const projects = [
       title: "Enterprise Access Control System",
       description: "RBAC + Position-Based Access Control system for 1K+ users across multiple business units with automated employee onboarding/offboarding.",
       technologies: ["Java", "Spring Security", "Redis", "RocketMQ", "HR System Integration"],
-      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/access-control.svg",
+      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/access-control.png",
       demoUrl: null, // Internal system
       repoUrl: null, // Private repository
       featured: false,
