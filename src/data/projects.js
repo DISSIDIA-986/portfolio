@@ -33,38 +33,35 @@ const projects = [
       category: "Backend Development"
     },
     {
-      id: 4,
-      title: "Risk Control System",
-      description: "A rule-based risk evaluation engine handling 5K+ daily risk assessments, improving automation rate by 40%.",
-      technologies: ["Java", "Spring Boot", "Rule Engine", "Third-party API Integration"],
-      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/risk-control.png",
-      demoUrl: null, // Internal system
-      repoUrl: null, // Private repository
-      featured: false,
-      category: "Backend Development"
-    },
-    {
-      id: 5,
-      title: "AI Career Advisor",
-      description: "An AI Agent that provides personalized career advice based on self managed knowledge base. Built using LLM and NLP technologies.",
-      technologies: ["Knowledge Base", "NLP", "LLM", "AI Agent", "Model Context Protocol"],
-      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/ai-career-advisor.png",
-      demoUrl: "https://dissidia-986.github.io/canada-unemployment-dashboard/",
-      repoUrl: "https://github.com/DISSIDIA-986/canada-unemployment-dashboard",
-      featured: false,
-      category: "Frontend Development"
-    },
-    {
-      id: 6,
-      title: "Enterprise Access Control System",
-      description: "RBAC + Position-Based Access Control system for 1K+ users across multiple business units with automated employee onboarding/offboarding.",
-      technologies: ["Java", "Spring Security", "Redis", "RocketMQ", "HR System Integration"],
-      imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/access-control.png",
-      demoUrl: null, // Internal system
-      repoUrl: null, // Private repository
-      featured: false,
-      category: "Backend Development"
-    }
+        "id": 4,
+        "title": "Get started with Microsoft data analytics",
+        "issuer": "Microsoft",
+        "date": "March 2025",
+        "description": "This course provides an introduction to Microsoft data analytics tools and techniques, covering core topics such as Power BI and Azure data services. It equips you with the essential skills in data visualization and business intelligence.",
+        "imageUrl": "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/certifications/ms-data-analytics.jpg",
+        "category": "Data Analytics",
+        "featured": false
+      },
+      {
+        "id": 5,
+        "title": "Creating your first web apps with React",
+        "issuer": "Microsoft",
+        "date": "March 2025",
+        "description": "This course guides you through building modern web applications using React. Learn about component-based development, state management, and integrating with backend services to create dynamic web apps.",
+        "imageUrl": "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/certifications/ms-react-webapps.jpg",
+        "category": "Web Development",
+        "featured": false
+      },
+      {
+        "id": 6,
+        "title": "Get Started Querying with Transact-SQL",
+        "issuer": "Microsoft",
+        "date": "March 2025",
+        "description": "This course introduces the basics of querying databases using Transact-SQL. Topics include SELECT statements, JOIN operations, and filtering data with WHERE clauses, along with common SQL Server operations.",
+        "imageUrl": "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/certifications/ms-t-sql.jpg",
+        "category": "Database",
+        "featured": false
+      }
   ];
   
   export default projects;
