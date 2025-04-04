@@ -73,7 +73,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A seasoned software engineer with a passion for building scalable systems and analyzing data.
+              A seasoned software developer with a passion for building scalable systems and analyzing data.
             </p>
           </motion.div>
 
@@ -82,7 +82,7 @@ const About = () => {
             <div className="lg:w-5/12">
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Professional Summary</h3>
               <p className="mb-4 text-gray-600">
-                I'm a seasoned software engineer with 17 years of experience specializing in enterprise-level Java application 
+                I'm a seasoned software developer with 17 years of experience specializing in enterprise-level Java application 
                 development and system architecture design. I've led microservices architecture transformation, risk control engine 
                 design, and high-concurrency transaction system development, with additional capabilities in data analytics and AI integration.
               </p>

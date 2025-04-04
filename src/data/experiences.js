@@ -2,7 +2,7 @@ const experiences = [
     {
       id: 1,
       company: "Edianyun Inc.",
-      position: "Senior Java Backend Engineer",
+      position: "Senior Java Backend Developer",
       location: "Beijing, China",
       period: "Mar 2016 - Apr 2024",
       description: "Edianyun is a publicly traded company (HKEX: 02416) and one of the leading IT infrastructure service providers in China, specializing in IT equipment leasing, management, and maintenance for enterprises.",
@@ -34,7 +34,7 @@ const experiences = [
     {
       id: 2,
       company: "Bitmain Technologies",
-      position: "Senior Java Engineer",
+      position: "Senior Java Developer",
       location: "Beijing, China",
       period: "Jun 2014 - Jun 2015",
       description: "Bitmain is a leading cryptocurrency mining hardware manufacturer and blockchain technology company.",
