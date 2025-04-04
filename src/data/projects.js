@@ -1,9 +1,9 @@
 const projects = [
     {
       id: 1,
-      title: "Canada Unemployment Dashboard",
+      title: "Canada Unemployment Analysis",
       description: "An interactive data visualization dashboard analyzing unemployment trends in Canada. Built as a Capstone project at SAIT.",
-      technologies: ["React", "JavaScript", "Data Visualization", "Power BI", "Interactive Charts"],
+      technologies: ["React", "JavaScript", "Data Visualization", "Machine Learning", "Python"],
       imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/unemployment-dashboard.png",
       demoUrl: "https://dissidia-986.github.io/canada-unemployment-dashboard/",
       repoUrl: "https://github.com/DISSIDIA-986/canada-unemployment-dashboard",
@@ -49,8 +49,8 @@ const projects = [
       description: "An AI Agent that provides personalized career advice based on self managed knowledge base. Built using LLM and NLP technologies.",
       technologies: ["Knowledge Base", "NLP", "LLM", "AI Agent", "Model Context Protocol"],
       imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/ai-career-advisor.png",
-      demoUrl: "https://dissidia-986.github.io/portfolio/",
-      repoUrl: "https://github.com/DISSIDIA-986/portfolio",
+      demoUrl: "https://dissidia-986.github.io/canada-unemployment-dashboard/",
+      repoUrl: "https://github.com/DISSIDIA-986/canada-unemployment-dashboard",
       featured: false,
       category: "Frontend Development"
     },
