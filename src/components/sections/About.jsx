@@ -126,7 +126,7 @@ const About = () => {
                 View Experience
               </a>
               <a
-                href="https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/resume/data-analyst-resume-en.250318.pdf"
+                href="https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/resume/full-stack-resume-en.250406.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline"
