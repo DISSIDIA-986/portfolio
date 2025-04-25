@@ -7,6 +7,7 @@ const projects = [
       imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/unemployment-dashboard.png",
       demoUrl: "https://dissidia-986.github.io/canada-unemployment-dashboard/",
       repoUrl: "https://github.com/DISSIDIA-986/canada-unemployment-dashboard",
+      videoUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/CapCon2025/IMG_4662.MOV",
       featured: true,
       category: "Data Analysis"
     },
