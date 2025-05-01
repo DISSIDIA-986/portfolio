@@ -6,7 +6,7 @@ const Footer = () => {
   
   const socialLinks = [
     { icon: <FaGithub className="w-5 h-5" />, href: 'https://github.com/DISSIDIA-986', ariaLabel: 'GitHub' },
-    { icon: <FaLinkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/yupo-niu-3a0200324/', ariaLabel: 'LinkedIn' },
+    { icon: <FaLinkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/yupo-niu/', ariaLabel: 'LinkedIn' },
     { icon: <FaEnvelope className="w-5 h-5" />, href: 'mailto:yupoca24@gmail.com', ariaLabel: 'Email' },
   ];
 

@@ -71,7 +71,7 @@ const Contact = () => {
       icon: <FaLinkedin className="w-6 h-6 text-primary-500" />,
       title: 'LinkedIn',
       value: 'linkedin.com/in/yupo-niu-3a0200324',
-      link: 'https://www.linkedin.com/in/yupo-niu-3a0200324/'
+      link: 'https://www.linkedin.com/in/yupo-niu/'
     },
     {
       icon: <FaGithub className="w-6 h-6 text-primary-500" />,
@@ -141,7 +141,7 @@ const Contact = () => {
                 </p>
                 <div className="flex space-x-4">
                   <a
-                    href="https://www.linkedin.com/in/yupo-niu-3a0200324/"
+                    href="https://www.linkedin.com/in/yupo-niu/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center transition-all duration-300 hover:bg-blue-700"

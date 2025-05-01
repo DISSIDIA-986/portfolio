@@ -35,7 +35,7 @@ const Hero = () => {
     {
       name: 'LinkedIn',
       icon: <FaLinkedin className="w-6 h-6" />,
-      url: 'https://www.linkedin.com/in/yupo-niu-3a0200324/',
+      url: 'https://www.linkedin.com/in/yupo-niu/',
       color: 'bg-blue-600 hover:bg-blue-700',
     },
     {
