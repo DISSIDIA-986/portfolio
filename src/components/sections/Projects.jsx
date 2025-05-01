@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import projects from '../../data/projects';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaPlay } from 'react-icons/fa';
 
 const Projects = () => {
   const { ref, controls } = useScrollAnimation();
@@ -32,8 +32,8 @@ const Projects = () => {
   const categories = ['all', ...new Set(projects.map(project => project.category))];
 
   // Filter projects
-  const filteredProjects = filter === 'all' 
-    ? projects 
+  const filteredProjects = filter === 'all'
+    ? projects
     : projects.filter(project => project.category === filter);
 
   return (
@@ -73,7 +73,7 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects Grid */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
           >
@@ -86,7 +86,7 @@ const Projects = () => {
               >
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden">
-                  <img 
+                  <img
                     src={project.imageUrl || "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/placeholder.jpg"}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
@@ -97,17 +97,17 @@ const Projects = () => {
                     </span>
                   )}
                 </div>
-                
+
                 {/* Project Content */}
                 <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-bold mb-2 text-gray-800">{project.title}</h3>
                   <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
-                  
+
                   {/* Technologies */}
                   <div className="mb-4 flex flex-wrap">
                     {project.technologies.slice(0, 3).map((tech, index) => (
-                      <span 
-                        key={index} 
+                      <span
+                        key={index}
                         className="bg-primary-100 text-primary-800 px-2 py-1 rounded-full text-xs font-medium mr-2 mb-2"
                       >
                         {tech}
@@ -119,9 +119,9 @@ const Projects = () => {
                       </span>
                     )}
                   </div>
-                  
+
                   {/* Links */}
-                  <div className="flex space-x-3">
+                  <div className="flex flex-wrap gap-3">
                     {project.demoUrl && (
                       <a
                         href={project.demoUrl}
@@ -142,6 +142,17 @@ const Projects = () => {
                       >
                         <FaGithub className="mr-2" />
                         Code
+                      </a>
+                    )}
+                    {project.videoUrl && (
+                      <a
+                        href={project.videoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-sm btn-accent py-2 px-4 text-sm flex items-center"
+                      >
+                        <FaPlay className="mr-2" />
+                        Video
                       </a>
                     )}
                   </div>
