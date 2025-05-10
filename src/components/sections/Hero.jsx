@@ -68,7 +68,7 @@ const Hero = () => {
               className="text-2xl md:text-3xl font-medium text-gray-700 mb-6"
               variants={itemVariants}
             >
-              Senior Java Developer & Data Analyst
+               Full Stack Developer & Data Analyst
             </motion.h2>
             
             <motion.p
