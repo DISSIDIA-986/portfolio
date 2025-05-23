@@ -14,7 +14,7 @@ function App() {
   return (
     <Router basename={process.env.NODE_ENV === 'production' ? '/portfolio' : '/'}>
       <Layout>
-        <div className="space-y-12">
+        <div>
           <Hero />
           <About />
           <Experience />

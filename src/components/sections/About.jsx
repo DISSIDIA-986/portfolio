@@ -59,7 +59,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -69,7 +69,7 @@ const About = () => {
           className="max-w-5xl mx-auto"
         >
           {/* Section Header */}
-          <motion.div className="mb-16 text-center" variants={itemVariants}>
+          <motion.div className="mb-12 md:mb-16 text-center" variants={itemVariants}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -78,7 +78,7 @@ const About = () => {
           </motion.div>
 
           {/* Personal Info */}
-          <motion.div className="flex flex-col lg:flex-row gap-12 mb-16" variants={itemVariants}>
+          <motion.div className="flex flex-col lg:flex-row gap-12 mb-12 md:mb-16" variants={itemVariants}>
             <div className="lg:w-5/12">
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Professional Summary</h3>
               <p className="mb-4 text-gray-600">

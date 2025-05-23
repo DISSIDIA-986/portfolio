@@ -47,7 +47,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="hero" className="min-h-screen flex items-center bg-gradient-to-br from-primary-50 to-white py-20">
+    <section id="hero" className="flex items-center bg-gradient-to-br from-primary-50 to-white py-16 md:py-20">
       <div className="container mx-auto px-4">
         <motion.div
           className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12"
