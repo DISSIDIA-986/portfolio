@@ -1,14 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import useScrollAnimation from '../../hooks/useScrollAnimation';
-import projects from '../../data/projects';
-import { FaGithub, FaExternalLinkAlt, FaPlay } from 'react-icons/fa';
+import useScrollAnimation from '../../hooks/useScrollAnimation.jsx';
+import projectsData from '../../data/projects.js'; // 根据你的文件路径调整
 
 const Projects = () => {
   const { ref, controls } = useScrollAnimation();
-  const [filter, setFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState('All');
 
-  // Animation variants
+  // 使用导入的项目数据
+  const allProjects = projectsData;
+
+  // 筛选类别
+  const filterCategories = [
+    'All',
+    'Data Analysis',
+    'Machine Learning',
+    'Backend Development',
+    'Frontend Development'
+  ];
+
+  // 使用 useMemo 来优化筛选性能，避免不必要的重新计算
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === 'All') {
+      return allProjects;
+    }
+    return allProjects.filter(project => project.category === activeFilter);
+  }, [activeFilter]);
+
+  // 处理筛选按钮点击
+  const handleFilterClick = (filter) => {
+    setActiveFilter(filter);
+  };
+
+  // 动画配置
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -28,16 +52,22 @@ const Projects = () => {
     },
   };
 
-  // Get unique categories
-  const categories = ['all', ...new Set(projects.map(project => project.category))];
-
-  // Filter projects
-  const filteredProjects = filter === 'all'
-    ? projects
-    : projects.filter(project => project.category === filter);
+  const projectVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: { duration: 0.3 },
+    },
+    exit: {
+      scale: 0.8,
+      opacity: 0,
+      transition: { duration: 0.2 },
+    },
+  };
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -47,7 +77,7 @@ const Projects = () => {
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}
-          <motion.div className="mb-16 text-center" variants={itemVariants}>
+          <motion.div className="mb-12 text-center" variants={itemVariants}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
             <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -55,82 +85,106 @@ const Projects = () => {
             </p>
           </motion.div>
 
-          {/* Project Filters */}
-          <motion.div className="mb-12 flex flex-wrap justify-center gap-3" variants={itemVariants}>
-            {categories.map((category) => (
+          {/* Filter Buttons */}
+          <motion.div 
+            className="flex flex-wrap justify-center gap-3 mb-12"
+            variants={itemVariants}
+          >
+            {filterCategories.map((category) => (
               <button
                 key={category}
-                onClick={() => setFilter(category)}
-                className={`px-5 py-2 rounded-full font-medium transition-all ${
-                  filter === category
-                    ? 'bg-primary-600 text-white shadow-md'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                onClick={() => handleFilterClick(category)}
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeFilter === category
+                    ? 'bg-primary-600 text-white shadow-lg transform scale-105'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300 hover:scale-102'
                 }`}
               >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
+                {category}
               </button>
             ))}
           </motion.div>
 
           {/* Projects Grid */}
-          <motion.div
+          <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={containerVariants}
+            layout
           >
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
-                className="card overflow-hidden flex flex-col h-full"
-                variants={itemVariants}
-                whileHover={{ y: -5, transition: { duration: 0.3 } }}
+                variants={projectVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                layout
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
               >
                 {/* Project Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={project.imageUrl || "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/placeholder.jpg"}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
+                <div className="relative h-48 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden">
                   {project.featured && (
-                    <span className="absolute top-3 right-3 bg-accent-500 text-white text-xs px-2 py-1 rounded-full">
+                    <div className="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium z-10">
                       Featured
-                    </span>
+                    </div>
                   )}
+                  {project.imageUrl ? (
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        // 图片加载失败时的fallback
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                  ) : null}
+                  <div className="absolute inset-0 bg-primary-600 opacity-20 flex items-center justify-center" style={{display: project.imageUrl ? 'none' : 'flex'}}>
+                    <div className="text-6xl text-primary-600 opacity-50">
+                      {project.category === 'Data Analysis' && '📊'}
+                      {project.category === 'Machine Learning' && '🤖'}
+                      {project.category === 'Backend Development' && '⚙️'}
+                      {project.category === 'Frontend Development' && '💻'}
+                    </div>
+                  </div>
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">{project.title}</h3>
-                  <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
 
-                  {/* Technologies */}
-                  <div className="mb-4 flex flex-wrap">
-                    {project.technologies.slice(0, 3).map((tech, index) => (
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies?.slice(0, 3).map((tech, index) => (
                       <span
                         key={index}
-                        className="bg-primary-100 text-primary-800 px-2 py-1 rounded-full text-xs font-medium mr-2 mb-2"
+                        className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-medium"
                       >
                         {tech}
                       </span>
                     ))}
-                    {project.technologies.length > 3 && (
-                      <span className="text-xs text-gray-500 flex items-center">
+                    {project.technologies?.length > 3 && (
+                      <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">
                         +{project.technologies.length - 3} more
                       </span>
                     )}
                   </div>
 
-                  {/* Links */}
-                  <div className="flex flex-wrap gap-3">
+                  {/* Action Buttons */}
+                  <div className="flex gap-3">
                     {project.demoUrl && (
                       <a
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-sm btn-primary py-2 px-4 text-sm flex items-center"
+                        className="flex-1 bg-primary-600 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-primary-700 transition-colors text-center"
                       >
-                        <FaExternalLinkAlt className="mr-2" />
-                        Live Demo
+                        🔗 Live Demo
                       </a>
                     )}
                     {project.repoUrl && (
@@ -138,21 +192,9 @@ const Projects = () => {
                         href={project.repoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-sm btn-outline py-2 px-4 text-sm flex items-center"
+                        className="flex-1 border border-gray-300 text-gray-700 py-2 px-4 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors text-center"
                       >
-                        <FaGithub className="mr-2" />
-                        Code
-                      </a>
-                    )}
-                    {project.videoUrl && (
-                      <a
-                        href={project.videoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-sm btn-accent py-2 px-4 text-sm flex items-center"
-                      >
-                        <FaPlay className="mr-2" />
-                        Video
+                        📋 Code
                       </a>
                     )}
                   </div>
@@ -161,16 +203,32 @@ const Projects = () => {
             ))}
           </motion.div>
 
-          {/* Future Projects Placeholder */}
-          <motion.div className="mt-16 text-center" variants={itemVariants}>
-            <h3 className="text-2xl font-bold mb-4 text-gray-800">Future Projects</h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              I'm constantly working on new projects. Check back soon for more updates, including flowcharts and mind maps 
-              showcasing my work processes and system architectures.
+          {/* No Projects Message */}
+          {filteredProjects.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-12"
+            >
+              <p className="text-gray-500 text-lg">
+                No projects found in this category.
+              </p>
+            </motion.div>
+          )}
+
+          {/* View All Projects Link */}
+          <motion.div className="text-center mt-12" variants={itemVariants}>
+            <p className="text-gray-600 mb-4">
+              Want to see more of my work?
             </p>
-            <div className="inline-block p-6 border-2 border-dashed border-gray-300 rounded-lg">
-              <p className="text-gray-500 italic">Placeholder for future project visualizations...</p>
-            </div>
+            <a
+              href="https://github.com/DISSIDIA-986"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+            >
+              View All on GitHub
+            </a>
           </motion.div>
         </motion.div>
       </div>
