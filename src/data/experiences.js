@@ -54,7 +54,7 @@ const experiences = [
     {
       id: 3,
       company: "Southern Alberta Institute of Technology (SAIT)",
-      position: "Student, Post-Diploma in Data Analytics & Software Development",
+      position: "Student, Post-Diploma in Data Analytics & Integrated AI",
       location: "Calgary, Canada",
       period: "Sep 2024 - Apr 2025",
       description: "Enhancing skills in data analytics and modern software development methodologies.",
