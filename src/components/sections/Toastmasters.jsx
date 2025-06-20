@@ -51,6 +51,8 @@ const Toastmasters = () => {
     "Constructive Feedback",
     "Active Listening",
     "Meeting Management",
+    "Educational Programming",
+    "Member Mentoring",
   ];
 
   return (
@@ -77,11 +79,12 @@ const Toastmasters = () => {
             <div className="inline-flex items-center justify-center p-3 bg-primary-100 text-primary-800 rounded-full mb-6">
               <FaMicrophone className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-gray-800">Level 2 Toastmasters Member</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">Level 3 Toastmasters Member & VP Education</h3>
             <p className="text-gray-600 max-w-3xl mx-auto">
               I joined Toastmasters in September 2024 to improve my public speaking skills and build confidence
-              in professional communication. Through regular speeches and leadership roles, I'm developing valuable 
-              soft skills that complement my technical expertise.
+              in professional communication. Recently upgraded to Level 3 and now serving as VP Education, 
+              where I help organize educational programs and mentor new members. Through regular speeches 
+              and leadership roles, I'm developing valuable soft skills that complement my technical expertise.
             </p>
           </motion.div>
 
