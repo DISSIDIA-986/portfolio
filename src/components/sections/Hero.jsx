@@ -68,16 +68,17 @@ const Hero = () => {
               className="text-2xl md:text-3xl font-medium text-gray-700 mb-6"
               variants={itemVariants}
             >
-               Full Stack Developer & Data Analyst
+               Full Stack Developer | AI/RAG Systems | Team Lead
             </motion.h2>
-            
+
             <motion.p
               className="text-lg text-gray-600 mb-8 max-w-2xl"
               variants={itemVariants}
             >
-              With 17 years of experience in enterprise-level Java application development 
-              and a strong foundation in data analytics. I specialize in high-performance 
-              systems, microservices architecture, and turning data into actionable insights.
+              With 17+ years of enterprise software development experience and Team Lead expertise,
+              I specialize in AI/RAG intelligent systems, high-concurrency architectures, and
+              full-stack development. Currently building cutting-edge AI solutions with LangChain
+              and React while working with Canadian tech companies in Calgary.
             </motion.p>
             
             {/* Buttons */}
