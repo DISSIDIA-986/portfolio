@@ -19,11 +19,11 @@ const ProjectModal = ({ project, onClose }) => {
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: 20 }}
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-        className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto"
+        className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Modal Image */}
-        <div className="relative h-64 md:h-80 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden rounded-t-2xl">
+        {/* Modal Image — full-width, auto-height for architecture diagrams */}
+        <div className="relative bg-gray-900 rounded-t-2xl">
           {project.featured && (
             <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium z-10">
               Featured
@@ -42,12 +42,14 @@ const ProjectModal = ({ project, onClose }) => {
             <img
               src={project.imageUrl}
               alt={project.title}
-              className="w-full h-full object-cover"
+              className="w-full h-auto max-h-[60vh] object-contain no-zoom"
               onError={(e) => {
                 e.target.style.display = 'none';
               }}
             />
-          ) : null}
+          ) : (
+            <div className="h-48 bg-gradient-to-br from-primary-100 to-primary-200" />
+          )}
         </div>
 
         {/* Modal Content */}
@@ -240,7 +242,7 @@ const Projects = () => {
                     <img
                       src={project.imageUrl}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 no-zoom"
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
