@@ -31,7 +31,7 @@ const Experience = () => {
   const selectedExperience = experiences.find(exp => exp.id === activeExperience) || experiences[0];
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}

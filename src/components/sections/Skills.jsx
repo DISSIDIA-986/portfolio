@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import skills from '../../data/skills';
-import { FaServer, FaCloud, FaChartBar, FaTerminal, FaLanguage } from 'react-icons/fa';
+import { FaServer, FaCloud, FaRobot, FaDesktop, FaLanguage } from 'react-icons/fa';
 
 const Skills = () => {
   const { ref, controls } = useScrollAnimation();
@@ -31,31 +31,31 @@ const Skills = () => {
   // Category icons
   const categoryIcons = {
     backend: <FaServer className="w-6 h-6" />,
+    ai: <FaRobot className="w-6 h-6" />,
+    frontend: <FaDesktop className="w-6 h-6" />,
     cloud: <FaCloud className="w-6 h-6" />,
-    data: <FaChartBar className="w-6 h-6" />,
-    linux: <FaTerminal className="w-6 h-6" />,
     languages: <FaLanguage className="w-6 h-6" />,
   };
 
-  // Category colors
-  const categoryColors = {
-    backend: 'primary',
-    cloud: 'accent',
-    data: 'secondary',
-    linux: 'gray',
-    languages: 'blue',
+  // Category styles with explicit Tailwind classes (required for JIT detection)
+  const categoryStyles = {
+    backend: { bar: 'bg-primary-500', btn: 'bg-primary-600' },
+    ai: { bar: 'bg-purple-500', btn: 'bg-purple-600' },
+    frontend: { bar: 'bg-blue-500', btn: 'bg-blue-600' },
+    cloud: { bar: 'bg-accent-500', btn: 'bg-accent-600' },
+    languages: { bar: 'bg-green-500', btn: 'bg-green-600' },
   };
 
   // Function to render skill progress bar
-  const SkillBar = ({ name, level, colorClass }) => (
+  const SkillBar = ({ name, level, barClass }) => (
     <div className="mb-5">
       <div className="flex justify-between mb-1">
         <span className="font-medium">{name}</span>
-        <span className="text-sm text-gray-500">{level}%</span>
+        <span className="text-sm text-gray-400">{level}%</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5">
+      <div className="w-full bg-gray-700 rounded-full h-2.5">
         <motion.div
-          className={`h-2.5 rounded-full bg-${colorClass}-500`}
+          className={`h-2.5 rounded-full ${barClass}`}
           initial={{ width: 0 }}
           animate={{ width: `${level}%` }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -65,7 +65,7 @@ const Skills = () => {
   );
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-12 md:py-16 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -75,11 +75,11 @@ const Skills = () => {
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}
-          <motion.div className="mb-16 text-center" variants={itemVariants}>
+          <motion.div className="mb-12 text-center" variants={itemVariants}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Skills</h2>
             <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              My technical expertise spans backend development, cloud architecture, data analysis, and more.
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              My technical expertise spans backend development, AI/ML, cloud architecture, and more.
             </p>
           </motion.div>
 
@@ -91,8 +91,8 @@ const Skills = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`flex items-center px-5 py-3 rounded-lg font-medium transition-all ${
                   activeCategory === category
-                    ? `bg-${categoryColors[category]}-600 text-white shadow-md`
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? `${categoryStyles[category].btn} text-white shadow-md`
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
               >
                 <span className="mr-2">{categoryIcons[category]}</span>
@@ -103,14 +103,14 @@ const Skills = () => {
 
           {/* Skills Display */}
           <motion.div 
-            className="bg-white rounded-lg shadow-md p-8"
+            className="bg-gray-800 rounded-lg shadow-md p-8"
             variants={itemVariants}
             key={activeCategory}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-gray-800">
+            <h3 className="text-2xl font-bold mb-6 text-white">
               {skills[activeCategory].title}
             </h3>
             
@@ -120,7 +120,7 @@ const Skills = () => {
                   key={index}
                   name={skill.name}
                   level={skill.level}
-                  colorClass={categoryColors[activeCategory]}
+                  barClass={categoryStyles[activeCategory].bar}
                 />
               ))}
             </div>
@@ -128,7 +128,7 @@ const Skills = () => {
 
           {/* Additional Skills Statement */}
           <motion.div className="mt-12 text-center" variants={itemVariants}>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-400">
               In addition to these core skills, I'm continuously learning and expanding my expertise in emerging technologies.
               Currently focusing on advanced data analysis techniques and AI integration.
             </p>

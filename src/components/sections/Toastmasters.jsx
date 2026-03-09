@@ -56,7 +56,7 @@ const Toastmasters = () => {
   ];
 
   return (
-    <section id="toastmasters" className="py-20 bg-gradient-to-br from-primary-50 to-white">
+    <section id="toastmasters" className="py-12 md:py-16 bg-gradient-to-br from-primary-50 to-white">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}

@@ -87,8 +87,8 @@ const About = () => {
                 design, and high-concurrency transaction system development, with additional capabilities in data analytics and AI integration.
               </p>
               <p className="mb-4 text-gray-600">
-                Currently based in Calgary, Canada, I'm pursuing a Post-Diploma in Data Analytics & Integrated AI at SAIT, expanding 
-                my expertise in data analytics, visualization, and machine learning while continuing to build on my strong foundation in software development.
+                Currently based in Calgary, Canada, I'm graduating from SAIT in April 2026 with Post-Diplomas in Data Analytics and Integrated AI,
+                adding expertise in data analytics, visualization, and machine learning to my strong foundation in software development.
               </p>
               <p className="text-gray-600">
                 I'm passionate about solving complex problems and creating efficient, scalable solutions that drive business success.
