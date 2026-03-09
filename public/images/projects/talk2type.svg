@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg4)" rx="12"/>
+
+  <text x="400" y="40" text-anchor="middle" fill="#f0abfc" font-size="22" font-weight="700">Talk2Type — macOS Voice-to-Text</text>
+  <line x1="210" y1="50" x2="590" y2="50" stroke="#d946ef" stroke-width="2"/>
+
+  <!-- macOS App -->
+  <rect x="280" y="70" width="240" height="60" rx="10" fill="#581c87" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="400" y="95" text-anchor="middle" fill="#e9d5ff" font-size="15" font-weight="700">macOS Native App</text>
+  <text x="400" y="115" text-anchor="middle" fill="#c084fc" font-size="10">Swift 5.9 • Global Hotkey • Menu Bar</text>
+
+  <defs><marker id="arr7" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#a855f7"/></marker></defs>
+
+  <!-- Audio Capture -->
+  <path d="M400,130 L400,160" stroke="#a855f7" stroke-width="1.5" fill="none" marker-end="url(#arr7)"/>
+  <rect x="250" y="160" width="300" height="50" rx="8" fill="#3b0764" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="400" y="185" text-anchor="middle" fill="#e9d5ff" font-size="13" font-weight="600">Audio Capture &amp; Processing</text>
+  <text x="400" y="200" text-anchor="middle" fill="#c084fc" font-size="10">AVAudioEngine • Real-time Recording</text>
+
+  <!-- ASR Services Fan -->
+  <path d="M400,210 L400,240" stroke="#a855f7" stroke-width="1.5" fill="none" marker-end="url(#arr7)"/>
+  <text x="400" y="255" text-anchor="middle" fill="#f0abfc" font-size="13" font-weight="700">8 ASR Services (Smart Routing)</text>
+
+  <!-- ASR Grid -->
+  <rect x="40" y="270" width="170" height="45" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="125" y="292" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600">OpenAI Whisper</text>
+  <text x="125" y="306" text-anchor="middle" fill="#94a3b8" font-size="9">Best Quality</text>
+
+  <rect x="220" y="270" width="170" height="45" rx="8" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+  <text x="305" y="292" text-anchor="middle" fill="#86efac" font-size="12" font-weight="600">Groq</text>
+  <text x="305" y="306" text-anchor="middle" fill="#94a3b8" font-size="9">Fastest Speed</text>
+
+  <rect x="400" y="270" width="170" height="45" rx="8" fill="#7c2d12" stroke="#f97316" stroke-width="1"/>
+  <text x="485" y="292" text-anchor="middle" fill="#fed7aa" font-size="12" font-weight="600">Alibaba DashScope</text>
+  <text x="485" y="306" text-anchor="middle" fill="#94a3b8" font-size="9">Chinese Optimized</text>
+
+  <rect x="580" y="270" width="180" height="45" rx="8" fill="#4c1d95" stroke="#a78bfa" stroke-width="1"/>
+  <text x="670" y="292" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="600">Tencent / Baidu / iFlytek</text>
+  <text x="670" y="306" text-anchor="middle" fill="#94a3b8" font-size="9">Cost Effective</text>
+
+  <rect x="220" y="325" width="170" height="45" rx="8" fill="#0e7490" stroke="#22d3ee" stroke-width="1"/>
+  <text x="305" y="347" text-anchor="middle" fill="#a5f3fc" font-size="12" font-weight="600">AssemblyAI</text>
+  <text x="305" y="361" text-anchor="middle" fill="#94a3b8" font-size="9">Multi-language</text>
+
+  <rect x="400" y="325" width="170" height="45" rx="8" fill="#0e7490" stroke="#22d3ee" stroke-width="1"/>
+  <text x="485" y="347" text-anchor="middle" fill="#a5f3fc" font-size="12" font-weight="600">Speechmatics</text>
+  <text x="485" y="361" text-anchor="middle" fill="#94a3b8" font-size="9">Enterprise Grade</text>
+
+  <!-- Output -->
+  <path d="M400,380 L400,405" stroke="#a855f7" stroke-width="1.5" fill="none" marker-end="url(#arr7)"/>
+  <rect x="200" y="405" width="400" height="50" rx="10" fill="#14532d" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="400" y="430" text-anchor="middle" fill="#86efac" font-size="14" font-weight="700">Text Output → Active Application</text>
+  <text x="400" y="447" text-anchor="middle" fill="#94a3b8" font-size="10">Auto-paste to any text field • Multi-language • Cost optimized</text>
+
+  <!-- Features -->
+  <text x="100" y="485" fill="#f0abfc" font-size="10" font-weight="600">🎤 Global Hotkey</text>
+  <text x="250" y="485" fill="#86efac" font-size="10" font-weight="600">🌍 i18n (8 Languages)</text>
+  <text x="430" y="485" fill="#93c5fd" font-size="10" font-weight="600">🔄 GitHub Actions CI/CD</text>
+  <text x="620" y="485" fill="#fde68a" font-size="10" font-weight="600">💰 Cost Optimization</text>
+</svg>

@@ -1,3 +1,5 @@
+const IMG_BASE = process.env.PUBLIC_URL || '';
+
 const projects = [
   {
     id: 1,
@@ -9,24 +11,49 @@ const projects = [
     repoUrl: "https://github.com/DISSIDIA-986/Industry-AI-Flow",
     videoUrl: "",
     featured: true,
-    category: "AI/ML"
+    category: "AI & Machine Learning"
   },
   {
     id: 2,
-    title: "Zhub - Enterprise Document Knowledge Base",
-    description: "Intelligent document retrieval platform built with Next.js 15 and TypeScript. Implements RAG system for smart document Q&A, enabling efficient enterprise knowledge management.",
-    technologies: ["Next.js 15", "TypeScript", "RAG", "AI", "Document Processing"],
-    imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/zhub.svg",
+    title: "Local Chat RAG - Privacy-First AI Chat",
+    description: "Privacy-first Retrieval-Augmented Generation chat application. Upload documents, ask questions, and get answers with source citations — everything runs locally on your machine using Ollama.",
+    technologies: ["React", "TypeScript", "FastAPI", "LangChain", "ChromaDB", "Ollama", "Zustand", "Chakra UI"],
+    imageUrl: `${IMG_BASE}/images/projects/local-chat-rag.svg`,
     demoUrl: null,
     repoUrl: null,
+    videoUrl: "",
     featured: true,
-    category: "AI/ML"
+    category: "AI & Machine Learning"
   },
   {
     id: 3,
-    title: "HavenzHub - Mobile App & Management System",
-    description: "Cross-platform mobile application and backend management system. Features SignalR real-time communication, Sentry error monitoring, and containerized deployment on GCP.",
-    technologies: ["React Native", "TypeScript", "Expo", ".NET/C#", "Docker", "GCP", "SignalR"],
+    title: "ThyroidSentry - Cancer Recurrence Prediction",
+    description: "Advanced thyroid cancer recurrence prediction system achieving 97.4% accuracy with 95.5% sensitivity. Built for medical professionals with interactive risk analysis dashboards and SHAP-based model interpretability.",
+    technologies: ["Python", "XGBoost", "scikit-learn", "Streamlit", "Plotly", "SHAP", "Machine Learning"],
+    imageUrl: `${IMG_BASE}/images/projects/thyroidsentry.svg`,
+    demoUrl: null,
+    repoUrl: "https://github.com/DISSIDIA-986/ThyroidSentry",
+    videoUrl: "",
+    featured: true,
+    category: "AI & Machine Learning"
+  },
+  {
+    id: 4,
+    title: "HockeyAI-Tracker - Real-Time Player Tracking",
+    description: "Real-time hockey player and puck tracking system using YOLOv8 object detection with BoT-SORT multi-object tracking. Generates CSV statistics and annotated video output with team-based tracking.",
+    technologies: ["Python", "YOLOv8", "OpenCV", "BoT-SORT", "NumPy", "Ultralytics", "Computer Vision"],
+    imageUrl: `${IMG_BASE}/images/projects/hockeyai-tracker.svg`,
+    demoUrl: null,
+    repoUrl: null,
+    videoUrl: "",
+    featured: true,
+    category: "Computer Vision"
+  },
+  {
+    id: 5,
+    title: "HavenzHub - BMS & Mobile Platform",
+    description: "Enterprise building management system with mobile app, AI-powered document RAG, and face recognition access control. Monorepo architecture with ASP.NET Core backend, Next.js admin panel, React Native mobile, and Python AI services.",
+    technologies: ["React Native", "TypeScript", ".NET/C#", "Next.js", "FastAPI", "LangChain", "Docker", "GCP"],
     imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/havenzhub.svg",
     demoUrl: null,
     repoUrl: null,
@@ -34,7 +61,7 @@ const projects = [
     category: "Full Stack"
   },
   {
-    id: 4,
+    id: 6,
     title: "YiPaiJi - IT Equipment Auction Platform",
     description: "High-concurrency auction platform handling thousands of simultaneous bidders. Optimized with WebSocket real-time updates, Redis caching, and RocketMQ asynchronous processing.",
     technologies: ["React", "Java", "Spring Boot", "Spring Cloud", "WebSocket", "Redis", "RocketMQ", "Microservices"],
@@ -45,38 +72,100 @@ const projects = [
     category: "Full Stack"
   },
   {
-    id: 5,
-    title: "RiseMobile - Financial Mobile App",
-    description: "React Native mobile application with Redux state management, Firebase authentication, Apple Authentication, and biometric features.",
-    technologies: ["React Native", "TypeScript", "Expo", "Redux", "Firebase", "Apple Auth"],
-    imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/risemobile.svg",
-    demoUrl: null,
-    repoUrl: null,
-    featured: false,
-    category: "Mobile Development"
-  },
-  {
-    id: 6,
-    title: "AntPool Mining Pool System",
-    description: "Maintained and optimized cryptocurrency mining pool system. Developed PoW revenue distribution algorithm and handled high-concurrency hashrate statistics and payment calculations.",
-    technologies: ["Java", "Spring", "Bitcoin Core API", "Redis", "MySQL", "WebSocket"],
-    imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/antpool.svg",
-    demoUrl: null,
-    repoUrl: null,
-    featured: false,
-    category: "Blockchain"
-  },
-  {
     id: 7,
-    title: "Canada Unemployment Analysis",
-    description: "Interactive data visualization dashboard analyzing unemployment trends in Canada. Built as a Capstone project at SAIT with machine learning predictions.",
+    title: "Talk2Type - Smart Voice-to-Text for macOS",
+    description: "Native macOS voice-to-text dictation tool with global hotkey activation. Supports 8 ASR services (OpenAI Whisper, Groq, Alibaba, Tencent, Baidu, iFlytek, AssemblyAI, Speechmatics) with cost optimization and multi-language localization.",
+    technologies: ["Swift 5.9", "macOS Native", "OpenAI Whisper", "Groq", "GitHub Actions", "CI/CD"],
+    imageUrl: `${IMG_BASE}/images/projects/talk2type.svg`,
+    demoUrl: null,
+    repoUrl: "https://github.com/DISSIDIA-986/Talk2Type",
+    videoUrl: "",
+    featured: false,
+    category: "Native App"
+  },
+  {
+    id: 8,
+    title: "Golf Swing Analyzer - Biomechanical Analysis",
+    description: "iOS app for real-time golf swing biomechanical analysis using Apple Vision framework. Detects 7 biomechanical metrics and 11 issue types at 30 FPS with pose estimation, providing scoring (0-100) and video import support.",
+    technologies: ["Swift", "SwiftUI", "Vision Framework", "Pose Detection", "SwiftData", "iOS 17+"],
+    imageUrl: `${IMG_BASE}/images/projects/golf-swing.svg`,
+    demoUrl: null,
+    repoUrl: "https://github.com/DISSIDIA-986/golf-swing",
+    videoUrl: "",
+    featured: false,
+    category: "Computer Vision"
+  },
+  {
+    id: 9,
+    title: "Trading Platform - AI-Powered Trading System",
+    description: "Multi-user trading platform with TradingView webhook integration, AI-powered entry/exit decisions, and multi-broker execution (IBKR/Kraken). Features multi-tenant data isolation and comprehensive Docker deployment.",
+    technologies: ["Python", "Flask", "PostgreSQL", "TradingView", "AI/GPT", "Docker", "IBKR API", "Kraken API"],
+    imageUrl: `${IMG_BASE}/images/projects/trading-bots.svg`,
+    demoUrl: null,
+    repoUrl: null,
+    videoUrl: "",
+    featured: false,
+    category: "FinTech"
+  },
+  {
+    id: 10,
+    title: "Polymarket Arbitrage Strategy Analysis",
+    description: "Comprehensive prediction market arbitrage analysis system with 36+ data sources, AI ensemble decision-making, and real-time data aggregation. Features advanced risk management and Kubernetes deployment architecture.",
+    technologies: ["Python", "NautilusTrader", "Claude API", "TimescaleDB", "Redis", "Kafka", "Kubernetes"],
+    imageUrl: `${IMG_BASE}/images/projects/polymarket-analysis.svg`,
+    demoUrl: null,
+    repoUrl: null,
+    videoUrl: "",
+    featured: false,
+    category: "FinTech"
+  },
+  {
+    id: 11,
+    title: "CodeMind3 - Smart Programming Flashcards",
+    description: "Full-stack programming flashcard system using FSRS spaced repetition algorithm. Features code syntax highlighting, progress tracking, and optimized review scheduling for effective learning.",
+    technologies: ["React 18", "TypeScript", "TailwindCSS", "Spring Boot 3", "PostgreSQL", "JWT", "FSRS"],
+    imageUrl: `${IMG_BASE}/images/projects/codemind3.svg`,
+    demoUrl: null,
+    repoUrl: "https://github.com/DISSIDIA-986/CodeMind3",
+    videoUrl: "",
+    featured: false,
+    category: "Full Stack"
+  },
+  {
+    id: 12,
+    title: "ATV-Bilibili - Apple TV Streaming Client",
+    description: "Feature-rich BiliBili streaming client for Apple TV (tvOS). Extensively customized fork with QR login, live streaming with real-time comments, HDR/Dolby Vision support, SponsorBlock integration, and playlist management.",
+    technologies: ["Swift", "tvOS", "AVPlayer", "RTSP/DASH", "SponsorBlock", "QR Auth"],
+    imageUrl: `${IMG_BASE}/images/projects/atv-bilibili.svg`,
+    demoUrl: null,
+    repoUrl: "https://github.com/DISSIDIA-986/ATV-Bilibili-demo",
+    videoUrl: "",
+    featured: false,
+    category: "Native App"
+  },
+  {
+    id: 13,
+    title: "AOS-AAIP Immigration Draw Analysis",
+    description: "Production-grade immigration draw analysis and forecasting system. Features web scraping pipeline, time-series modeling with confidence intervals, multi-model comparison (Linear/RF/XGBoost), and policy stability monitoring.",
+    technologies: ["Python", "scikit-learn", "XGBoost", "Pandas", "Bootstrap CI", "Web Scraping", "Data Pipeline"],
+    imageUrl: `${IMG_BASE}/images/projects/aos-aaip-analysis.svg`,
+    demoUrl: null,
+    repoUrl: "https://github.com/DISSIDIA-986/AOS-AAIP-Analysis",
+    videoUrl: "",
+    featured: false,
+    category: "Data Science"
+  },
+  {
+    id: 14,
+    title: "Canada Unemployment Analysis Dashboard",
+    description: "Interactive data visualization dashboard analyzing unemployment trends in Canada. Built as a Capstone project at SAIT with machine learning predictions and interactive charts.",
     technologies: ["React", "JavaScript", "Data Visualization", "Machine Learning", "Python"],
     imageUrl: "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/unemployment-dashboard.png",
     demoUrl: "https://dissidia-986.github.io/canada-unemployment-dashboard/",
     repoUrl: "https://github.com/DISSIDIA-986/canada-unemployment-dashboard",
     videoUrl: "",
     featured: false,
-    category: "Data Analysis"
+    category: "Data Science"
   }
 ];
 

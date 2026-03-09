@@ -5,45 +5,46 @@ const skills = {
         { name: "Java 8/11", level: 95 },
         { name: "Spring Boot", level: 90 },
         { name: "Spring Cloud (Netflix/Alibaba)", level: 85 },
-        { name: "MySQL", level: 85 },
+        { name: "Python (FastAPI)", level: 85 },
+        { name: "MySQL / PostgreSQL", level: 85 },
         { name: "Redis", level: 90 },
-        { name: "RabbitMQ", level: 80 },
-        { name: "RocketMQ", level: 85 },
-        { name: "Kafka", level: 75 },
-        { name: "Microservices (Nacos / API Gateway / Sentinel)", level: 85 },
-        { name: "Distributed Transactions (Seata)", level: 80 },
+        { name: "RocketMQ / Kafka", level: 85 },
+        { name: "Microservices Architecture", level: 85 },
+        { name: "RESTful API Design", level: 90 },
+      ]
+    },
+    ai: {
+      title: "AI & Machine Learning",
+      skills: [
+        { name: "LangChain / RAG Systems", level: 85 },
+        { name: "scikit-learn / XGBoost", level: 80 },
+        { name: "Computer Vision (OpenCV, YOLO)", level: 75 },
+        { name: "NLP & LLM Integration", level: 80 },
+        { name: "Prompt Engineering", level: 85 },
+        { name: "AI Agent Orchestration", level: 80 },
+        { name: "Streamlit / ML Deployment", level: 80 },
+        { name: "Data Analysis (Pandas, NumPy)", level: 85 },
+      ]
+    },
+    frontend: {
+      title: "Frontend & Mobile",
+      skills: [
+        { name: "React / Next.js", level: 90 },
+        { name: "TypeScript", level: 85 },
+        { name: "React Native / Expo", level: 80 },
+        { name: "Swift / SwiftUI (iOS/macOS/tvOS)", level: 75 },
+        { name: "Tailwind CSS", level: 85 },
+        { name: "Data Visualization", level: 80 },
       ]
     },
     cloud: {
       title: "Cloud & DevOps",
       skills: [
-        { name: "Docker", level: 85 },
-        { name: "Kubernetes", level: 80 },
-        { name: "Helm", level: 75 },
-        { name: "Terraform", level: 70 },
-        { name: "CI/CD (Jenkins + GitLab)", level: 85 },
-        { name: "ArgoCD", level: 70 },
-        { name: "Cloud Computing (Alibaba Cloud, AWS)", level: 75 },
-      ]
-    },
-    data: {
-      title: "Data & AI",
-      skills: [
-        { name: "Python (Pandas, NumPy, Scikit-learn)", level: 80 },
-        { name: "Power BI / Tableau", level: 75 },
-        { name: "Predictive Analysis", level: 70 },
-        { name: "Data Cleaning & Preprocessing", level: 80 },
-        { name: "Data Visualization", level: 75 },
-        { name: "SQL Query Optimization", level: 85 },
-        { name: "Machine Learning Fundamentals", level: 70 },
-      ]
-    },
-    linux: {
-      title: "Linux & System Automation",
-      skills: [
-        { name: "Shell / Bash", level: 80 },
-        { name: "Dockerfile", level: 85 },
-        { name: "CI/CD Pipelines (Jenkins)", level: 80 },
+        { name: "Docker / Kubernetes", level: 85 },
+        { name: "GCP / AWS / Alibaba Cloud", level: 80 },
+        { name: "CI/CD (GitHub Actions, Jenkins)", level: 85 },
+        { name: "Helm / Terraform", level: 75 },
+        { name: "Linux / Shell Scripting", level: 85 },
         { name: "System Monitoring & APM", level: 75 },
       ]
     },
@@ -55,5 +56,5 @@ const skills = {
       ]
     }
   };
-  
+
   export default skills;

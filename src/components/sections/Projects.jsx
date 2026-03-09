@@ -13,10 +13,12 @@ const Projects = () => {
   // 筛选类别
   const filterCategories = [
     'All',
-    'Data Analysis',
-    'Machine Learning',
-    'Backend Development',
-    'Frontend Development'
+    'AI & Machine Learning',
+    'Computer Vision',
+    'Full Stack',
+    'FinTech',
+    'Native App',
+    'Data Science'
   ];
 
   // 使用 useMemo 来优化筛选性能，避免不必要的重新计算
@@ -81,7 +83,7 @@ const Projects = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
             <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A collection of my work showcasing my skills in software development and data analysis.
+              A curated collection showcasing my expertise in AI/ML, computer vision, full-stack development, and data science.
             </p>
           </motion.div>
 
@@ -141,10 +143,12 @@ const Projects = () => {
                   ) : null}
                   <div className="absolute inset-0 bg-primary-600 opacity-20 flex items-center justify-center" style={{display: project.imageUrl ? 'none' : 'flex'}}>
                     <div className="text-6xl text-primary-600 opacity-50">
-                      {project.category === 'Data Analysis' && '📊'}
-                      {project.category === 'Machine Learning' && '🤖'}
-                      {project.category === 'Backend Development' && '⚙️'}
-                      {project.category === 'Frontend Development' && '💻'}
+                      {project.category === 'AI & Machine Learning' && '🤖'}
+                      {project.category === 'Computer Vision' && '👁️'}
+                      {project.category === 'Full Stack' && '⚙️'}
+                      {project.category === 'FinTech' && '📈'}
+                      {project.category === 'Native App' && '📱'}
+                      {project.category === 'Data Science' && '📊'}
                     </div>
                   </div>
                 </div>

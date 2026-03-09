@@ -5,26 +5,26 @@ const experiences = [
     position: "Full Stack Developer (Part-time)",
     location: "Calgary, Canada",
     period: "Aug 2024 - Present",
-    description: "Canadian technology company specializing in mobile applications and enterprise management systems.",
+    description: "Canadian technology company specializing in smart building management systems, mobile applications, and AI-powered enterprise solutions.",
     responsibilities: [
       {
-        title: "HavenzHub Project",
-        details: "Developed cross-platform mobile app using React Native + TypeScript + Expo with SignalR real-time communication and Sentry error monitoring. Built backend management system with .NET/C# and deployed using Docker + GCP."
-      },
-      {
-        title: "RiseMobile Project",
-        details: "Built React Native mobile application with Redux state management, Firebase authentication, Apple Authentication, and biometric features."
+        title: "HavenzHub BMS Platform",
+        details: "Developed enterprise building management system (BMS) as a monorepo: ASP.NET Core 8 backend, Next.js 15 admin panel, React Native mobile app. Features multi-tenant management, real-time SignalR communication, face recognition access control, and Docker + GCP deployment."
       },
       {
         title: "AI/RAG Intelligent Systems",
-        details: "Developed Zhub enterprise document knowledge base with Next.js 15 + TypeScript implementing RAG system. Created Industry-AI-Flow AI workflow platform with LangChain, featuring intent recognition, intelligent routing, multi-agent orchestration, pgvector hybrid retrieval, OCR processing, and Python + FastAPI backend."
+        details: "Built Industry-AI-Flow AI workflow platform with LangChain, featuring intent recognition, intelligent routing, multi-agent orchestration, pgvector hybrid retrieval, and OCR processing. Developed enterprise document knowledge base (Zhub) with Next.js 15 implementing RAG system."
+      },
+      {
+        title: "Mobile Application Development",
+        details: "Developed cross-platform mobile applications using React Native + TypeScript + Expo with Redux state management, Firebase authentication, Apple Auth, and biometric features."
       },
       {
         title: "Team Collaboration",
         details: "Collaborated with local Canadian development team, participated in code reviews and technical discussions, implemented CI/CD automation using GitHub Actions."
       }
     ],
-    technologies: ["React Native", "TypeScript", ".NET/C#", "Next.js", "LangChain", "pgvector", "PaddleOCR", "Python", "FastAPI", "Docker", "GCP"],
+    technologies: ["React Native", "TypeScript", ".NET/C#", "Next.js", "LangChain", "pgvector", "Python", "FastAPI", "Docker", "GCP"],
     url: null
   },
   {
@@ -92,23 +92,23 @@ const experiences = [
     company: "Southern Alberta Institute of Technology (SAIT)",
     position: "Post-Diploma in Data Analytics & Integrated AI",
     location: "Calgary, Canada",
-    period: "Sep 2024 - Present",
-    description: "Enhancing skills in data analytics, AI integration, and modern software development methodologies.",
+    period: "Sep 2024 - Apr 2026",
+    description: "Completed two certificate programs: Data Analytics and Integrated AI, with focus on machine learning, computer vision, NLP, and AI deployment.",
     responsibilities: [
       {
         title: "Academic Excellence",
-        details: "Achieved 4.0/4.0 GPA for three consecutive semesters while working part-time on real-world projects with local development teams."
+        details: "Achieved 4.0/4.0 GPA across all semesters while working part-time on real-world projects with local development teams."
       },
       {
         title: "Core Courses",
-        details: "Data Analysis (Python, SQL), Artificial Intelligence & Integration (Machine Learning, AI Model Deployment), Full Stack Development."
+        details: "Data Analytics (Python, SQL, Power BI), AI Integration (Machine Learning, Deep Learning, AI Model Deployment), Computer Vision (YOLO, OpenCV), Natural Language Processing, Full Stack Development."
       },
       {
-        title: "Practical Projects",
-        details: "Collaborated efficiently with local Canadian teams demonstrating strong English communication skills in professional settings."
+        title: "Capstone & Research Projects",
+        details: "Built HockeyAI-Tracker (real-time player tracking with YOLOv8), ThyroidSentry (cancer recurrence prediction with 97.4% accuracy), brain tumor classification CNN, and Canada unemployment analysis dashboard."
       }
     ],
-    technologies: ["Python", "SQL", "Machine Learning", "AI", "Power BI", "Tableau", "Data Visualization"],
+    technologies: ["Python", "SQL", "Machine Learning", "Computer Vision", "NLP", "YOLOv8", "Power BI", "Tableau", "React"],
     url: "https://www.sait.ca"
   }
 ];
