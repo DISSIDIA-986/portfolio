@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg6)" rx="12"/>
+
+  <text x="400" y="40" text-anchor="middle" fill="#fbbf24" font-size="22" font-weight="700">Trading Platform — System Architecture</text>
+  <line x1="200" y1="50" x2="600" y2="50" stroke="#f59e0b" stroke-width="2"/>
+
+  <defs><marker id="arr10" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#f59e0b"/></marker></defs>
+
+  <!-- TradingView -->
+  <rect x="280" y="65" width="240" height="50" rx="8" fill="#7c2d12" stroke="#f97316" stroke-width="1.5"/>
+  <text x="400" y="90" text-anchor="middle" fill="#fed7aa" font-size="14" font-weight="700">TradingView Webhooks</text>
+  <text x="400" y="107" text-anchor="middle" fill="#94a3b8" font-size="10">Signal Source • Alert Triggers</text>
+
+  <path d="M400,115 L400,145" stroke="#f59e0b" stroke-width="1.5" fill="none" marker-end="url(#arr10)"/>
+
+  <!-- Flask Backend -->
+  <rect x="180" y="145" width="440" height="65" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="400" y="170" text-anchor="middle" fill="#93c5fd" font-size="15" font-weight="700">Flask API Backend</text>
+  <text x="400" y="190" text-anchor="middle" fill="#cbd5e1" font-size="10">Webhook Ingestion • Signal Processing • Multi-Tenant Isolation • REST API</text>
+
+  <!-- Three branches -->
+  <path d="M280,210 L180,250" stroke="#3b82f6" stroke-width="1.5" fill="none" marker-end="url(#arr11)"/>
+  <path d="M400,210 L400,250" stroke="#f59e0b" stroke-width="1.5" fill="none" marker-end="url(#arr10)"/>
+  <path d="M520,210 L620,250" stroke="#a855f7" stroke-width="1.5" fill="none" marker-end="url(#arr12)"/>
+  <defs>
+    <marker id="arr11" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#3b82f6"/></marker>
+    <marker id="arr12" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#a855f7"/></marker>
+  </defs>
+
+  <!-- PostgreSQL -->
+  <rect x="60" y="250" width="200" height="70" rx="10" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="160" y="275" text-anchor="middle" fill="#6ee7b7" font-size="13" font-weight="700">PostgreSQL</text>
+  <text x="160" y="295" text-anchor="middle" fill="#a7f3d0" font-size="10">Trade History • User Accounts</text>
+  <text x="160" y="308" text-anchor="middle" fill="#94a3b8" font-size="9">Multi-tenant Data Isolation</text>
+
+  <!-- AI Decision Engine -->
+  <rect x="280" y="250" width="240" height="70" rx="10" fill="#7c2d12" stroke="#f97316" stroke-width="1.5"/>
+  <text x="400" y="275" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="700">AI Decision Engine (GPT)</text>
+  <text x="400" y="295" text-anchor="middle" fill="#fed7aa" font-size="10">Entry/Exit Analysis</text>
+  <text x="400" y="308" text-anchor="middle" fill="#94a3b8" font-size="9">Risk Assessment • Position Sizing</text>
+
+  <!-- Broker Execution -->
+  <rect x="540" y="250" width="200" height="70" rx="10" fill="#4c1d95" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="640" y="275" text-anchor="middle" fill="#c4b5fd" font-size="13" font-weight="700">Broker Execution</text>
+  <text x="640" y="295" text-anchor="middle" fill="#ddd6fe" font-size="10">IBKR • Kraken APIs</text>
+  <text x="640" y="308" text-anchor="middle" fill="#94a3b8" font-size="9">Multi-Broker Support</text>
+
+  <!-- Output -->
+  <path d="M400,320 L400,360" stroke="#f59e0b" stroke-width="1.5" fill="none" marker-end="url(#arr10)"/>
+
+  <rect x="140" y="360" width="520" height="55" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="385" text-anchor="middle" fill="#e0e7ff" font-size="14" font-weight="700">Trade Execution &amp; Monitoring</text>
+  <text x="400" y="403" text-anchor="middle" fill="#94a3b8" font-size="10">Real-time P&amp;L • Risk Alerts • Portfolio Dashboard • Trade History Export</text>
+
+  <!-- Tech badges -->
+  <rect x="100" y="440" width="600" height="40" rx="8" fill="#0f172a" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="155" y="465" fill="#fbbf24" font-size="10" font-weight="600">Python</text>
+  <text x="230" y="465" fill="#93c5fd" font-size="10" font-weight="600">Flask</text>
+  <text x="310" y="465" fill="#6ee7b7" font-size="10" font-weight="600">PostgreSQL</text>
+  <text x="410" y="465" fill="#fed7aa" font-size="10" font-weight="600">TradingView</text>
+  <text x="510" y="465" fill="#c4b5fd" font-size="10" font-weight="600">Docker</text>
+  <text x="590" y="465" fill="#fde68a" font-size="10" font-weight="600">AI/GPT</text>
+  <text x="660" y="465" fill="#94a3b8" font-size="10" font-weight="600">IBKR</text>
+</svg>
