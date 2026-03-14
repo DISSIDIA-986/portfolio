@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import useScrollAnimation from '../../hooks/useScrollAnimation';
 import skills from '../../data/skills';
 import { FaServer, FaCloud, FaRobot, FaDesktop, FaLanguage } from 'react-icons/fa';
 
 const Skills = () => {
-  const { ref, controls } = useScrollAnimation();
   const [activeCategory, setActiveCategory] = useState('backend');
 
   // Animation variants
@@ -68,10 +66,10 @@ const Skills = () => {
     <section id="skills" className="py-12 md:py-16 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
         <motion.div
-          ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate={controls}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}

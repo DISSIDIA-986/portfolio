@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import useScrollAnimation from '../../hooks/useScrollAnimation.jsx';
 import projectsData from '../../data/projects.js';
 
 const ProjectModal = ({ project, onClose }) => {
@@ -116,7 +115,6 @@ const ProjectModal = ({ project, onClose }) => {
 };
 
 const Projects = () => {
-  const { ref, controls } = useScrollAnimation();
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -180,10 +178,10 @@ const Projects = () => {
     <section id="projects" className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
-          ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate={controls}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}

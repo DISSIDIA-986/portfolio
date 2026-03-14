@@ -1,11 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import useScrollAnimation from '../../hooks/useScrollAnimation.jsx';
 import { FaCode, FaServer, FaDatabase, FaChartBar, FaCloud } from 'react-icons/fa';
 
 const About = () => {
-  const { ref, controls } = useScrollAnimation();
-  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -62,10 +59,10 @@ const About = () => {
     <section id="about" className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
-          ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate={controls}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
           className="max-w-5xl mx-auto"
         >
           {/* Section Header */}

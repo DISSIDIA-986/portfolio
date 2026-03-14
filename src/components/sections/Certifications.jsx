@@ -1,11 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import useScrollAnimation from '../../hooks/useScrollAnimation';
 import certificationsData from '../../data/certifications';
 import { FaAward, FaCalendarAlt, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Certifications = () => {
-  const { ref, controls } = useScrollAnimation();
   const [activeFilter, setActiveFilter] = useState('all');
 
   // 确保使用导入的数据
@@ -67,10 +65,10 @@ const Certifications = () => {
     <section id="certifications" className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
-          ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate={controls}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}

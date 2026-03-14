@@ -1,11 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import useScrollAnimation from '../../hooks/useScrollAnimation';
 import { FaMicrophone, FaUsers, FaTrophy } from 'react-icons/fa';
 
 const Toastmasters = () => {
-  const { ref, controls } = useScrollAnimation();
-
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -59,10 +56,10 @@ const Toastmasters = () => {
     <section id="toastmasters" className="py-12 md:py-16 bg-gradient-to-br from-primary-50 to-white">
       <div className="container mx-auto px-4">
         <motion.div
-          ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate={controls}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}
