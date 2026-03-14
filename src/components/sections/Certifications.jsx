@@ -67,8 +67,7 @@ const Certifications = () => {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          animate="visible"
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}
