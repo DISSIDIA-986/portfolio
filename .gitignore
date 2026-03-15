@@ -4,15 +4,21 @@
 /node_modules
 /.pnp
 .pnp.js
+.pnp.*
 
 # testing
 /coverage
+
+# next.js
+/.next/
+/out/
 
 # production
 /build
 
 # misc
 .DS_Store
+*.pem
 .env.local
 .env.development.local
 .env.test.local
@@ -35,6 +41,13 @@ oss.md
 *.webp
 *.svg
 !public/images/projects/*.svg
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# vercel
+.vercel
 
 # allow .claude skill config
 !.claude/
