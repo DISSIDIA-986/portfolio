@@ -1,16 +1,21 @@
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Experience from "@/components/sections/Experience";
+import HowIBuild from "@/components/sections/HowIBuild";
+import Projects from "@/components/sections/Projects";
+import Skills from "@/components/sections/Skills";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <About />
-      {/* Phase 2: Experience */}
-      {/* Phase 2: How I Build */}
-      {/* Phase 2: Projects */}
-      {/* Phase 3: Skills */}
-      {/* Phase 3: Contact */}
+      <Experience />
+      <HowIBuild />
+      <Projects />
+      <Skills />
+      <Contact />
     </>
   );
 }
