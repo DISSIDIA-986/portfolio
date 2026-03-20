@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
     output: "export",
     basePath: "/portfolio",
   }),
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGhPages ? "/portfolio" : "",
+  },
   images: {
     ...(isGhPages && { unoptimized: true }),
     remotePatterns: [

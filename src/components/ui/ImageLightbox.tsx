@@ -30,10 +30,12 @@ export default function ImageLightbox({
 
   // Next.js Image handles basePath automatically, but YARL uses its own <img>.
   // On subpath deployments (e.g. GitHub Pages at /portfolio/), prepend basePath
-  // so YARL resolves local images correctly.
+  // so YARL resolves local images correctly. NEXT_PUBLIC_BASE_PATH is inlined
+  // at build time via next.config.ts.
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const lightboxSrc =
     src.startsWith("/") && !src.startsWith("//")
-      ? `${typeof window !== "undefined" ? ((window as unknown as Record<string, { basePath?: string }>).__NEXT_DATA__?.basePath || "") : ""}${src}`
+      ? `${basePath}${src}`
       : src;
 
   return (
