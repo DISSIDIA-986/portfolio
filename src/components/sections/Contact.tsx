@@ -63,7 +63,7 @@ export default function Contact() {
           <motion.div variants={itemVariants}>
             <SectionHeader
               title="Get in Touch"
-              subtitle="Open to new opportunities, collaborations, and interesting conversations about technology."
+              subtitle="I'm looking for teams where the problems are hard and the standards are high. If that sounds like yours, let's talk."
             />
           </motion.div>
 

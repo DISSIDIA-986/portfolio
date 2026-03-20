@@ -14,6 +14,7 @@ export interface Project {
   videoUrl?: string;
   featured: boolean;
   category: string;
+  challenge?: string;
 }
 
 export interface Skill {
@@ -34,21 +35,18 @@ export interface Skills {
   languages: SkillCategory;
 }
 
-export interface Responsibility {
-  title: string;
-  details: string;
-}
-
 export interface Experience {
   id: number;
   company: string;
   position: string;
   location: string;
   period: string;
-  description: string;
-  responsibilities: Responsibility[];
+  problem: string;
+  solution: string[];
+  impact: string;
   technologies: string[];
   url: string | null;
+  type?: "work" | "education";
 }
 
 export interface Certification {

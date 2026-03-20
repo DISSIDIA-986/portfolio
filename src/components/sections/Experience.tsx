@@ -23,7 +23,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-12 md:py-16 bg-gray-50 dark:bg-gray-900"
+      className="py-12 md:py-16 bg-white dark:bg-gray-950"
     >
       <Container>
         <motion.div
@@ -36,7 +36,7 @@ export default function Experience() {
           <motion.div variants={itemVariants}>
             <SectionHeader
               title="Experience"
-              subtitle="17 years of building enterprise systems, leading teams, and shipping products."
+              subtitle="Every role started with a hard problem. Here's what I built to solve them."
             />
           </motion.div>
 
@@ -45,58 +45,90 @@ export default function Experience() {
               <motion.div
                 key={exp.id}
                 variants={itemVariants}
-                className="relative p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 hover:shadow-lg transition-shadow"
+                className="relative p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 hover:shadow-lg transition-shadow"
               >
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-800 dark:text-white">
-                      {exp.position}
-                    </h3>
-                    <div className="flex items-center gap-2 mt-1">
-                      {exp.url ? (
-                        <a
-                          href={exp.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary-600 dark:text-primary-400 hover:underline font-semibold inline-flex items-center gap-1"
-                        >
-                          {exp.company}
-                          <ExternalLink className="w-3.5 h-3.5" />
-                        </a>
-                      ) : (
-                        <span className="text-primary-600 dark:text-primary-400 font-semibold">
-                          {exp.company}
-                        </span>
-                      )}
+                {/* Education badge */}
+                {exp.type === "education" && (
+                  <span className="absolute top-4 right-4 px-2.5 py-1 text-xs font-medium rounded-full bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300">
+                    Education
+                  </span>
+                )}
+
+                {/* Problem */}
+                <div className="mb-4">
+                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-400">
+                    Problem
+                  </span>
+                  <p className="mt-1 text-gray-800 dark:text-white font-medium">
+                    {exp.problem}
+                  </p>
+                </div>
+
+                {/* Solution */}
+                <div className="mb-4">
+                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-400">
+                    Solution
+                  </span>
+                  <ul className="mt-1 space-y-1.5">
+                    {exp.solution.map((item, idx) => (
+                      <li
+                        key={idx}
+                        className="text-sm text-gray-600 dark:text-gray-300 flex gap-2"
+                      >
+                        <span className="text-primary-400 shrink-0">•</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Impact */}
+                <div className="mb-5">
+                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-400">
+                    Impact
+                  </span>
+                  <p className="mt-1 text-sm text-gray-700 dark:text-gray-200 font-medium">
+                    {exp.impact}
+                  </p>
+                </div>
+
+                {/* Company info */}
+                <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+                        {exp.position}
+                      </h3>
+                      <div className="flex items-center gap-2 mt-1">
+                        {exp.url ? (
+                          <a
+                            href={exp.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary-600 dark:text-primary-400 hover:underline font-semibold inline-flex items-center gap-1"
+                          >
+                            {exp.company}
+                            <ExternalLink className="w-3.5 h-3.5" />
+                          </a>
+                        ) : (
+                          <span className="text-primary-600 dark:text-primary-400 font-semibold">
+                            {exp.company}
+                          </span>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex flex-col items-start md:items-end gap-1 text-sm text-gray-500 dark:text-gray-400 shrink-0">
-                    <span className="font-medium">{exp.period}</span>
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5" />
-                      {exp.location}
-                    </span>
+                    <div className="flex flex-col items-start md:items-end gap-1 text-sm text-gray-500 dark:text-gray-400 shrink-0">
+                      <span className="font-medium">{exp.period}</span>
+                      <span className="flex items-center gap-1">
+                        <MapPin className="w-3.5 h-3.5" />
+                        {exp.location}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                  {exp.description}
-                </p>
-
-                <div className="space-y-3 mb-4">
-                  {exp.responsibilities.map((resp, idx) => (
-                    <div key={idx}>
-                      <h4 className="font-semibold text-sm text-gray-800 dark:text-gray-200">
-                        {resp.title}
-                      </h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
-                        {resp.details}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap gap-2">
+                {/* Tech badges */}
+                <div className="flex flex-wrap gap-2 mt-4">
                   {exp.technologies.map((tech) => (
                     <span
                       key={tech}

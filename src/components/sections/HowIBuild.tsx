@@ -113,7 +113,7 @@ export default function HowIBuild() {
           <motion.div variants={itemVariants}>
             <SectionHeader
               title="How I Build"
-              subtitle="I don't just use AI — I've built a complete voice-driven development environment that turns ideas into production code at conversation speed."
+              subtitle="The methodology above is powered by a custom-built development environment. I don't just use AI tools — I build them."
             />
           </motion.div>
 

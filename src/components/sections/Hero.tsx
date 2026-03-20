@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
-import { SOCIAL_LINKS, SITE_CONFIG } from "@/lib/constants";
+import { SOCIAL_LINKS } from "@/lib/constants";
+import TerminalBlock from "@/components/ui/TerminalBlock";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -40,11 +41,19 @@ const socialLinks = [
 
 const terminalLines = [
   { prompt: "~", command: "whoami", delay: 0 },
-  { output: "full-stack-developer && ai-engineer", delay: 0.3 },
-  { prompt: "~", command: "experience --years", delay: 0.6 },
-  { output: "17 years of shipping production software", delay: 0.9 },
-  { prompt: "~", command: "superpower", delay: 1.2 },
-  { output: "AI-augmented development velocity", delay: 1.5 },
+  {
+    output: "jason-niu — 17yr full-stack / ai-augmented engineer",
+    delay: 0.3,
+  },
+  { prompt: "~", command: "cat philosophy.txt", delay: 0.6 },
+  {
+    output: '"Every hard problem is a system trying to teach you something."',
+    delay: 0.9,
+  },
+  { prompt: "~", command: "ls ~/tools/", delay: 1.2 },
+  { output: "vox.sh    akm    claude-notify    gstack", delay: 1.5 },
+  { prompt: "~", command: "uptime", delay: 1.8 },
+  { output: "1,139+ commits this year. Still shipping.", delay: 2.1 },
 ];
 
 export default function Hero() {
@@ -66,9 +75,9 @@ export default function Hero() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4"
               variants={itemVariants}
             >
-              I build production software{" "}
+              17 years of solving hard problems.{" "}
               <span className="text-primary-600 dark:text-primary-400">
-                at the speed of ideas.
+                Now I solve them at AI speed.
               </span>
             </motion.h1>
 
@@ -76,17 +85,20 @@ export default function Hero() {
               className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-6"
               variants={itemVariants}
             >
-              Full Stack Developer | AI-Augmented Engineering |{" "}
-              {SITE_CONFIG.location}
+              Full Stack Developer in Calgary — I combine deep engineering
+              experience with AI-augmented development to ship production
+              software at conversation speed.
             </motion.h2>
 
             <motion.p
               className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl"
               variants={itemVariants}
             >
-              17 years of full-stack engineering, now amplified by AI — from
-              enterprise platforms handling 10K concurrent users to ML systems
-              with 97% accuracy.
+              From enterprise platforms handling 10K concurrent users to ML
+              systems with 97.4% accuracy — I&apos;ve built systems across
+              fintech, e-commerce, smart buildings, and AI. Today, every project
+              I build uses a voice-driven AI development environment I created
+              myself.
             </motion.p>
 
             {/* Buttons */}
@@ -124,57 +136,51 @@ export default function Hero() {
             className="lg:w-5/12 w-full max-w-lg"
             variants={itemVariants}
           >
-            <div className="rounded-xl overflow-hidden shadow-2xl bg-gray-900 dark:bg-gray-800 border border-gray-700">
-              {/* Terminal Header */}
-              <div className="flex items-center gap-2 px-4 py-3 bg-gray-800 dark:bg-gray-700 border-b border-gray-700">
-                <div className="w-3 h-3 rounded-full bg-red-500" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                <div className="w-3 h-3 rounded-full bg-green-500" />
-                <span className="ml-2 text-gray-400 text-sm font-mono">
-                  terminal
-                </span>
-              </div>
-              {/* Terminal Body */}
-              <div className="p-4 font-mono text-sm leading-relaxed min-h-[200px]">
-                {terminalLines.map((line, i) =>
-                  "command" in line ? (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: line.delay, duration: 0.3 }}
-                      className="flex gap-2"
-                    >
-                      <span className="text-green-400">
-                        {line.prompt} $
-                      </span>
-                      <span className="text-white">{line.command}</span>
-                    </motion.div>
-                  ) : (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: line.delay, duration: 0.3 }}
-                      className="text-accent-400 ml-4 mb-2"
-                    >
-                      {line.output}
-                    </motion.div>
-                  )
-                )}
-              </div>
-            </div>
+            <TerminalBlock>
+              {terminalLines.map((line, i) =>
+                "command" in line ? (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: line.delay, duration: 0.3 }}
+                    className="flex gap-2"
+                  >
+                    <span className="text-green-400">
+                      {line.prompt} $
+                    </span>
+                    <span className="text-white">{line.command}</span>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: line.delay, duration: 0.3 }}
+                    className="text-accent-400 ml-4 mb-2"
+                  >
+                    {line.output}
+                  </motion.div>
+                )
+              )}
+            </TerminalBlock>
           </motion.div>
         </motion.div>
       </div>
 
       {/* Scroll Down Indicator */}
       <motion.a
-        href="#about"
+        href="#how-i-think"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 dark:text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 0.5, repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
+        transition={{
+          delay: 2.5,
+          duration: 0.5,
+          repeat: Infinity,
+          repeatType: "reverse",
+          repeatDelay: 1,
+        }}
         aria-label="Scroll down"
       >
         <ChevronDown className="w-8 h-8" />

@@ -22,6 +22,7 @@ const projects: Project[] = [
     repoUrl: "https://github.com/DISSIDIA-986/Industry-AI-Flow",
     featured: true,
     category: "AI & Machine Learning",
+    challenge: "How do you make enterprise documents searchable without structured metadata?",
   },
   {
     id: 2,
@@ -43,6 +44,7 @@ const projects: Project[] = [
     repoUrl: null,
     featured: true,
     category: "AI & Machine Learning",
+    challenge: "Can you build a privacy-first AI chat that runs entirely on your machine?",
   },
   {
     id: 3,
@@ -63,6 +65,7 @@ const projects: Project[] = [
     repoUrl: "https://github.com/DISSIDIA-986/ThyroidSentry",
     featured: true,
     category: "AI & Machine Learning",
+    challenge: "Can ML predict cancer recurrence as accurately as a specialist?",
   },
   {
     id: 4,
@@ -83,6 +86,7 @@ const projects: Project[] = [
     repoUrl: null,
     featured: true,
     category: "Computer Vision",
+    challenge: "How do you track players in real-time when they constantly overlap and occlude?",
   },
   {
     id: 5,
@@ -105,6 +109,7 @@ const projects: Project[] = [
     repoUrl: null,
     featured: true,
     category: "Full Stack",
+    challenge: "Can one team build a BMS, mobile app, and AI system in a single monorepo?",
   },
   {
     id: 6,
@@ -127,6 +132,7 @@ const projects: Project[] = [
     repoUrl: null,
     featured: true,
     category: "Full Stack",
+    challenge: "How do you handle thousands of simultaneous bidders without dropping a single bid?",
   },
   {
     id: 7,

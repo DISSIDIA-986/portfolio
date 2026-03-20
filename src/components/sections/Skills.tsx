@@ -110,7 +110,7 @@ export default function Skills() {
           <motion.div variants={itemVariants}>
             <SectionHeader
               title="Skills"
-              subtitle="Technical expertise across the full stack, from backend systems to AI and cloud infrastructure."
+              subtitle="Tools I've used to solve problems across the full stack."
             />
           </motion.div>
 

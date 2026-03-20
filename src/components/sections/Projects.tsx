@@ -39,7 +39,7 @@ export default function Projects() {
           <motion.div variants={itemVariants}>
             <SectionHeader
               title="Projects"
-              subtitle="Featured work spanning AI systems, full-stack platforms, and data science."
+              subtitle="Every project started with a question I couldn't leave alone."
             />
           </motion.div>
 
@@ -63,6 +63,11 @@ export default function Projects() {
                   </div>
                 )}
                 <div className="p-6">
+                  {project.challenge && (
+                    <p className="text-sm italic text-accent-600 dark:text-accent-400 mb-3">
+                      {project.challenge}
+                    </p>
+                  )}
                   <div className="flex items-start justify-between gap-2 mb-2">
                     <h3 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                       {project.title}
