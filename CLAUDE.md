@@ -31,27 +31,26 @@ Vitest + @testing-library/react. Tests live in `src/__tests__/`. Config in `vite
 
 ## Architecture
 
-Single-page portfolio site built with **Next.js 16 + React 19 + TypeScript + Tailwind CSS v4**. Deployed to **Vercel** at `dissidia.tech`.
+Single-page portfolio site built with **Next.js 16 + React 19 + TypeScript + Tailwind CSS v4**. Deployed to **Vercel** at `portfolio.dissidia.tech`.
 
 ### Routing & Layout
 
-Single route (`src/app/page.tsx`) renders 7 sections in order: Hero, About, Experience, HowIBuild, Projects, Skills, Contact. Navigation is anchor-based (`#about`, `#experience`, etc.).
+Single route (`src/app/page.tsx`) renders 8 sections in order: Hero, HowIThink, HowIBuild, Experience, Projects, Exploring, Skills, Contact. Navigation is anchor-based (`#how-i-think`, `#how-i-build`, `#experience`, etc.). The "Exploring" section is not in the nav — it appears naturally between Projects and Skills.
 
-`src/app/layout.tsx` wraps all pages with Navbar, Footer, and ScrollToTop. Fonts: Inter (sans) and JetBrains Mono (mono) loaded via `next/font/google`.
+`src/app/layout.tsx` wraps all pages with Navbar, Footer, and ScrollToTop. Fonts: Inter (sans), Poppins (headings), and JetBrains Mono (mono) loaded via `next/font/google`. Dark mode activates automatically via `prefers-color-scheme` detection.
 
 ### Component Organization
 
-- `src/components/sections/` — Page sections, each a self-contained component. Most are `"use client"` for framer-motion animations.
-- `src/components/UI/` — Shared primitives: `Container` (max-w-7xl wrapper), `SectionHeader` (title + underline).
+- `src/components/sections/` — Page sections (HowIThink, HowIBuild, Experience, etc.), each self-contained. Most are `"use client"` for framer-motion animations.
+- `src/components/ui/` — Shared primitives: `Container` (max-w-7xl wrapper), `SectionHeader` (title + underline), `TerminalBlock` (reusable terminal chrome).
 - `src/components/layout/` — Navbar, Footer, ScrollToTop.
 
 ### Data Layer
 
 All portfolio content lives in `src/data/` as typed arrays/objects. No API calls or CMS — content updates are code changes:
-- `projects.ts` — Project entries with `featured` flag controlling homepage display
-- `experiences.ts` — Work history
+- `projects.ts` — Project entries with `featured` flag and optional `challenge` question tag
+- `experiences.ts` — Work history using Problem/Solution/Impact format (with optional `type: "education"` for badge display)
 - `skills.ts` — Skill categories and levels
-- `certifications.ts` — Certifications
 - `navigation.ts` — Nav items (must match section `id` attributes)
 
 Types are in `src/types/index.ts`. Constants (site name, URLs, social links) in `src/lib/constants.ts`.

@@ -7,13 +7,19 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Next.js 16 + React 19 + TypeScript foundation replacing Create React App
 - Tailwind CSS v4 with CSS-first theme (custom color palettes: primary/indigo, secondary/magenta, accent/amber)
-- 7 section components: Hero, About, Experience, HowIBuild, Projects, Skills, Contact
-- Terminal-style hero animation with typewriter effect
+- 8 section components: Hero, HowIThink, HowIBuild, Experience, Projects, Exploring, Skills, Contact
+- "How I Think" section with terminal-style methodology pipeline (embrace → decompose → research → build → validate)
+- "What I'm Exploring" micro-section with inline learning interest tags
+- Terminal-style hero animation with narrative content ("17 years of solving hard problems")
 - HowIBuild section showcasing voice-driven development pipeline and custom VIBE toolkit
+- Problem/Solution/Impact experience cards with Education badge for SAIT entry
+- Challenge question tags on featured project cards
+- Shared TerminalBlock UI component (DRY: used by Hero + HowIThink)
 - Responsive Navbar with scroll-aware transparency and mobile hamburger menu
 - ScrollToTop floating button component
 - SVG architecture diagrams for 10 projects
-- Dark mode support via class-based custom variant
+- Dark mode via system preference detection (prefers-color-scheme)
+- Poppins font for headings via next/font/google
 - Path aliases (`@/*` → `./src/*`)
 - Vitest + @testing-library/react test framework with 15 initial tests
 - Framer Motion scroll-triggered animations across all sections
@@ -23,12 +29,13 @@ All notable changes to this project will be documented in this file.
 - Converted all components from JSX to TypeScript TSX
 - Converted all data files from JS to TypeScript with type definitions
 - Updated project data with 14 projects including featured flags and challenge categories
-- Expanded experiences data with detailed responsibilities and tech stacks
+- Restructured experiences data from responsibilities list to Problem/Solution/Impact format
 - Replaced custom scroll animation hook with Framer Motion `whileInView`
 
 ### Removed
 - Create React App configuration and dependencies
-- Old JSX components (About, Certifications, Contact, Experience, Hero, Projects, Skills, Toastmasters)
+- Old JSX components (Certifications, Toastmasters, and CRA versions of About, Contact, Experience, Hero, Projects, Skills)
+- About.tsx (replaced by HowIThink.tsx)
 - Old CSS files (App.css, index.css, animations.css, global.css, variables.css)
 - Old page components (AboutPage, ContactPage, HomePage, ProjectsPage, ResumePage)
 - GitHub Pages deployment script (rebuild-gh-pages.sh)
