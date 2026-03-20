@@ -28,12 +28,11 @@ export default function ImageLightbox({
 }: ImageLightboxProps) {
   const [open, setOpen] = useState(false);
 
-  // Next.js Image handles basePath automatically, but YARL uses its own <img>.
-  // On subpath deployments (e.g. GitHub Pages at /portfolio/), prepend basePath
-  // so YARL resolves local images correctly. NEXT_PUBLIC_BASE_PATH is inlined
-  // at build time via next.config.ts.
+  // Next.js Image with unoptimized:true in static export doesn't auto-prefix
+  // basePath for local paths. Prepend it for both the thumbnail and YARL lightbox.
+  // NEXT_PUBLIC_BASE_PATH is inlined at build time via next.config.ts.
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const lightboxSrc =
+  const resolvedSrc =
     src.startsWith("/") && !src.startsWith("//")
       ? `${basePath}${src}`
       : src;
@@ -47,7 +46,7 @@ export default function ImageLightbox({
         aria-label={`View ${alt} fullscreen`}
       >
         <Image
-          src={src}
+          src={resolvedSrc}
           alt={alt}
           className={className}
           fill={fill}
@@ -63,7 +62,7 @@ export default function ImageLightbox({
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        slides={[{ src: lightboxSrc }]}
+        slides={[{ src: resolvedSrc }]}
         plugins={[Zoom]}
         render={{
           buttonPrev: () => null,
