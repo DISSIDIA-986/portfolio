@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/* ── Tailwind v4 CSS-first theme ─────────────────────────── */
+@theme {
+  /* Primary — Indigo (keep current palette) */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+  --color-primary-950: #1e1b4b;
+
+  /* Secondary — Magenta (keep current palette) */
+  --color-secondary-50: #fdf4ff;
+  --color-secondary-100: #fae8ff;
+  --color-secondary-200: #f5d0fe;
+  --color-secondary-300: #f0abfc;
+  --color-secondary-400: #e879f9;
+  --color-secondary-500: #d946ef;
+  --color-secondary-600: #c026d3;
+  --color-secondary-700: #a21caf;
+  --color-secondary-800: #86198f;
+  --color-secondary-900: #701a75;
+  --color-secondary-950: #4a044e;
+
+  /* Accent — Amber (NEW — for AI elements) */
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+  --color-accent-800: #92400e;
+  --color-accent-900: #78350f;
+  --color-accent-950: #451a03;
+
+  /* Fonts */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-heading: "Poppins", ui-sans-serif, system-ui, -apple-system,
+    sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Fira Code", monospace;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.5s ease-in-out;
+  --animate-slide-up: slide-up 0.5s ease-in-out;
+  --animate-slide-down: slide-down 0.5s ease-in-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* ── Dark mode variant (class-based) ────────────────────── */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Base styles ─────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-gray-800 font-sans antialiased;
+}
+
+.dark body {
+  @apply bg-gray-950 text-gray-100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* ── Utility classes ─────────────────────────────────────── */
+@utility section {
+  @apply py-16 md:py-24;
+}
+
+@utility btn {
+  @apply px-6 py-3 rounded-md font-medium transition-all duration-300 inline-flex items-center justify-center;
+}
+
+@utility btn-primary {
+  @apply bg-primary-600 text-white hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600;
+}
+
+@utility btn-secondary {
+  @apply bg-secondary-600 text-white hover:bg-secondary-700;
+}
+
+@utility btn-accent {
+  @apply bg-accent-600 text-white hover:bg-accent-700;
+}
+
+@utility btn-outline {
+  @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white dark:border-primary-400 dark:text-primary-400 dark:hover:bg-primary-500 dark:hover:text-white;
+}
+
+@utility card {
+  @apply bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl dark:bg-gray-800;
+}
+
+@utility skill-badge {
+  @apply px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2 inline-block;
+}
