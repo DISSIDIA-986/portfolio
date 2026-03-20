@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2026-03-20
+
+### Added
+- Image lightbox with pinch-to-zoom on mobile and scroll-to-zoom on desktop (yet-another-react-lightbox)
+- ImageLightbox shared UI component with ZoomIn affordance icon and accessibility support
+- YiPaiJi architecture SVG diagram matching established dark indigo gradient style
+- ImageLightbox component tests (5 test cases: render, open, close, props, zoom icon)
+- Data tests for featured project images and YiPaiJi SVG path validation
+
+### Changed
+- Featured project card images now open in full-screen lightbox on tap/click
+- YiPaiJi project image replaced from CDN PNG to local SVG architecture diagram
+
 ## [2.0.0] - 2026-03-20
 
 ### Added
