@@ -28,6 +28,14 @@ export default function ImageLightbox({
 }: ImageLightboxProps) {
   const [open, setOpen] = useState(false);
 
+  // Next.js Image handles basePath automatically, but YARL uses its own <img>.
+  // On subpath deployments (e.g. GitHub Pages at /portfolio/), prepend basePath
+  // so YARL resolves local images correctly.
+  const lightboxSrc =
+    src.startsWith("/") && !src.startsWith("//")
+      ? `${typeof window !== "undefined" ? ((window as unknown as Record<string, { basePath?: string }>).__NEXT_DATA__?.basePath || "") : ""}${src}`
+      : src;
+
   return (
     <>
       <button
@@ -53,7 +61,7 @@ export default function ImageLightbox({
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        slides={[{ src }]}
+        slides={[{ src: lightboxSrc }]}
         plugins={[Zoom]}
         render={{
           buttonPrev: () => null,
