@@ -42,7 +42,7 @@ Single route (`src/app/page.tsx`) renders 8 sections in order: Hero, HowIThink, 
 ### Component Organization
 
 - `src/components/sections/` — Page sections (HowIThink, HowIBuild, Experience, etc.), each self-contained. Most are `"use client"` for framer-motion animations.
-- `src/components/ui/` — Shared primitives: `Container` (max-w-7xl wrapper), `SectionHeader` (title + underline), `TerminalBlock` (reusable terminal chrome).
+- `src/components/ui/` — Shared primitives: `Container` (max-w-7xl wrapper), `SectionHeader` (title + underline), `TerminalBlock` (reusable terminal chrome), `ImageLightbox` (tap-to-zoom with pinch/scroll support via yet-another-react-lightbox).
 - `src/components/layout/` — Navbar, Footer, ScrollToTop.
 
 ### Data Layer
@@ -71,7 +71,9 @@ Framer Motion is used in section components for scroll-triggered animations. Pat
 
 Project images are served from two sources:
 - Alibaba Cloud OSS: `dissidia.oss-cn-beijing.aliyuncs.com/portfolio/` (configured in `next.config.ts` remotePatterns)
-- Local: `public/images/`
+- Local: `public/images/` (11 SVG architecture diagrams)
+
+Featured project images use `ImageLightbox` component for tap-to-zoom (pinch on mobile, scroll on desktop). All architecture SVGs follow a consistent style: 800x500 viewBox, dark indigo gradient background, Inter font, colored component boxes.
 
 ### Path Aliases
 
