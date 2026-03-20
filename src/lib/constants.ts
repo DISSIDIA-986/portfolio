@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   title: "Full Stack Developer & AI-Augmented Engineer",
   description:
     "17 years of full-stack engineering, now amplified by AI — from enterprise platforms handling 10K concurrent users to ML systems with 97% accuracy.",
-  url: "https://dissidia.tech",
+  url: "https://portfolio.dissidia.tech",
   email: "yupoca24@gmail.com",
   location: "Calgary, AB, Canada",
 } as const;
