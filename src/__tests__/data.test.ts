@@ -23,6 +23,19 @@ describe("projects data", () => {
     const ids = projects.map((p) => p.id);
     expect(new Set(ids).size).toBe(ids.length);
   });
+
+  it("all featured projects have image URLs", () => {
+    const featured = projects.filter((p) => p.featured);
+    for (const project of featured) {
+      expect(project.imageUrl).toBeTruthy();
+    }
+  });
+
+  it("YiPaiJi uses local SVG, not CDN PNG", () => {
+    const yipaiji = projects.find((p) => p.title.includes("YiPaiJi"));
+    expect(yipaiji).toBeDefined();
+    expect(yipaiji!.imageUrl).toBe("/images/projects/yipaiji.svg");
+  });
 });
 
 describe("experiences data", () => {
