@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
+import ImageLightbox from "@/components/ui/ImageLightbox";
 import projects from "@/data/projects";
 
 const containerVariants = {
@@ -53,7 +53,7 @@ export default function Projects() {
               >
                 {project.imageUrl && (
                   <div className="relative w-full h-40 bg-gray-100 dark:bg-gray-700">
-                    <Image
+                    <ImageLightbox
                       src={project.imageUrl}
                       alt={project.title}
                       fill

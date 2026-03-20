@@ -126,8 +126,7 @@ const projects: Project[] = [
       "RocketMQ",
       "Microservices",
     ],
-    imageUrl:
-      "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/yipaiji.png",
+    imageUrl: "/images/projects/yipaiji.svg",
     demoUrl: "https://pai.edianyun.com/",
     repoUrl: null,
     featured: true,
