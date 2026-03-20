@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import Container from "@/components/ui/Container";
@@ -50,6 +51,17 @@ export default function Projects() {
                 variants={itemVariants}
                 className="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 overflow-hidden hover:shadow-lg transition-all"
               >
+                {project.imageUrl && (
+                  <div className="relative w-full h-40 bg-gray-100 dark:bg-gray-700">
+                    <Image
+                      src={project.imageUrl}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex items-start justify-between gap-2 mb-2">
                     <h3 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
