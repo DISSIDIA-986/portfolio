@@ -23,7 +23,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-12 md:py-16 bg-white dark:bg-gray-950"
+      className="py-12 md:py-16 bg-white dark:bg-stone-900"
     >
       <Container>
         <motion.div
@@ -45,7 +45,7 @@ export default function Experience() {
               <motion.div
                 key={exp.id}
                 variants={itemVariants}
-                className="relative p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 hover:shadow-lg transition-shadow"
+                className="relative p-6 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-100 dark:bg-stone-800/50 hover:shadow-lg transition-shadow"
               >
                 {/* Education badge */}
                 {exp.type === "education" && (
@@ -56,24 +56,24 @@ export default function Experience() {
 
                 {/* Problem */}
                 <div className="mb-4">
-                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-400">
+                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-700 dark:text-primary-400">
                     Problem
                   </span>
-                  <p className="mt-1 text-gray-800 dark:text-white font-medium">
+                  <p className="mt-1 text-stone-800 dark:text-white font-medium">
                     {exp.problem}
                   </p>
                 </div>
 
                 {/* Solution */}
                 <div className="mb-4">
-                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-400">
+                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-700 dark:text-primary-400">
                     Solution
                   </span>
                   <ul className="mt-1 space-y-1.5">
                     {exp.solution.map((item, idx) => (
                       <li
                         key={idx}
-                        className="text-sm text-gray-600 dark:text-gray-300 flex gap-2"
+                        className="text-sm text-stone-600 dark:text-stone-300 flex gap-2"
                       >
                         <span className="text-primary-400 shrink-0">•</span>
                         {item}
@@ -84,19 +84,19 @@ export default function Experience() {
 
                 {/* Impact */}
                 <div className="mb-5">
-                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-400">
+                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-700 dark:text-primary-400">
                     Impact
                   </span>
-                  <p className="mt-1 text-sm text-gray-700 dark:text-gray-200 font-medium">
+                  <p className="mt-1 text-sm text-stone-700 dark:text-stone-200 font-medium">
                     {exp.impact}
                   </p>
                 </div>
 
                 {/* Company info */}
-                <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="pt-4 border-t border-stone-200 dark:border-stone-700">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                     <div>
-                      <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+                      <h3 className="text-lg font-bold text-stone-800 dark:text-white">
                         {exp.position}
                       </h3>
                       <div className="flex items-center gap-2 mt-1">
@@ -105,19 +105,19 @@ export default function Experience() {
                             href={exp.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-primary-600 dark:text-primary-400 hover:underline font-semibold inline-flex items-center gap-1"
+                            className="text-primary-700 dark:text-primary-400 hover:underline font-semibold inline-flex items-center gap-1"
                           >
                             {exp.company}
                             <ExternalLink className="w-3.5 h-3.5" />
                           </a>
                         ) : (
-                          <span className="text-primary-600 dark:text-primary-400 font-semibold">
+                          <span className="text-primary-700 dark:text-primary-400 font-semibold">
                             {exp.company}
                           </span>
                         )}
                       </div>
                     </div>
-                    <div className="flex flex-col items-start md:items-end gap-1 text-sm text-gray-500 dark:text-gray-400 shrink-0">
+                    <div className="flex flex-col items-start md:items-end gap-1 text-sm text-stone-500 dark:text-stone-400 shrink-0">
                       <span className="font-medium">{exp.period}</span>
                       <span className="flex items-center gap-1">
                         <MapPin className="w-3.5 h-3.5" />

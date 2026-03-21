@@ -100,7 +100,7 @@ export default function HowIBuild() {
   return (
     <section
       id="how-i-build"
-      className="py-12 md:py-16 bg-white dark:bg-gray-950"
+      className="py-12 md:py-16 bg-white dark:bg-stone-900"
     >
       <Container>
         <motion.div
@@ -132,15 +132,15 @@ export default function HowIBuild() {
                     <Icon
                       className={`w-8 h-8 ${step.color} mx-auto mb-2`}
                     />
-                    <h3 className="font-bold text-gray-800 dark:text-white mb-1">
+                    <h3 className="font-bold text-stone-800 dark:text-white mb-1">
                       {step.title}
                     </h3>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">
+                    <p className="text-xs text-stone-600 dark:text-stone-400">
                       {step.description}
                     </p>
                   </div>
                   {index < pipelineSteps.length - 1 && (
-                    <span className="hidden md:block text-2xl text-gray-300 dark:text-gray-600 mt-4 mx-auto">
+                    <span className="hidden md:block text-2xl text-stone-300 dark:text-stone-600 mt-4 mx-auto">
                       →
                     </span>
                   )}
@@ -151,10 +151,10 @@ export default function HowIBuild() {
 
           {/* VIBE Toolkit */}
           <motion.div variants={itemVariants} className="mb-16">
-            <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">
+            <h3 className="text-xl font-bold mb-2 text-stone-800 dark:text-white">
               VIBE Toolkit
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+            <p className="text-sm text-stone-500 dark:text-stone-400 mb-6">
               Custom-built tools powering voice-integrated development
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -164,18 +164,18 @@ export default function HowIBuild() {
                   <motion.div
                     key={tool.name}
                     variants={itemVariants}
-                    className="p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 hover:shadow-md transition-shadow"
+                    className="p-5 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-100 dark:bg-stone-800/50 hover:shadow-md transition-shadow"
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <Icon className="w-5 h-5 text-amber-500" />
-                      <h4 className="font-bold text-gray-800 dark:text-white font-mono">
+                      <h4 className="font-bold text-stone-800 dark:text-white font-mono">
                         {tool.name}
                       </h4>
                     </div>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                    <p className="text-sm text-stone-600 dark:text-stone-300 mb-3">
                       {tool.description}
                     </p>
-                    <p className="text-xs text-gray-400 dark:text-gray-500 font-mono">
+                    <p className="text-xs text-stone-400 dark:text-stone-500 font-mono">
                       {tool.tech}
                     </p>
                   </motion.div>
@@ -192,16 +192,16 @@ export default function HowIBuild() {
                 return (
                   <div
                     key={metric.label}
-                    className="text-center p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50"
+                    className="text-center p-5 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-100 dark:bg-stone-800/50"
                   >
                     <Icon className="w-5 h-5 text-primary-500 mx-auto mb-2" />
-                    <p className="text-2xl font-bold text-gray-800 dark:text-white">
+                    <p className="text-2xl font-bold text-stone-800 dark:text-white">
                       {metric.value}
                     </p>
-                    <p className="text-sm font-medium text-gray-600 dark:text-gray-300">
+                    <p className="text-sm font-medium text-stone-600 dark:text-stone-300">
                       {metric.label}
                     </p>
-                    <p className="text-xs text-gray-400 dark:text-gray-500">
+                    <p className="text-xs text-stone-400 dark:text-stone-500">
                       {metric.sublabel}
                     </p>
                   </div>

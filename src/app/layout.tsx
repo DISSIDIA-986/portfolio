@@ -1,20 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono, Poppins } from "next/font/google";
+import { Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
-const inter = Inter({
+const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: "400",
   variable: "--font-heading",
   display: "swap",
 });
@@ -48,13 +43,16 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/favicon.svg",
+  },
   metadataBase: new URL(SITE_CONFIG.url),
 };
 
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#030712" },
+    { media: "(prefers-color-scheme: dark)", color: "#1c1917" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -66,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${GeistSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{

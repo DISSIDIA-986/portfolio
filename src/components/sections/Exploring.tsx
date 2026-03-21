@@ -27,7 +27,7 @@ const exploringTags = [
 
 export default function Exploring() {
   return (
-    <section className="py-12 md:py-16 bg-white dark:bg-gray-950">
+    <section className="py-12 md:py-16 bg-white dark:bg-stone-900">
       <Container>
         <motion.div
           variants={containerVariants}
@@ -45,7 +45,7 @@ export default function Exploring() {
 
           <motion.p
             variants={itemVariants}
-            className="text-gray-600 dark:text-gray-300 mb-6 text-center"
+            className="text-stone-600 dark:text-stone-300 mb-6 text-center"
           >
             I track GitHub trending, follow AI research on X, and build custom
             learning paths to rapidly acquire domain knowledge in areas I

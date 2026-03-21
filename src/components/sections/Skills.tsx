@@ -44,7 +44,7 @@ function getTier(level: number): { label: string; color: string } {
   return {
     label: "Capable",
     color:
-      "bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300",
+      "bg-stone-100 text-stone-600 dark:bg-stone-700 dark:text-stone-300",
   };
 }
 
@@ -60,11 +60,11 @@ function CategoryCard({
   return (
     <motion.div
       variants={itemVariants}
-      className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50"
+      className="p-6 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800/50"
     >
       <div className="flex items-center gap-3 mb-4">
         <Icon className="w-5 h-5 text-primary-500" />
-        <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+        <h3 className="text-lg font-bold text-stone-800 dark:text-white">
           {category.title}
         </h3>
       </div>
@@ -76,7 +76,7 @@ function CategoryCard({
               key={skill.name}
               className="flex items-center justify-between gap-3"
             >
-              <span className="text-sm text-gray-700 dark:text-gray-300">
+              <span className="text-sm text-stone-700 dark:text-stone-300">
                 {skill.name}
               </span>
               <span
@@ -98,7 +98,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-12 md:py-16 bg-white dark:bg-gray-950"
+      className="py-12 md:py-16 bg-white dark:bg-stone-900"
     >
       <Container>
         <motion.div

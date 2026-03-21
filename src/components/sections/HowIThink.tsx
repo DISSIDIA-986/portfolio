@@ -51,7 +51,7 @@ export default function HowIThink() {
   return (
     <section
       id="how-i-think"
-      className="py-12 md:py-16 bg-white dark:bg-gray-950"
+      className="py-12 md:py-16 bg-white dark:bg-stone-900"
     >
       <Container>
         <motion.div
@@ -111,10 +111,10 @@ export default function HowIThink() {
                 sizes="128px"
               />
             </div>
-            <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+            <h3 className="text-xl font-bold text-stone-800 dark:text-white">
               Yupo (Jason) Niu
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-stone-500 dark:text-stone-400">
               Full Stack Developer · Calgary, Canada
             </p>
           </motion.div>
@@ -124,8 +124,8 @@ export default function HowIThink() {
             className="max-w-3xl mx-auto space-y-4 mb-10"
             variants={itemVariants}
           >
-            <p className="text-gray-600 dark:text-gray-300">
-              <span className="font-semibold text-gray-800 dark:text-white">
+            <p className="text-stone-600 dark:text-stone-300">
+              <span className="font-semibold text-stone-800 dark:text-white">
                 Who I am:
               </span>{" "}
               I&apos;m Jason — a developer who&apos;s spent 17 years building
@@ -136,8 +136,8 @@ export default function HowIThink() {
               club, I bridge the gap between engineering thinking and clear
               communication.
             </p>
-            <p className="text-gray-600 dark:text-gray-300">
-              <span className="font-semibold text-gray-800 dark:text-white">
+            <p className="text-stone-600 dark:text-stone-300">
+              <span className="font-semibold text-stone-800 dark:text-white">
                 What drives me:
               </span>{" "}
               I&apos;m genuinely curious about how things work — and how they

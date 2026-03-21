@@ -50,7 +50,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-12 md:py-16 bg-gray-50 dark:bg-gray-900"
+      className="py-12 md:py-16 bg-stone-100 dark:bg-stone-800"
     >
       <Container>
         <motion.div
@@ -74,13 +74,13 @@ export default function Contact() {
             {contactItems.map((item) => {
               const Icon = item.icon;
               const content = (
-                <div className="flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 hover:shadow-md hover:border-primary-200 dark:hover:border-primary-600 transition-all">
+                <div className="flex items-center gap-4 p-5 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800/50 hover:shadow-md hover:border-primary-200 dark:hover:border-primary-600 transition-all">
                   <Icon className="w-5 h-5 text-primary-500 shrink-0" />
                   <div>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                    <p className="text-xs text-stone-500 dark:text-stone-400">
                       {item.label}
                     </p>
-                    <p className="font-medium text-gray-800 dark:text-white text-sm">
+                    <p className="font-medium text-stone-800 dark:text-white text-sm">
                       {item.value}
                     </p>
                   </div>
