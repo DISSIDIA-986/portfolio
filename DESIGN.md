@@ -86,6 +86,13 @@ Replaces indigo to escape the #1 AI slop pattern (purple/violet gradients).
 | Error | `#dc2626` (red-600) | Form errors, destructive actions |
 | Info | `#0d9488` (teal-600) | Informational states (shares with primary) |
 
+### Accessibility — Contrast Rules (WCAG AA)
+- **Small text** (links, labels, tags): use `primary-700` (`#0f766e`, 4.8:1 on white) — NOT primary-600 (3.7:1 fails AA)
+- **Large text & buttons**: `primary-600` (`#0d9488`, 3.7:1) is fine — AA only requires 3:1 for large text
+- **Challenge tags (light mode)**: use `accent-700` (`#b45309`, 4.5:1) — NOT accent-600 (3.2:1 fails AA)
+- **Dark mode text**: `primary-400` (`#2dd4bf`) on stone-900 passes AA at 9.4:1
+- **Muted text**: stone-600 on white (7.6:1) and stone-400 on stone-900 (6.9:1) both pass
+
 ### Dark mode strategy
 - Surfaces shift to warm stone (`#1c1917`, `#292524`) instead of cold gray
 - Primary teal reduces saturation slightly: use `primary-400` for text, `primary-500` for interactive
@@ -172,6 +179,35 @@ Consistent style across all project diagrams in `public/images/projects/`:
 | Teal instead of indigo | 80% of AI-built portfolios use purple/indigo. Teal reads as "handcrafted." | Escapes the AI slop pattern | Loses the "safe" purple palette |
 | Warm stone neutrals | Cold grays feel sterile. Warm stone feels intentional and inviting. | More personality, less template | Subtle — most visitors won't notice consciously |
 
+## Migration Plan
+
+**Strategy:** One atomic commit. No intermediate broken states.
+
+**Files to change:**
+1. `src/app/layout.tsx` — swap Inter/Poppins for Geist/Instrument Serif font imports
+2. `src/app/globals.css` — replace indigo palette with teal, gray with stone, update font variables
+3. `src/components/sections/*.tsx` — update any hardcoded indigo/gray class references to teal/stone
+4. `src/components/ui/TerminalBlock.tsx` — update terminal chrome colors if needed
+5. `src/components/layout/Navbar.tsx` — update nav color classes
+6. `src/components/layout/Footer.tsx` — update footer color classes
+7. `public/images/projects/*.svg` (11 files) — find-replace indigo hex values with teal equivalents
+8. `public/favicon.ico` — create new teal-themed favicon
+9. `CHANGELOG.md` — document the design system migration
+
+**SVG color mapping:**
+| Old (indigo) | New (teal) | Usage |
+|-------------|------------|-------|
+| `#1e1b4b` | `#042f2e` | Background gradient start |
+| `#312e81` | `#134e4a` | Background gradient end |
+| `#4f46e5` | `#0d9488` | Card fill gradient start |
+| `#4338ca` | `#0f766e` | Card fill gradient end |
+| `#818cf8` | `#2dd4bf` | Strokes, arrows |
+| `#a5b4fc` | `#5eead4` | Sublabels |
+| `#e0e7ff` | `#ccfbf1` | Title text |
+| `#c7d2fe` | `#99f6e4` | Light accents |
+
+**Verification:** Run tests + build + visual QA on both Vercel and GH Pages after the atomic commit.
+
 ## Decisions Log
 
 | Date | Decision | Rationale |
@@ -182,3 +218,8 @@ Consistent style across all project diagrams in `public/images/projects/`:
 | 2026-03-21 | Shift neutrals from cold gray to warm stone | Warmth and intentionality vs sterile template feel |
 | 2026-03-21 | Keep amber accent unchanged | Distinctive, semantically tied to AI elements |
 | 2026-03-21 | Keep JetBrains Mono unchanged | Excellent for terminal blocks, no reason to change |
+| 2026-03-21 | Migrate all 11 SVGs from indigo to teal | Consistent visual language; half-migrated looks broken |
+| 2026-03-21 | Add teal-themed favicon | Visual consistency with new color system |
+| 2026-03-21 | Use teal-700 for small text, teal-600 for large/buttons | WCAG AA contrast compliance |
+| 2026-03-21 | Use amber-700 for challenge tags in light mode | WCAG AA contrast compliance |
+| 2026-03-21 | Implement as one atomic commit | Avoid intermediate broken visual states |
