@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/favicon.svg`,
   },
   metadataBase: new URL(SITE_CONFIG.url),
 };
