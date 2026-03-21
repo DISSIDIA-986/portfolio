@@ -1,77 +1,101 @@
-# Design System
+# Design System — Yupo Niu Portfolio
 
-Portfolio site design system. Source of truth for colors, typography, spacing, and component patterns.
+## Product Context
+- **What this is:** Senior developer portfolio showcasing 17 years of engineering experience, AI/ML projects, and full-stack system design
+- **Who it's for:** Canadian and global tech recruiters, hiring managers, engineering leads
+- **Space/industry:** Developer portfolios — peers include Brittany Chiang, Lee Robinson, Josh Comeau
+- **Project type:** Single-page marketing site with 8 content sections
 
-## Color Palette
-
-Three semantic palettes defined in `src/app/globals.css` via `@theme`:
-
-### Primary — Indigo (depth, professionalism)
-Used for: headings, links, buttons, nav highlights, section accents.
-
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `primary-50` | `#eef2ff` | Light backgrounds |
-| `primary-100` | `#e0e7ff` | Hover backgrounds |
-| `primary-400` | `#818cf8` | Dark mode text, SVG diagram accents |
-| `primary-500` | `#6366f1` | Mid-weight text |
-| `primary-600` | `#4f46e5` | Buttons, links, SVG diagram cards |
-| `primary-700` | `#4338ca` | Button hover, SVG diagram card gradient |
-| `primary-900` | `#312e81` | SVG diagram background gradient end |
-| `primary-950` | `#1e1b4b` | SVG diagram background gradient start |
-
-### Secondary — Magenta (energy, creativity)
-Used for: secondary buttons, visual accents. Rarely used — reserved for emphasis.
-
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `secondary-500` | `#d946ef` | Accent elements |
-| `secondary-600` | `#c026d3` | Secondary buttons |
-
-### Accent — Amber (AI, innovation)
-Used for: AI-related elements, challenge tags, category badges.
-
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `accent-400` | `#fbbf24` | Dark mode challenge text |
-| `accent-600` | `#d97706` | Challenge question tags |
-| `accent-700` | `#b45309` | Accent buttons |
-
-### Neutral — Gray (Tailwind defaults)
-Used for: body text, borders, card backgrounds, dark mode surfaces.
-
-| Context | Light | Dark |
-|---------|-------|------|
-| Body bg | `white` | `gray-950` |
-| Body text | `gray-800` | `gray-100` |
-| Card bg | `white` | `gray-800/50` |
-| Borders | `gray-200` | `gray-700` |
-| Muted text | `gray-600` | `gray-400` |
+## Aesthetic Direction
+- **Direction:** Industrial/Utilitarian — function-first, data-dense where it matters, monospace accents
+- **Decoration level:** Intentional — terminal blocks are the signature element, subtle texture for depth
+- **Mood:** An engineer's workspace, not a marketing template. Confident, seasoned, precise. The design should communicate "I solve hard problems" through craft, not flash.
+- **Reference sites:** brittanychiang.com (dark + single accent), leerob.com (ultra-minimal serif)
 
 ## Typography
 
-Three font families loaded via `next/font/google`:
+- **Display/Hero:** Instrument Serif — serif comeback signals authority and maturity. A 17-year veteran earns a typeface that says "seasoned." Differentiates from every sans-serif-only dev portfolio.
+- **Body:** Geist (by Vercel) — modern, technically precise, designed for developer tools. Replaces Inter (ubiquitous) and Poppins (overused).
+- **UI/Labels:** Geist (same as body, semi-bold for emphasis)
+- **Data/Tables:** Geist (supports tabular-nums)
+- **Code:** JetBrains Mono — unchanged, excellent for terminal blocks
+- **Loading:** Google Fonts (`next/font/google`)
+- **Scale:**
 
-| Family | Variable | Usage | Weights |
-|--------|----------|-------|---------|
-| **Inter** | `--font-sans` | Body text, UI elements | 400 (default) |
-| **Poppins** | `--font-heading` | All headings (h1-h6) | 400, 600, 700 |
-| **JetBrains Mono** | `--font-mono` | Terminal blocks, code | 400 (default) |
+| Level | Font | Size | Weight | Usage |
+|-------|------|------|--------|-------|
+| H1 | Instrument Serif | 48px / 3rem | 400 | Hero title only |
+| H2 | Instrument Serif | 36px / 2.25rem | 400 | Section headers |
+| H3 | Geist | 18px / 1.125rem | 600 | Subsection titles, card titles |
+| H4 | Geist | 14px / 0.875rem | 600 | Compact card titles |
+| Body | Geist | 16px / 1rem | 400 | Paragraphs, descriptions |
+| Small | Geist | 14px / 0.875rem | 400 | Secondary text |
+| Tiny | Geist | 12px / 0.75rem | 500 | Tags, badges |
+| Mono | JetBrains Mono | 13px / 0.8125rem | 400 | Terminal, code, tech labels |
 
-### Heading hierarchy
-- `h1` — Hero title only (text-4xl md:text-6xl, Poppins 700)
-- `h2` — Section headers via `SectionHeader` component (text-3xl, Poppins 700)
-- `h3` — Subsection titles (text-xl font-bold)
-- `h4` — Card titles in compact layouts (font-semibold text-sm)
+### Font blacklist (never use)
+Papyrus, Comic Sans, Lobster, Impact, Jokerman, Courier New (for body)
 
-### Body text
-- Base: `text-sm` to `text-base` (14-16px), Inter
-- Muted/secondary: `text-gray-600 dark:text-gray-300`
-- Tiny labels: `text-xs` or `text-[10px]` for tags and badges
+### Overused fonts (avoid as primary)
+Inter, Roboto, Arial, Helvetica, Open Sans, Lato, Montserrat, Poppins
+
+## Color
+
+- **Approach:** Restrained — one primary + one accent + warm neutrals. Color is meaningful, not decorative.
+
+### Primary — Teal (technical depth, craft)
+Replaces indigo to escape the #1 AI slop pattern (purple/violet gradients).
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `primary-50` | `#f0fdfa` | Light hover backgrounds |
+| `primary-100` | `#ccfbf1` | Light active backgrounds |
+| `primary-200` | `#99f6e4` | Light borders |
+| `primary-300` | `#5eead4` | Decorative accents |
+| `primary-400` | `#2dd4bf` | Dark mode text, links |
+| `primary-500` | `#14b8a6` | Mid-weight interactive elements |
+| `primary-600` | `#0d9488` | **Primary brand color** — buttons, links, section accents |
+| `primary-700` | `#0f766e` | Button hover, emphasis |
+| `primary-800` | `#115e59` | Deep accents |
+| `primary-900` | `#134e4a` | SVG diagram background end |
+| `primary-950` | `#042f2e` | SVG diagram background start |
+
+### Accent — Amber (AI, innovation) — unchanged
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `accent-400` | `#fbbf24` | Dark mode challenge text |
+| `accent-500` | `#f59e0b` | Mid-weight accent |
+| `accent-600` | `#d97706` | Challenge question tags, AI badges |
+| `accent-700` | `#b45309` | Accent button hover |
+
+### Neutrals — Warm Stone (replaces cold gray)
+| Context | Light | Dark |
+|---------|-------|------|
+| Body bg | `#ffffff` | `#1c1917` (stone-900) |
+| Surface alt | `#f5f5f4` (stone-100) | `#292524` (stone-800) |
+| Body text | `#1c1917` (stone-900) | `#fafaf9` (stone-50) |
+| Muted text | `#57534e` (stone-600) | `#a8a29e` (stone-400) |
+| Borders | `#e7e5e4` (stone-200) | `#44403c` (stone-700) |
+| Faint text | `#a8a29e` (stone-400) | `#78716c` (stone-500) |
+
+### Semantic
+| State | Hex | Usage |
+|-------|-----|-------|
+| Success | `#059669` (emerald-600) | Form success, positive states |
+| Warning | `#d97706` (amber-600) | Caution states (shares with accent) |
+| Error | `#dc2626` (red-600) | Form errors, destructive actions |
+| Info | `#0d9488` (teal-600) | Informational states (shares with primary) |
+
+### Dark mode strategy
+- Surfaces shift to warm stone (`#1c1917`, `#292524`) instead of cold gray
+- Primary teal reduces saturation slightly: use `primary-400` for text, `primary-500` for interactive
+- Amber accent unchanged — warm tones read well on dark warm surfaces
+- Reduce white to `#fafaf9` (stone-50) to avoid harsh contrast
 
 ## Spacing
-
-Tailwind 4px grid. Consistent patterns:
+- **Base unit:** 4px
+- **Density:** Comfortable
+- **Scale:** 2xs(2px) xs(4px) sm(8px) md(16px) lg(24px) xl(32px) 2xl(48px) 3xl(64px)
 
 | Context | Value |
 |---------|-------|
@@ -80,95 +104,81 @@ Tailwind 4px grid. Consistent patterns:
 | Card padding | `p-6` (featured), `p-4` (compact) |
 | Card gap | `gap-6` (featured grid), `gap-4` (compact grid) |
 | Tag/badge padding | `px-2 py-0.5` (standard), `px-1.5 py-0.5` (compact) |
-| Element spacing | `mb-2` to `mb-4` between elements in cards |
+
+## Layout
+- **Approach:** Grid-disciplined — strict columns, predictable alignment
+- **Grid:** 1 col mobile, 2 col tablet (md), 2-3 col desktop (lg)
+- **Max content width:** `max-w-7xl` (1280px)
+- **Border radius:** sm: 6px (`rounded-md`), md: 8px (`rounded-lg`), lg: 12px (`rounded-xl`), full: 9999px (`rounded-full` for tags)
+
+## Motion
+- **Approach:** Intentional — subtle entrance animations, meaningful state transitions
+- **Library:** Framer Motion
+- **Easing:** enter(ease-out) exit(ease-in) move(ease-in-out)
+- **Duration:** micro(100ms) short(200ms) medium(300-500ms)
+- **Pattern:** Staggered children with `containerVariants`/`itemVariants`
+- **Scroll:** `whileInView` with `viewport: { once: true }`
 
 ## Component Patterns
 
-### Cards
-- Featured: `rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 overflow-hidden hover:shadow-lg transition-all`
-- Compact: `p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 hover:shadow-md transition-shadow`
-
-### Buttons
-Defined as `@utility` classes in globals.css:
-- `btn` — base (px-6 py-3 rounded-md)
-- `btn-primary` — indigo fill
-- `btn-outline` — indigo border, transparent bg, fill on hover
-
-### Tags/Badges
-- Tech tags: `px-2 py-0.5 text-xs font-medium rounded-full bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300`
-- Category badges: `px-2 py-0.5 text-xs font-medium rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300`
-
-### Terminal Block
-Reusable `TerminalBlock` component (`src/components/ui/TerminalBlock.tsx`):
-- Dark chrome: `bg-gray-900 dark:bg-gray-800 border border-gray-700`
-- Traffic light dots: red/yellow/green circles
-- Content: `font-mono text-xs sm:text-sm`
+### Terminal Block (signature component)
+- Dark chrome: warm stone surface (`#292524`) with traffic light dots
+- Content: JetBrains Mono, teal for commands, amber for emphasis, stone-500 for operators
 - Used by: Hero, HowIThink sections
 
 ### Image Lightbox
-`ImageLightbox` component (`src/components/ui/ImageLightbox.tsx`):
-- Tap/click to open full-screen overlay (`bg-black/80`)
-- `ZoomIn` icon affordance (bottom-right, semi-transparent)
+- Tap to open full-screen overlay (`bg-black/80`)
+- ZoomIn icon affordance (bottom-right, semi-transparent)
 - Pinch-to-zoom (mobile), scroll-to-zoom (desktop) via YARL
-- Close: X button, click overlay, ESC key, swipe-down (mobile)
 
-### Section Header
-`SectionHeader` component (`src/components/ui/SectionHeader.tsx`):
-- Title: h2 with Poppins font
-- Underline accent bar
-- Optional subtitle in muted text
+### Cards
+- Featured: `rounded-xl` with border, hover shadow
+- Compact: `rounded-lg` with border, hover shadow
 
-## Dark Mode
+### Buttons
+- Primary: teal-600 fill, white text
+- Outline: teal-600 border, transparent bg, fill on hover
+- Ghost: transparent, muted text, darken on hover
 
-Activated automatically via `prefers-color-scheme` media query. Detection in `layout.tsx` with `<script>` that adds `.dark` class to `<html>`.
-
-Custom variant: `@custom-variant dark (&:where(.dark, .dark *))`
-
-Pattern: Every color class uses `dark:` variant — e.g., `bg-white dark:bg-gray-800/50`.
-
-## Animation
-
-Framer Motion for scroll-triggered entrance animations. Consistent pattern across all sections:
-
-```tsx
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
-};
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
-};
-```
-
-Applied via `<motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>`.
+### Tags/Badges
+- Tech: stone bg, muted text, rounded-full
+- Category/AI: amber bg with low opacity, amber text
 
 ## SVG Architecture Diagrams
 
-Consistent style across all 11 project diagrams in `public/images/projects/`:
+Consistent style across all project diagrams in `public/images/projects/`:
 
 | Property | Value |
 |----------|-------|
 | ViewBox | `0 0 800 500` |
-| Background | Linear gradient `#1e1b4b` → `#312e81` (indigo) |
+| Background | Linear gradient `primary-950` → `primary-900` (teal) |
 | Font | `Inter, system-ui, sans-serif` |
-| Card fill | Gradient `#4f46e5` → `#4338ca` with `#818cf8` stroke |
+| Card fill | Gradient `primary-600` → `primary-700` with `primary-400` stroke |
 | Accent colors | Cyan (`#06b6d4`), Purple (`#8b5cf6`), Green (`#059669`), Amber (`#d97706`) |
-| Title | 22px, centered, `#e0e7ff` |
-| Labels | 13-14px `#e0e7ff`, sublabels 10px `#a5b4fc` |
-| Arrows | `#818cf8` with arrow marker |
-| Feature bar | Bottom row, icons + descriptions at 11px |
+| Arrows | `primary-400` with arrow marker |
 | Corner radius | `rx="8"` on cards, `rx="12"` on background |
 
 ## Responsive Breakpoints
-
-Tailwind defaults:
 - `sm`: 640px
 - `md`: 768px (primary breakpoint — mobile/desktop split)
 - `lg`: 1024px
 - `xl`: 1280px
 
-Key responsive patterns:
-- Featured projects: `grid-cols-1 md:grid-cols-2`
-- More projects: `grid-cols-1 md:grid-cols-2 lg:grid-cols-3`
-- Container: max-w-7xl with responsive padding
+## Design Risks (intentional departures)
+
+| Risk | Rationale | Gain | Cost |
+|------|-----------|------|------|
+| Instrument Serif headings | Most dev portfolios use sans-serif only. Serif signals maturity and confidence. | Instant differentiation from AI-generated portfolios | Might feel unexpected to some visitors |
+| Teal instead of indigo | 80% of AI-built portfolios use purple/indigo. Teal reads as "handcrafted." | Escapes the AI slop pattern | Loses the "safe" purple palette |
+| Warm stone neutrals | Cold grays feel sterile. Warm stone feels intentional and inviting. | More personality, less template | Subtle — most visitors won't notice consciously |
+
+## Decisions Log
+
+| Date | Decision | Rationale |
+|------|----------|-----------|
+| 2026-03-21 | Pivot primary from indigo to teal | Escape AI slop purple pattern; teal signals technical craft |
+| 2026-03-21 | Replace Poppins with Instrument Serif for headings | Serif comeback in 2025-26; authority signal for 17yr veteran |
+| 2026-03-21 | Replace Inter with Geist for body text | Inter is ubiquitous; Geist is modern and developer-focused |
+| 2026-03-21 | Shift neutrals from cold gray to warm stone | Warmth and intentionality vs sterile template feel |
+| 2026-03-21 | Keep amber accent unchanged | Distinctive, semantically tied to AI elements |
+| 2026-03-21 | Keep JetBrains Mono unchanged | Excellent for terminal blocks, no reason to change |
