@@ -135,8 +135,20 @@ export default function Projects() {
                   <motion.div
                     key={project.id}
                     variants={itemVariants}
-                    className="p-4 rounded-lg border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800/50 hover:shadow-md transition-shadow"
+                    className="rounded-lg border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800/50 hover:shadow-md transition-shadow overflow-hidden"
                   >
+                    {project.imageUrl && (
+                      <div className="relative w-full h-28 bg-stone-100 dark:bg-stone-700">
+                        <ImageLightbox
+                          src={project.imageUrl}
+                          alt={project.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
+                    )}
+                    <div className="p-4">
                     <div className="flex items-start justify-between gap-2 mb-2">
                       <h4 className="font-semibold text-sm text-stone-800 dark:text-white">
                         {project.title}
@@ -186,6 +198,7 @@ export default function Projects() {
                           Demo
                         </a>
                       )}
+                    </div>
                     </div>
                   </motion.div>
                 ))}
