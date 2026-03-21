@@ -40,6 +40,7 @@ oss.md
 *.gif
 *.webp
 *.svg
+!public/favicon.svg
 !public/images/projects/*.svg
 
 # typescript

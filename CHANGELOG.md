@@ -2,12 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.0] - 2026-03-21
+
+### Changed
+- Migrated design system: indigo→teal primary, Poppins→Instrument Serif headings, Inter→Geist body
+- Shifted neutral palette from cold gray to warm stone for intentional warmth
+- Restricted serif font (Instrument Serif) to H1-H2 only; H3-H6 use Geist sans
+- Updated 6 SVG architecture diagrams from indigo to teal gradient palette
+- Applied WCAG AA contrast fixes: teal-700 for small text, amber-700 for challenge tags
+
+### Added
+- Teal-themed SVG favicon with basePath support for GH Pages
+- DESIGN.md — comprehensive design system with aesthetic direction, typography scale, color rationale, and migration plan
+
+### Removed
+- Dead certifications data file and Certification type interface
+
 ## [2.1.0] - 2026-03-20
 
 ### Added
 - Image lightbox with pinch-to-zoom on mobile and scroll-to-zoom on desktop (yet-another-react-lightbox)
 - ImageLightbox shared UI component with ZoomIn affordance icon and accessibility support
-- YiPaiJi architecture SVG diagram matching established dark indigo gradient style
+- YiPaiJi architecture SVG diagram matching established diagram style
 - ImageLightbox component tests (5 test cases: render, open, close, props, zoom icon)
 - Data tests for featured project images and YiPaiJi SVG path validation
 

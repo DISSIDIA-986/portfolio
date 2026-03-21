@@ -23,7 +23,7 @@ const socialLinks = [
     name: "GitHub",
     icon: Github,
     url: SOCIAL_LINKS.github,
-    color: "bg-gray-800 hover:bg-gray-900",
+    color: "bg-stone-800 hover:bg-stone-900",
   },
   {
     name: "LinkedIn",
@@ -60,7 +60,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-50 via-white to-slate-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-50 via-white to-stone-50 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
@@ -72,7 +72,7 @@ export default function Hero() {
           {/* Text Content */}
           <motion.div className="lg:w-7/12" variants={itemVariants}>
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 dark:text-white mb-4"
               variants={itemVariants}
             >
               17 years of solving hard problems.{" "}
@@ -82,7 +82,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.h2
-              className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-6"
+              className="text-xl md:text-2xl font-medium text-stone-600 dark:text-stone-300 mb-6"
               variants={itemVariants}
             >
               Full Stack Developer in Calgary — I combine deep engineering
@@ -91,7 +91,7 @@ export default function Hero() {
             </motion.h2>
 
             <motion.p
-              className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl"
+              className="text-lg text-stone-600 dark:text-stone-400 mb-8 max-w-2xl"
               variants={itemVariants}
             >
               From enterprise platforms handling 10K concurrent users to ML
@@ -171,7 +171,7 @@ export default function Hero() {
       {/* Scroll Down Indicator */}
       <motion.a
         href="#how-i-think"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 dark:text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-stone-400 dark:text-stone-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
