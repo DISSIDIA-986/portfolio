@@ -48,14 +48,3 @@ export interface Experience {
   url: string | null;
   type?: "work" | "education";
 }
-
-export interface Certification {
-  id: number;
-  title: string;
-  issuer: string;
-  date: string;
-  description: string;
-  imageUrl: string;
-  category: string;
-  featured: boolean;
-}
