@@ -37,7 +37,7 @@ Single-page portfolio site built with **Next.js 16 + React 19 + TypeScript + Tai
 
 Single route (`src/app/page.tsx`) renders 8 sections in order: Hero, HowIThink, HowIBuild, Experience, Projects, Exploring, Skills, Contact. Navigation is anchor-based (`#how-i-think`, `#how-i-build`, `#experience`, etc.). The "Exploring" section is not in the nav — it appears naturally between Projects and Skills.
 
-`src/app/layout.tsx` wraps all pages with Navbar, Footer, and ScrollToTop. Fonts: Inter (sans), Poppins (headings), and JetBrains Mono (mono) loaded via `next/font/google`. Dark mode activates automatically via `prefers-color-scheme` detection.
+`src/app/layout.tsx` wraps all pages with Navbar, Footer, and ScrollToTop. Fonts: Geist (body), Instrument Serif (headings H1-H2), and JetBrains Mono (mono). Dark mode activates automatically via `prefers-color-scheme` detection.
 
 ### Component Organization
 
@@ -58,7 +58,7 @@ Types are in `src/types/index.ts`. Constants (site name, URLs, social links) in 
 ### Styling
 
 **Tailwind CSS v4** with CSS-first theme in `src/app/globals.css`:
-- Custom color palettes: `primary-*` (indigo), `secondary-*` (magenta), `accent-*` (amber for AI elements)
+- Custom color palettes: `primary-*` (teal), `secondary-*` (magenta), `accent-*` (amber for AI elements)
 - Custom `@utility` classes: `btn`, `btn-primary`, `btn-outline`, `card`, `skill-badge`, `section`
 - Dark mode: class-based via `@custom-variant dark (&:where(.dark, .dark *))`
 - PostCSS configured with `@tailwindcss/postcss`
@@ -73,7 +73,7 @@ Project images are served from two sources:
 - Alibaba Cloud OSS: `dissidia.oss-cn-beijing.aliyuncs.com/portfolio/` (configured in `next.config.ts` remotePatterns)
 - Local: `public/images/` (11 SVG architecture diagrams)
 
-Featured project images use `ImageLightbox` component for tap-to-zoom (pinch on mobile, scroll on desktop). All architecture SVGs follow a consistent style: 800x500 viewBox, dark indigo gradient background, Inter font, colored component boxes.
+Featured project images use `ImageLightbox` component for tap-to-zoom (pinch on mobile, scroll on desktop). All architecture SVGs follow a consistent style: 800x500 viewBox, dark teal gradient background, Inter font, colored component boxes.
 
 ### Path Aliases
 
