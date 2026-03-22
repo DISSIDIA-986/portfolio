@@ -42,7 +42,7 @@ const socialLinks = [
 const terminalLines = [
   { prompt: "~", command: "whoami", delay: 0 },
   {
-    output: "jason-niu — 17yr full-stack / ai-augmented engineer",
+    output: "jason-niu — ai engineer / 17yr production engineering depth",
     delay: 0.3,
   },
   { prompt: "~", command: "cat philosophy.txt", delay: 0.6 },
@@ -85,9 +85,9 @@ export default function Hero() {
               className="text-xl md:text-2xl font-medium text-stone-600 dark:text-stone-300 mb-6"
               variants={itemVariants}
             >
-              Full Stack Developer in Calgary — I combine deep engineering
-              experience with AI-augmented development to ship production
-              software at conversation speed.
+              AI Engineer in Calgary — I build and ship production AI systems
+              daily: LLM orchestrators, RAG platforms, multi-agent systems,
+              and computer vision pipelines.
             </motion.h2>
 
             <motion.p

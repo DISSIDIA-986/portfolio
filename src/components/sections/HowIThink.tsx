@@ -115,7 +115,7 @@ export default function HowIThink() {
               Yupo (Jason) Niu
             </h3>
             <p className="text-sm text-stone-500 dark:text-stone-400">
-              Full Stack Developer · Calgary, Canada
+              AI Engineer · Calgary, Canada
             </p>
           </motion.div>
 

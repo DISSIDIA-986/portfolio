@@ -1,8 +1,8 @@
 export const SITE_CONFIG = {
   name: "Yupo (Jason) Niu",
-  title: "Full Stack Developer & AI-Augmented Engineer",
+  title: "AI Engineer & Full Stack Developer",
   description:
-    "17 years of full-stack engineering, now amplified by AI — from enterprise platforms handling 10K concurrent users to ML systems with 97% accuracy.",
+    "AI Engineer with 17 years of production engineering depth — shipping LLM orchestrators, RAG systems, multi-agent platforms, and computer vision daily. 15+ AI projects, 84 repos, 1,139+ commits this year.",
   url: "https://portfolio.dissidia.tech",
   email: "yupoca24@gmail.com",
   location: "Calgary, AB, Canada",
