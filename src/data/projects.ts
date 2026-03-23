@@ -178,7 +178,7 @@ const projects: Project[] = [
       "Multi-user SaaS trading system where local LLMs (Qwen 2.5, DeepSeek-R1) make entry/exit decisions. TradingView webhooks trigger signals, AI evaluates market context via customizable prompts, and trades execute through IBKR API with per-user/per-symbol configuration.",
     technologies: [
       "Python",
-      "FastAPI",
+      "Flask",
       "PostgreSQL",
       "Qwen/DeepSeek",
       "Ollama",
