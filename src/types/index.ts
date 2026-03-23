@@ -27,13 +27,7 @@ export interface SkillCategory {
   skills: Skill[];
 }
 
-export interface Skills {
-  backend: SkillCategory;
-  ai: SkillCategory;
-  frontend: SkillCategory;
-  cloud: SkillCategory;
-  languages: SkillCategory;
-}
+export type Skills = Record<string, SkillCategory>;
 
 export interface Experience {
   id: number;

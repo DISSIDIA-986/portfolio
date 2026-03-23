@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Server, Brain, Monitor, Cloud, Languages } from "lucide-react";
+import { Brain, BarChart3, Server, Sparkles, Languages } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
 import skills from "@/data/skills";
@@ -21,10 +21,10 @@ const itemVariants = {
 };
 
 const categoryIcons: Record<string, React.ElementType> = {
-  backend: Server,
-  ai: Brain,
-  frontend: Monitor,
-  cloud: Cloud,
+  aiLlm: Brain,
+  mlData: BarChart3,
+  production: Server,
+  aiDev: Sparkles,
   languages: Languages,
 };
 
@@ -110,7 +110,7 @@ export default function Skills() {
           <motion.div variants={itemVariants}>
             <SectionHeader
               title="Skills"
-              subtitle="Tools I've used to solve problems across the full stack."
+              subtitle="From AI systems to production engineering — 17 years of solving hard problems."
             />
           </motion.div>
 

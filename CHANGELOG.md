@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.0] - 2026-03-22
+
+### Changed
+- Portfolio now positions as "Full Stack AI Engineer" — the "Problem Solver with AI Superpowers" narrative puts AI capabilities front and center while honoring 17 years of production engineering depth
+- Hero section leads with "Full Stack AI Engineer in Calgary" and an AI-focused terminal block showcasing RAG, LLM Agent, Computer Vision, and Healthcare ML
+- Skills section restructured into 5 AI-capability categories: AI & LLM Systems, Machine Learning & Data, Production Engineering, AI-Augmented Development, and Languages
+- Experience descriptions now connect past engineering work to AI relevance (distributed systems → AI infrastructure at scale)
+- Unified "Full Stack AI Engineer" title across Hero, HowIThink, Footer, and meta tags
+- Corrected ThyroidSentry accuracy from 97% to 97.4% in site description
+
+### Added
+- 5 new data integrity tests validating the AI-first skills structure
+- TODO: promote ai-code-reviewer (multi-LLM orchestration) to featured project
+
+### For contributors
+- `Skills` type changed from fixed-key interface to `Record<string, SkillCategory>` — adding or removing skill categories no longer requires changing the TypeScript interface
+
 ## [2.2.0] - 2026-03-21
 
 ### Changed
