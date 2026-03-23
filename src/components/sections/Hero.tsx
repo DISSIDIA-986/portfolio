@@ -74,6 +74,12 @@ export default function Hero() {
         >
           {/* Text Content */}
           <motion.div className="lg:w-7/12" variants={itemVariants}>
+            <motion.p
+              className="text-sm font-mono uppercase tracking-widest text-primary-600 dark:text-primary-400 mb-3"
+              variants={itemVariants}
+            >
+              Yupo (Jason) Niu
+            </motion.p>
             <motion.h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 dark:text-white mb-4"
               variants={itemVariants}

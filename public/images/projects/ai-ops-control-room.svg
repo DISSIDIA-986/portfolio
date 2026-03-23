@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#042f2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#134e4a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0f766e;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4" />
+      <stop offset="100%" style="stop-color:#8b5cf6" />
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#2dd4bf"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#d97706"/>
+    </marker>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#ccfbf1" font-size="22" font-weight="700">AI Ops Control Room — Architecture</text>
+  <line x1="200" y1="50" x2="600" y2="50" stroke="url(#accent)" stroke-width="2"/>
+
+  <!-- Top: React 19 Dashboard -->
+  <rect x="200" y="65" width="400" height="55" rx="8" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="400" y="90" text-anchor="middle" fill="#ccfbf1" font-size="14" font-weight="600">React 19 Dashboard</text>
+  <text x="400" y="106" text-anchor="middle" fill="#5eead4" font-size="10">shadcn-admin • Radix UI • Clerk Auth • TanStack</text>
+
+  <!-- Arrows from Dashboard down -->
+  <line x1="280" y1="120" x2="170" y2="165" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="400" y1="120" x2="400" y2="165" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="520" y1="120" x2="630" y2="165" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Middle-left: Test Scenario Generator -->
+  <rect x="60" y="165" width="220" height="55" rx="8" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="170" y="190" text-anchor="middle" fill="#ccfbf1" font-size="14" font-weight="600">Test Scenario Generator</text>
+  <text x="170" y="206" text-anchor="middle" fill="#5eead4" font-size="10">E-commerce Customer Queries</text>
+
+  <!-- Middle-center: Qwen (Target LLM) -->
+  <rect x="300" y="165" width="200" height="55" rx="8" fill="#0891b2" fill-opacity="0.6" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="400" y="188" text-anchor="middle" fill="#ccfbf1" font-size="14" font-weight="600">Qwen 3.5:4b</text>
+  <text x="400" y="206" text-anchor="middle" fill="#a5f3fc" font-size="10">Target LLM via Ollama (Local)</text>
+
+  <!-- Middle-right: DeepSeek V3 (Judge LLM) -->
+  <rect x="520" y="165" width="220" height="55" rx="8" fill="#7c3aed" fill-opacity="0.7" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="630" y="188" text-anchor="middle" fill="#ccfbf1" font-size="14" font-weight="600">DeepSeek V3 API</text>
+  <text x="630" y="206" text-anchor="middle" fill="#c4b5fd" font-size="10">Judge LLM (Cloud)</text>
+
+  <!-- Arrow: Scenario Generator → Qwen -->
+  <line x1="280" y1="192" x2="298" y2="192" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrow: Qwen → DeepSeek (response flows to judge) -->
+  <line x1="500" y1="192" x2="518" y2="192" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrowAmber)"/>
+  <text x="510" y="183" text-anchor="middle" fill="#fbbf24" font-size="8">response</text>
+
+  <!-- Arrow: DeepSeek down to DeepEval -->
+  <line x1="630" y1="220" x2="630" y2="270" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Arrow: Qwen down to DeepEval -->
+  <line x1="400" y1="220" x2="400" y2="270" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Arrow: Scenario Generator down to DeepEval -->
+  <line x1="170" y1="220" x2="170" y2="270" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- DeepEval Framework -->
+  <rect x="60" y="270" width="680" height="60" rx="8" fill="#059669" fill-opacity="0.5" stroke="#34d399" stroke-width="1.5"/>
+  <text x="400" y="295" text-anchor="middle" fill="#ccfbf1" font-size="15" font-weight="700">DeepEval Framework</text>
+  <text x="400" y="315" text-anchor="middle" fill="#a7f3d0" font-size="10">Automated LLM Quality Evaluation Pipeline</text>
+
+  <!-- Arrows: DeepEval down to 3 evaluation metrics -->
+  <line x1="200" y1="330" x2="200" y2="360" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="400" y1="330" x2="400" y2="360" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="600" y1="330" x2="600" y2="360" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Evaluation Dimension 1: Relevance -->
+  <rect x="100" y="360" width="200" height="50" rx="8" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="200" y="385" text-anchor="middle" fill="#ccfbf1" font-size="13" font-weight="600">Relevance</text>
+  <text x="200" y="401" text-anchor="middle" fill="#5eead4" font-size="10">Answer-to-Query Alignment</text>
+
+  <!-- Evaluation Dimension 2: Faithfulness -->
+  <rect x="310" y="360" width="180" height="50" rx="8" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="400" y="385" text-anchor="middle" fill="#ccfbf1" font-size="13" font-weight="600">Faithfulness</text>
+  <text x="400" y="401" text-anchor="middle" fill="#5eead4" font-size="10">Factual Consistency</text>
+
+  <!-- Evaluation Dimension 3: Effectiveness -->
+  <rect x="500" y="360" width="200" height="50" rx="8" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="600" y="385" text-anchor="middle" fill="#ccfbf1" font-size="13" font-weight="600">Effectiveness</text>
+  <text x="600" y="401" text-anchor="middle" fill="#5eead4" font-size="10">Task Completion Quality</text>
+
+  <!-- Score Badge -->
+  <rect x="310" y="430" width="180" height="50" rx="8" fill="#d97706" fill-opacity="0.8" stroke="#fbbf24" stroke-width="2"/>
+  <text x="400" y="455" text-anchor="middle" fill="#fffbeb" font-size="18" font-weight="700">0.94 / 1.00</text>
+  <text x="400" y="472" text-anchor="middle" fill="#fef3c7" font-size="10">Composite Evaluation Score</text>
+
+  <!-- Key features bar -->
+  <rect x="60" y="430" width="230" height="50" rx="8" fill="#042f2e" stroke="#0d9488" stroke-width="1" opacity="0.8"/>
+  <text x="90" y="452" fill="#06b6d4" font-size="10" font-weight="600">Local Inference</text>
+  <text x="200" y="452" fill="#8b5cf6" font-size="10" font-weight="600">Auto Scoring</text>
+  <text x="90" y="468" fill="#94a3b8" font-size="8">Ollama Runtime</text>
+  <text x="200" y="468" fill="#94a3b8" font-size="8">LLM-as-Judge</text>
+
+  <rect x="510" y="430" width="230" height="50" rx="8" fill="#042f2e" stroke="#0d9488" stroke-width="1" opacity="0.8"/>
+  <text x="540" y="452" fill="#06b6d4" font-size="10" font-weight="600">Multi-Metric</text>
+  <text x="650" y="452" fill="#8b5cf6" font-size="10" font-weight="600">Dashboard</text>
+  <text x="540" y="468" fill="#94a3b8" font-size="8">3 Dimensions</text>
+  <text x="650" y="468" fill="#94a3b8" font-size="8">Real-time Viz</text>
+</svg>

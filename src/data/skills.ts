@@ -22,10 +22,11 @@ const skills: Skills = {
   production: {
     title: "Production Engineering",
     skills: [
-      { name: "Distributed Systems (Spring Cloud, MQ)", level: 85 },
-      { name: "Cloud & DevOps (Docker, K8s, GCP, CI/CD)", level: 85 },
+      { name: "Distributed Systems (Spring Cloud, MQ, ELK)", level: 85 },
+      { name: "Cloud & DevOps (Docker, K8s, GCP, Alibaba Cloud, CI/CD)", level: 85 },
+      { name: "Observability & Data Pipelines (Prometheus, OpenTelemetry, Skywalking, ETL)", level: 80 },
       { name: "Full Stack (React/Next.js, Java/Spring, Python/FastAPI)", level: 90 },
-      { name: "Database Systems (PostgreSQL, Redis, vector DBs)", level: 85 },
+      { name: "Database Systems (PostgreSQL, Redis, MongoDB, Elasticsearch, vector DBs)", level: 85 },
     ],
   },
   aiDev: {

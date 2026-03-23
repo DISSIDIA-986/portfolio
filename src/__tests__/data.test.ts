@@ -37,6 +37,17 @@ describe("projects data", () => {
     expect(yipaiji!.imageUrl).toBe("/images/projects/yipaiji.svg");
   });
 
+  it("has exactly 15 total projects", () => {
+    expect(projects.length).toBe(15);
+  });
+
+  it("new AI-native projects exist", () => {
+    const titles = projects.map((p) => p.title);
+    expect(titles).toContain("AI Ops Control Room - LLM Quality Evaluation");
+    expect(titles).toContain("Vox - AI Voice-to-Text Pipeline");
+    expect(titles).toContain("AKM - AI API Key Manager");
+  });
+
   it("featured projects lead with AI categories", () => {
     const featured = projects.filter((p) => p.featured);
     const firstFeatured = featured[0];

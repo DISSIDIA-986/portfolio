@@ -9,4 +9,30 @@
 
 ## AI Engineer Repositioning
 
-- [ ] **Promote ai-code-reviewer to featured project** — Research the repo at `/Users/niuyp/Documents/github.com/ai-code-reviewer/`, create a project entry in `projects.ts` (title, description, technologies, challenge, imageUrl), and optionally create an architecture diagram SVG in `public/images/`. This project demonstrates multi-LLM orchestration (Claude + Gemini + Qwen + GLM) which is a strong AI Engineer signal. **Why:** Design doc "Problem Solver with AI Superpowers" (2026-03-22) recommends this as a potential featured project to strengthen AI positioning. **Depends on:** Core repositioning changes (Hero, Skills, Projects reorder) should ship first.
+- [ ] ~~**Promote ai-code-reviewer to featured project**~~ — **DEFERRED** per design review (2026-03-22): user chose not to add this as featured. Keeping 6 featured projects for clean 3×2 grid layout.
+
+## Design Review Findings (2026-03-22)
+
+- [x] **Hero: Add name to hero content** — **Completed:** 2026-03-22. Added "Yupo (Jason) Niu" in mono uppercase above H1. — Add "Yupo (Jason) Niu" directly in the Hero section content block (above or beside the H1) to strengthen personal brand anchor. Currently the name only appears in the Navbar. **Why:** Codex design critique identified weak brand hierarchy — "people remember the slogan and forget the person." **Impact:** One-line change in Hero.tsx, high brand impact.
+
+- [x] **Skills: Add observability & data engineering capabilities** — **Completed:** 2026-03-22. — Merge new skills into existing Production Engineering rows + add one new row. Specific changes to `skills.ts`:
+  - `"Distributed Systems (Spring Cloud, MQ)"` → `"Distributed Systems (Spring Cloud, MQ, ELK)"`
+  - `"Cloud & DevOps (Docker, K8s, GCP, CI/CD)"` → `"Cloud & DevOps (Docker, K8s, GCP, Alibaba Cloud, CI/CD)"`
+  - `"Database Systems (PostgreSQL, Redis, vector DBs)"` → `"Database Systems (PostgreSQL, Redis, MongoDB, Elasticsearch, vector DBs)"`
+  - **New row:** `"Observability & Data Pipelines (Prometheus, OpenTelemetry, Skywalking, ETL)"` at level 80
+  **Why:** 4 high-value skills (ELK, ETL, Observability, MongoDB) completely missing from portfolio. Data engineering + observability = core AI Engineer requirements. **Constraint:** Keep Production Engineering to max 5 rows to maintain visual balance with other skill cards.
+
+- [x] **Experience: Add Edianyun observability bullet** — **Completed:** 2026-03-22. — Add a new solution bullet to Edianyun experience entry in `experiences.ts`: "Built company-wide observability stack with ELK (Elasticsearch, Logstash, Kibana) for all web systems, implemented hot/cold log storage separation, and deployed Prometheus + Skywalking APM for performance diagnostics across CMS, ERP, CRM, and risk control platforms." **Why:** Demonstrates production-grade data engineering and DevOps leadership — key differentiators for AI Engineer roles. **Note:** Edianyun already has 5 bullets; this makes 6. Consider condensing existing bullets to keep balance.
+
+- [x] **Projects: Replace 3 non-featured + add 1 new** — **Completed:** 2026-03-22. Replaced AOS-AAIP→ai-ops-control-room, CodeMind3→vox, updated Trading Platform→trading-bots, added akm. **Pending:** SVG architecture diagrams for 3 new projects (vox, ai-ops-control-room, akm). — Update `projects.ts`:
+  - **Replace** `AOS-AAIP Immigration Draw Analysis` → `ai-ops-control-room` (LLM-as-Judge quality evaluation system, Python + DeepEval + React 19)
+  - **Replace** `CodeMind3` → `vox` (AI voice-to-text tool, Go + Groq Whisper + Gemini correction pipeline)
+  - **Update** `Trading Platform` → refresh with actual `trading-bots` repo data (add LLM-driven entry/exit decisions with Qwen/DeepSeek, multi-user SaaS, IBKR API)
+  - **Add** `akm` (API Key Manager, Go + AES-256-GCM + macOS Keychain, AI platform key management)
+  Total: 14 → 15 projects. Each new project needs: title, description, technologies array, imageUrl (SVG or OSS), category, and optionally repoUrl/demoUrl. **Why:** Strengthens AI-native signal in project portfolio. **Depends on:** Create SVG architecture diagrams for new projects (follow DESIGN.md SVG spec: 800×500, teal gradient, Inter font).
+
+## Deferred (out of current scope)
+
+- [ ] **Page layout architecture** — Codex hard rejection: site reads as "stacked cards" instead of composed marketing page. Sections repeat same mood statement. This is a structural redesign (ocean), not a data update. Address in a future sprint.
+- [ ] **Section order optimization** — Consider moving Projects before Experience to show AI evidence earlier. Requires user journey redesign.
+- [ ] **Empty link states** — HavenzHub and Local Chat RAG have no demoUrl/repoUrl, leaving card footer empty. Design a consistent "no links" state.
