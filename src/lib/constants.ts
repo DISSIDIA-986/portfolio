@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   name: "Yupo (Jason) Niu",
-  title: "Full Stack Developer & AI-Augmented Engineer",
+  title: "Full Stack AI Engineer",
   description:
     "17 years of full-stack engineering, now amplified by AI — from enterprise platforms handling 10K concurrent users to ML systems with 97% accuracy.",
   url: "https://portfolio.dissidia.tech",
