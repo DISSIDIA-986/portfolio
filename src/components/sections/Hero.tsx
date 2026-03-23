@@ -42,18 +42,21 @@ const socialLinks = [
 const terminalLines = [
   { prompt: "~", command: "whoami", delay: 0 },
   {
-    output: "jason-niu — 17yr full-stack / ai-augmented engineer",
+    output: "jason-niu — full-stack ai engineer, 17yr production veteran",
     delay: 0.3,
   },
-  { prompt: "~", command: "cat philosophy.txt", delay: 0.6 },
+  { prompt: "~", command: "cat skills.yml", delay: 0.6 },
   {
-    output: '"Every hard problem is a system trying to teach you something."',
+    output: "RAG × LLM Agent × Computer Vision × Healthcare ML",
     delay: 0.9,
   },
-  { prompt: "~", command: "ls ~/tools/", delay: 1.2 },
-  { output: "vox.sh    akm    claude-notify    gstack", delay: 1.5 },
+  { prompt: "~", command: "cat philosophy.txt", delay: 1.2 },
+  {
+    output: '"Every hard problem is a system trying to teach you something."',
+    delay: 1.5,
+  },
   { prompt: "~", command: "uptime", delay: 1.8 },
-  { output: "1,139+ commits this year. Still shipping.", delay: 2.1 },
+  { output: "1,100+ commits this year. Still shipping.", delay: 2.1 },
 ];
 
 export default function Hero() {
@@ -85,9 +88,9 @@ export default function Hero() {
               className="text-xl md:text-2xl font-medium text-stone-600 dark:text-stone-300 mb-6"
               variants={itemVariants}
             >
-              Full Stack Developer in Calgary — I combine deep engineering
-              experience with AI-augmented development to ship production
-              software at conversation speed.
+              Full Stack AI Engineer in Calgary — I combine 17 years of
+              production engineering with hands-on AI system building to
+              solve hard problems at every layer of the stack.
             </motion.h2>
 
             <motion.p
@@ -96,9 +99,9 @@ export default function Hero() {
             >
               From enterprise platforms handling 10K concurrent users to ML
               systems with 97.4% accuracy — I&apos;ve built systems across
-              fintech, e-commerce, smart buildings, and AI. Today, every project
-              I build uses a voice-driven AI development environment I created
-              myself.
+              fintech, e-commerce, smart buildings, and AI. My daily workflow
+              integrates Claude Code, MCP, and custom AI tools to ship faster
+              and solve harder problems.
             </motion.p>
 
             {/* Buttons */}

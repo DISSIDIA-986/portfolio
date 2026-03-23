@@ -38,7 +38,7 @@ const experiences: Experience[] = [
     location: "Beijing, China",
     period: "Mar 2016 - Apr 2024",
     problem:
-      "Design and scale enterprise systems for a publicly traded company — high-concurrency auctions, risk control engines, and multi-system integrations handling 10K+ concurrent users",
+      "Design and scale enterprise systems for a publicly traded company — high-concurrency auctions, risk control engines, and distributed architectures handling 10K+ concurrent users",
     solution: [
       "Led multiple development teams (Risk Control, E-commerce, DevOps) responsible for technical design, code review, and project delivery",
       "Architected high-concurrency bidding system using React + Java with WebSocket real-time updates, optimized with Redis + RocketMQ",
@@ -47,7 +47,7 @@ const experiences: Experience[] = [
       "Migrated to Kubernetes cloud-native infrastructure with Jenkins/GitLab CI/CD and blue-green deployments",
     ],
     impact:
-      "Led 3 teams, built 4 major platforms, migrated to Kubernetes, cut API response time 40%",
+      "Led 3 teams, built 4 major platforms, migrated to Kubernetes, cut API response time 40%. The distributed systems and high-concurrency patterns I mastered here are the same engineering discipline I now apply to AI systems at scale.",
     technologies: [
       "React",
       "JavaScript",
@@ -79,7 +79,7 @@ const experiences: Experience[] = [
       "Participated in wallet API design, implemented Bitcoin transaction confirmation and blockchain data synchronization",
     ],
     impact:
-      "Independently shipped Bitcoin payment system, optimized blockchain confirmation time 40%",
+      "Independently shipped Bitcoin payment system, optimized blockchain confirmation time 40%. Early exposure to distributed computing and real-time data patterns now essential for AI infrastructure.",
     technologies: [
       "Java",
       "Spring",

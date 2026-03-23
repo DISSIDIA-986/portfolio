@@ -1,11 +1,8 @@
 # CLAUDE.md
 
-## gstack
+## 语言偏好
+请用中文回复。用户母语是中文，阅读中文更快。代码、命令、技术术语可以保持英文。
 
-Use /browse from gstack for all web browsing. Never use mcp__claude-in-chrome__* tools.
-Available skills: /office-hours, /plan-ceo-review, /plan-eng-review, /plan-design-review,
-/design-consultation, /review, /ship, /browse, /qa, /qa-only, /design-review,
-/setup-browser-cookies, /retro, /debug, /document-release.
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
@@ -94,4 +91,6 @@ In QA mode, flag any code that doesn't match DESIGN.md.
 
 ## gstack
 
-Use /browse from gstack for all web browsing. Never use mcp__claude-in-chrome__* tools.
+Use the `/browse` skill from gstack for all web browsing. **Never use `mcp__claude-in-chrome__*` tools directly.**
+
+Available skills: `/office-hours`, `/plan-ceo-review`, `/plan-eng-review`, `/plan-design-review`, `/design-consultation`, `/review`, `/ship`, `/land-and-deploy`, `/canary`, `/benchmark`, `/browse`, `/qa`, `/qa-only`, `/design-review`, `/setup-browser-cookies`, `/setup-deploy`, `/retro`, `/investigate`, `/document-release`, `/codex`, `/cso`, `/autoplan`, `/careful`, `/freeze`, `/guard`, `/unfreeze`, `/gstack-upgrade`.

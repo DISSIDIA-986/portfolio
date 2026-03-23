@@ -1,53 +1,39 @@
 import type { Skills } from "@/types";
 
 const skills: Skills = {
-  backend: {
-    title: "Backend & Distributed Systems",
+  aiLlm: {
+    title: "AI & LLM Systems",
     skills: [
-      { name: "Java 8/11", level: 95 },
-      { name: "Spring Boot", level: 90 },
-      { name: "Spring Cloud (Netflix/Alibaba)", level: 85 },
-      { name: "Python (FastAPI)", level: 85 },
-      { name: "MySQL / PostgreSQL", level: 85 },
-      { name: "Redis", level: 90 },
-      { name: "RocketMQ / Kafka", level: 85 },
-      { name: "Microservices Architecture", level: 85 },
-      { name: "RESTful API Design", level: 90 },
-    ],
-  },
-  ai: {
-    title: "AI & Machine Learning",
-    skills: [
-      { name: "LangChain / RAG Systems", level: 85 },
-      { name: "scikit-learn / XGBoost", level: 80 },
-      { name: "Computer Vision (OpenCV, YOLO)", level: 75 },
+      { name: "LangChain / RAG Architecture", level: 85 },
+      { name: "LLM Agent Orchestration (MCP)", level: 80 },
+      { name: "Prompt Engineering & Evaluation", level: 85 },
       { name: "NLP & LLM Integration", level: 80 },
-      { name: "Prompt Engineering", level: 85 },
-      { name: "AI Agent Orchestration", level: 80 },
+    ],
+  },
+  mlData: {
+    title: "Machine Learning & Data",
+    skills: [
+      { name: "scikit-learn / XGBoost / SHAP", level: 80 },
+      { name: "Computer Vision (YOLOv8, OpenCV)", level: 75 },
+      { name: "Data Analysis (Pandas, NumPy, Plotly)", level: 85 },
       { name: "Streamlit / ML Deployment", level: 80 },
-      { name: "Data Analysis (Pandas, NumPy)", level: 85 },
     ],
   },
-  frontend: {
-    title: "Frontend & Mobile",
+  production: {
+    title: "Production Engineering",
     skills: [
-      { name: "React / Next.js", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "React Native / Expo", level: 80 },
-      { name: "Swift / SwiftUI (iOS/macOS/tvOS)", level: 75 },
-      { name: "Tailwind CSS", level: 85 },
-      { name: "Data Visualization", level: 80 },
+      { name: "Distributed Systems (Spring Cloud, MQ)", level: 85 },
+      { name: "Cloud & DevOps (Docker, K8s, GCP, CI/CD)", level: 85 },
+      { name: "Full Stack (React/Next.js, Java/Spring, Python/FastAPI)", level: 90 },
+      { name: "Database Systems (PostgreSQL, Redis, vector DBs)", level: 85 },
     ],
   },
-  cloud: {
-    title: "Cloud & DevOps",
+  aiDev: {
+    title: "AI-Augmented Development",
     skills: [
-      { name: "Docker / Kubernetes", level: 85 },
-      { name: "GCP / AWS / Alibaba Cloud", level: 80 },
-      { name: "CI/CD (GitHub Actions, Jenkins)", level: 85 },
-      { name: "Helm / Terraform", level: 75 },
-      { name: "Linux / Shell Scripting", level: 85 },
-      { name: "System Monitoring & APM", level: 75 },
+      { name: "Claude Code + MCP Daily Workflow", level: 90 },
+      { name: "AI Pair Programming & Code Review", level: 85 },
+      { name: "AI-Assisted Learning & Curricula Design", level: 80 },
     ],
   },
   languages: {
