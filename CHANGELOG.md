@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.0] - 2026-03-22
+
+### Changed
+- Repositioned portfolio as "Problem Solver with AI Superpowers" — from SWE to Full Stack AI Engineer
+- Hero subtitle: "Full Stack Developer" → "Full Stack AI Engineer" with honest, verifiable framing
+- Terminal block: AI-focused content (RAG × LLM Agent × Computer Vision × Healthcare ML)
+- Skills: restructured from tech-domain categories to AI capability stack (AI & LLM Systems, ML & Data, Production Engineering, AI-Augmented Development, Languages)
+- Skills type: fixed-key interface → `Record<string, SkillCategory>` for flexibility
+- Skills subtitle: "From AI systems to production engineering — 17 years of solving hard problems."
+- Experience: added AI-relevance context to Edianyun and Bitmain impact statements
+- Footer and HowIThink: unified "Full Stack AI Engineer" title across site
+- Site meta description: corrected accuracy from 97% to 97.4%
+
+### Added
+- 5 new data integrity tests (category count, per-category skills, AI-first ordering, category titles, first category verification)
+- TODO: ai-code-reviewer promotion to featured project
+
 ## [2.2.0] - 2026-03-21
 
 ### Changed
