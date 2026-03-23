@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.4.0] - 2026-03-23
+
+### Added
+- "Yupo (Jason) Niu" name anchor in Hero section — mono uppercase above the H1 headline, strengthening personal brand on first impression
+- Observability & Data Pipelines skill row (Prometheus, OpenTelemetry, Skywalking, ETL) in Production Engineering category
+- Edianyun experience now includes company-wide ELK observability stack, hot/cold log storage separation, and Prometheus/Skywalking APM deployment
+- 3 new AI-native projects: AI Ops Control Room (LLM-as-Judge evaluation, 0.94/1.00 score), Vox (AI voice-to-text with Groq Whisper + Gemini correction), AKM (AI API key vault with AES-256-GCM)
+- SVG architecture diagrams for all 3 new projects following DESIGN.md teal gradient spec
+- 2 new data validation tests: total project count assertion (15) and new project name existence checks
+
+### Changed
+- Production Engineering skills expanded: ELK added to Distributed Systems, Alibaba Cloud to Cloud & DevOps, MongoDB + Elasticsearch to Database Systems
+- Trading Platform project updated to "Trading Bots — LLM-Driven Automated Trading" with correct Flask stack and Qwen/DeepSeek LLM decision details
+- Edianyun technologies list now includes MongoDB, Elasticsearch, and Prometheus
+- Total project count: 14 → 15
+
+### Replaced
+- AOS-AAIP Immigration Draw Analysis → AI Ops Control Room (stronger AI/MLOps signal)
+- CodeMind3 Smart Programming Flashcards → Vox AI Voice-to-Text Pipeline (AI-native tool)
+
+### Fixed
+- vox.svg: replaced invalid `&bull;` HTML entities with Unicode `•` (SVG/XML compliance)
+- Trading Bots: corrected technology from FastAPI to Flask (verified from actual repo)
+
 ## [2.3.0] - 2026-03-22
 
 ### Changed
