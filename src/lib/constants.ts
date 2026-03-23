@@ -18,4 +18,4 @@ export const AVATAR_URL =
   "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/avatar.pic.jpg";
 
 export const RESUME_URL =
-  "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/resume/full-stack-resume-en.250406.pdf";
+  "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/resume/ai-engineer.pdf";
