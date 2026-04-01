@@ -2,6 +2,29 @@ import type { Project } from "@/types";
 
 const projects: Project[] = [
   {
+    id: 16,
+    title: "JobPilot AI — Agentic Job Automation",
+    description:
+      "Autonomous multi-agent job search pipeline orchestrating 5 LLM providers with circuit breakers, structured output, reflexive quality gates, and auto-apply via real Chrome. 1,250+ tests, 4 discovery sources, Telegram bot with inline keyboards.",
+    technologies: [
+      "Python",
+      "LLM Orchestration",
+      "Pydantic",
+      "aiobreaker",
+      "APScheduler",
+      "Telegram Bot",
+      "bb-browser",
+      "SQLite",
+    ],
+    imageUrl: "/images/projects/jobpilot-ai.svg",
+    demoUrl: null,
+    repoUrl: "https://github.com/DISSIDIA-986/jobpilot-ai",
+    featured: true,
+    category: "AI & Machine Learning",
+    challenge:
+      "Can an AI agent find, score, build resumes for, and apply to jobs autonomously?",
+  },
+  {
     id: 1,
     title: "Industry-AI-Flow - AI Workflow Platform",
     description:
@@ -42,7 +65,7 @@ const projects: Project[] = [
     imageUrl: "/images/projects/local-chat-rag.svg",
     demoUrl: null,
     repoUrl: null,
-    featured: true,
+    featured: false,
     category: "AI & Machine Learning",
     challenge: "Can you build a privacy-first AI chat that runs entirely on your machine?",
   },
@@ -129,7 +152,7 @@ const projects: Project[] = [
     imageUrl: "/images/projects/yipaiji.svg",
     demoUrl: "https://pai.edianyun.com/",
     repoUrl: null,
-    featured: true,
+    featured: false,
     category: "Full Stack",
     challenge: "How do you handle thousands of simultaneous bidders without dropping a single bid?",
   },
@@ -268,7 +291,7 @@ const projects: Project[] = [
     imageUrl: "/images/projects/ai-ops-control-room.svg",
     demoUrl: null,
     repoUrl: "https://github.com/DISSIDIA-986/ai-ops-control-room",
-    featured: false,
+    featured: true,
     category: "AI & MLOps",
   },
   {
@@ -309,6 +332,24 @@ const projects: Project[] = [
     repoUrl: "https://github.com/DISSIDIA-986/akm",
     featured: false,
     category: "AI & DevOps",
+  },
+  {
+    id: 17,
+    title: "AgenticAI2026 — AI Agent Curriculum",
+    description:
+      "Interactive AI Agent learning curriculum for senior developers. Covers multi-agent patterns, tool orchestration, MCP, and production deployment of agentic AI systems.",
+    technologies: [
+      "MDX",
+      "AI Agents",
+      "Multi-Agent",
+      "MCP",
+      "Agentic AI",
+    ],
+    imageUrl: "/images/projects/agentic-ai-2026.svg",
+    demoUrl: null,
+    repoUrl: "https://github.com/DISSIDIA-986/AgenticAI2026",
+    featured: false,
+    category: "AI & Machine Learning",
   },
 ];
 

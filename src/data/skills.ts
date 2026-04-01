@@ -4,10 +4,10 @@ const skills: Skills = {
   aiLlm: {
     title: "AI & LLM Systems",
     skills: [
+      { name: "Agentic AI / Multi-Agent Orchestration", level: 85 },
       { name: "LangChain / RAG Architecture", level: 85 },
-      { name: "LLM Agent Orchestration (MCP)", level: 80 },
-      { name: "Prompt Engineering & Evaluation", level: 85 },
-      { name: "NLP & LLM Integration", level: 80 },
+      { name: "LLM Reliability (Circuit Breakers, Fallback Chains)", level: 80 },
+      { name: "Structured Output (Pydantic/instructor)", level: 85 },
     ],
   },
   mlData: {

@@ -4,7 +4,7 @@ const experiences: Experience[] = [
   {
     id: 1,
     company: "Havenz Tech",
-    position: "Full Stack Developer (Part-time)",
+    position: "AI Developer",
     location: "Calgary, Canada",
     period: "Aug 2024 - Present",
     problem:

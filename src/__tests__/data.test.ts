@@ -37,8 +37,8 @@ describe("projects data", () => {
     expect(yipaiji!.imageUrl).toBe("/images/projects/yipaiji.svg");
   });
 
-  it("has exactly 15 total projects", () => {
-    expect(projects.length).toBe(15);
+  it("has exactly 17 total projects", () => {
+    expect(projects.length).toBe(17);
   });
 
   it("new AI-native projects exist", () => {
@@ -46,6 +46,16 @@ describe("projects data", () => {
     expect(titles).toContain("AI Ops Control Room - LLM Quality Evaluation");
     expect(titles).toContain("Vox - AI Voice-to-Text Pipeline");
     expect(titles).toContain("AKM - AI API Key Manager");
+  });
+
+  it("JobPilot AI is first featured project", () => {
+    const featured = projects.filter((p) => p.featured);
+    expect(featured[0].title).toContain("JobPilot AI");
+  });
+
+  it("has exactly 6 featured projects", () => {
+    const featured = projects.filter((p) => p.featured);
+    expect(featured.length).toBe(6);
   });
 
   it("featured projects lead with AI categories", () => {

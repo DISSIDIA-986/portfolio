@@ -94,9 +94,9 @@ export default function Hero() {
               className="text-xl md:text-2xl font-medium text-stone-600 dark:text-stone-300 mb-6"
               variants={itemVariants}
             >
-              Full Stack AI Engineer in Calgary — I combine 17 years of
-              production engineering with hands-on AI system building to
-              solve hard problems at every layer of the stack.
+              AI Engineer in Calgary — I combine 17 years of production
+              engineering with hands-on agentic AI system building to ship
+              multi-agent LLM platforms that work in production.
             </motion.h2>
 
             <motion.p
