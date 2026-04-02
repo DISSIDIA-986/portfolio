@@ -7,7 +7,7 @@ yupoca24@gmail.com | [linkedin.com/in/yupo-niu](https://linkedin.com/in/yupo-niu
 
 ## Professional Summary
 
-AI Engineer who ships production systems. 17 years building distributed platforms (10K+ concurrent users, Kubernetes, observability stacks), now applying that same engineering rigor to agentic AI. Built multi-agent LLM pipelines orchestrating 5 providers with circuit breakers and 1,250+ tests, enterprise RAG with hybrid retrieval, and ML systems achieving 97.4% accuracy. 4.0 GPA in Integrated AI at SAIT. Canadian work authorization (PGWP).
+AI Engineer who ships production systems. 17 years building distributed platforms (10K+ concurrent users, Kubernetes, observability stacks), now applying that same engineering rigor to agentic AI. Built multi-agent LLM pipelines orchestrating 5 providers with circuit breakers and 1,250+ tests, enterprise RAG with hybrid retrieval, and ML systems achieving 97.4% accuracy. 4.0 GPA in Data Analytics + Integrated AI at SAIT. Canadian work authorization (PGWP).
 
 ---
 
@@ -65,8 +65,12 @@ AI Engineer who ships production systems. 17 years building distributed platform
 
 ## Education
 
-**Post-Diploma in Integrated AI** — SAIT, Calgary | Sep 2024 – Apr 2026
-- 4.0/4.0 GPA | Core: Machine Learning, Deep Learning, Computer Vision (YOLOv8), NLP, Model Deployment
+**Post-Diploma Certificate in Integrated Artificial Intelligence** — SAIT, Calgary | Sep 2025 – Apr 2026
+- In Progress (Final Term) | Computer Vision, Predictive Analytics, AI Governance, Human-Centred AI
+- Capstone: Applied AI Projects
+
+**Post-Diploma Certificate in Data Analytics** — SAIT, Calgary | Sep 2024 – Apr 2025
+- 4.0/4.0 GPA | Statistical Analysis, Predictive Analytics, Business Intelligence
 - Capstone: ThyroidSentry (97.4% cancer recurrence prediction with XGBoost + SHAP)
 
 ---
