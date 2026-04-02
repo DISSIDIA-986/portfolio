@@ -132,10 +132,10 @@ const experiences: Experience[] = [
     solution: [
       "Achieved 4.0/4.0 GPA while working part-time on real-world projects with local development teams",
       "Core courses: Statistical Analysis, Predictive Analytics, Business Intelligence Reporting, Business Analytics",
-      "Capstone: ThyroidSentry — cancer recurrence prediction system achieving 97.4% accuracy with XGBoost + SHAP",
+      "Capstone: cancer recurrence prediction system achieving 97.4% accuracy with XGBoost, SHAP interpretability, and Streamlit dashboard",
     ],
     impact:
-      "4.0 GPA, ThyroidSentry (97.4% accuracy), solid foundation for AI specialization",
+      "4.0 GPA, capstone ML system (97.4% accuracy), solid foundation for AI specialization",
     technologies: [
       "Python",
       "SQL",
