@@ -45,18 +45,18 @@ const terminalLines = [
     output: "jason-niu — full-stack ai engineer, 17yr production veteran",
     delay: 0.3,
   },
-  { prompt: "~", command: "cat skills.yml", delay: 0.6 },
+  { prompt: "~", command: "cat stack.yml", delay: 0.6 },
   {
-    output: "RAG × LLM Agent × Computer Vision × Healthcare ML",
+    output: "Python · Go · TypeScript | RAG · Multi-Agent · LLM Ops · CV",
     delay: 0.9,
   },
-  { prompt: "~", command: "cat philosophy.txt", delay: 1.2 },
+  { prompt: "~", command: "tail -1 metrics.log", delay: 1.2 },
   {
-    output: '"Every hard problem is a system trying to teach you something."',
+    output: "10K concurrent users · 0.94 LLM quality · 6 AI systems shipped",
     delay: 1.5,
   },
   { prompt: "~", command: "uptime", delay: 1.8 },
-  { output: "1,100+ commits this year. Still shipping.", delay: 2.1 },
+  { output: "Building with AI, not just about AI.", delay: 2.1 },
 ];
 
 export default function Hero() {
