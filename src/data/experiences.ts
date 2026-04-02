@@ -11,7 +11,7 @@ const experiences: Experience[] = [
       "Build a smart building management system from scratch — BMS, mobile app, AI document search, and face recognition access control — for a Canadian startup",
     solution: [
       "Developed enterprise BMS as a monorepo: ASP.NET Core 8 backend, Next.js 15 admin panel, React Native mobile app with multi-tenant management and real-time SignalR communication",
-      "Built Industry-AI-Flow AI workflow platform with LangChain, featuring intent recognition, multi-agent orchestration, pgvector hybrid retrieval, and OCR processing",
+      "Built agentic AI workflow platform with LangChain, featuring intent recognition, multi-agent orchestration, pgvector hybrid retrieval, and OCR document processing",
       "Developed cross-platform mobile app using React Native + TypeScript + Expo with Firebase auth and biometric features",
       "Implemented CI/CD automation using GitHub Actions with Docker + GCP deployment",
     ],
@@ -99,15 +99,15 @@ const experiences: Experience[] = [
   {
     id: 4,
     company: "Southern Alberta Institute of Technology (SAIT)",
-    position: "Post-Diploma in Data Analytics & Integrated AI",
+    position: "Post-Diploma in Integrated AI",
     location: "Calgary, Canada",
     period: "Sep 2024 - Apr 2026",
     type: "education",
     problem:
-      "Transition from 15 years of enterprise Java to modern AI/ML — learn fast, ship real projects, prove the new skills are production-grade",
+      "Accelerate into production AI — combine 17 years of engineering rigor with formal AI/ML training and hands-on agentic AI projects",
     solution: [
       "Achieved 4.0/4.0 GPA across all semesters while working part-time on real-world projects with local development teams",
-      "Completed core courses: Data Analytics (Python, SQL, Power BI), AI Integration (ML, Deep Learning, Model Deployment), Computer Vision (YOLO, OpenCV), NLP",
+      "Completed core courses: AI Integration (ML, Deep Learning, Model Deployment), Computer Vision (YOLO, OpenCV), NLP, Data Analytics (Python, SQL, Power BI)",
       "Built capstone projects: HockeyAI-Tracker (real-time player tracking with YOLOv8), ThyroidSentry (cancer recurrence prediction with 97.4% accuracy)",
     ],
     impact:

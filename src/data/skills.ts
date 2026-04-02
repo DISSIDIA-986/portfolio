@@ -8,6 +8,7 @@ const skills: Skills = {
       { name: "LangChain / RAG Architecture", level: 85 },
       { name: "LLM Reliability (Circuit Breakers, Fallback Chains)", level: 80 },
       { name: "Structured Output (Pydantic/instructor)", level: 85 },
+      { name: "LLM-as-Judge / DeepEval", level: 80 },
     ],
   },
   mlData: {
@@ -25,7 +26,7 @@ const skills: Skills = {
       { name: "Distributed Systems (Spring Cloud, MQ, ELK)", level: 85 },
       { name: "Cloud & DevOps (Docker, K8s, GCP, Alibaba Cloud, CI/CD)", level: 85 },
       { name: "Observability & Data Pipelines (Prometheus, OpenTelemetry, Skywalking, ETL)", level: 80 },
-      { name: "Full Stack (React/Next.js, Java/Spring, Python/FastAPI)", level: 90 },
+      { name: "Full Stack (React/Next.js, Java/Spring, Python/FastAPI, Go)", level: 90 },
       { name: "Database Systems (PostgreSQL, Redis, MongoDB, Elasticsearch, vector DBs)", level: 85 },
     ],
   },

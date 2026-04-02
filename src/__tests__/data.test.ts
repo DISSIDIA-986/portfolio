@@ -63,6 +63,13 @@ describe("projects data", () => {
     const firstFeatured = featured[0];
     expect(firstFeatured.category).toContain("AI");
   });
+
+  it("featured projects are ordered AI-first", () => {
+    const featured = projects.filter((p) => p.featured);
+    expect(featured[0].title).toContain("JobPilot AI");
+    expect(featured[1].title).toContain("Industry-AI-Flow");
+    expect(featured[2].title).toContain("AI Ops Control Room");
+  });
 });
 
 describe("experiences data", () => {

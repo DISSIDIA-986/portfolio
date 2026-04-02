@@ -7,17 +7,17 @@ yupoca24@gmail.com | [linkedin.com/in/yupo-niu](https://linkedin.com/in/yupo-niu
 
 ## Professional Summary
 
-AI Engineer with 17 years of production engineering and 2+ years building agentic AI systems. Ship multi-agent LLM platforms daily, including a job automation pipeline orchestrating 5 providers with circuit breakers, structured output, and reflexive quality gates (1,250+ tests). Built enterprise RAG with LangChain/pgvector, computer vision tracking with YOLOv8, and ML systems achieving 97.4% accuracy. 4.0 GPA in AI/Data Analytics at SAIT. Canadian work authorization (PGWP).
+AI Engineer who ships production systems. 17 years building distributed platforms (10K+ concurrent users, Kubernetes, observability stacks), now applying that same engineering rigor to agentic AI. Built multi-agent LLM pipelines orchestrating 5 providers with circuit breakers and 1,250+ tests, enterprise RAG with hybrid retrieval, and ML systems achieving 97.4% accuracy. 4.0 GPA in Integrated AI at SAIT. Canadian work authorization (PGWP).
 
 ---
 
 ## Technical Skills
 
-**AI & LLM Systems:** Agentic AI / Multi-Agent Orchestration, LangChain, RAG (pgvector, ChromaDB), Structured Output (Pydantic/instructor), LLM Reliability (circuit breakers, provider fallback chains), Prompt Engineering, MCP, DeepEval
+**AI & LLM Systems:** Agentic AI / Multi-Agent Orchestration, LangChain, LangGraph, RAG (pgvector, ChromaDB), Structured Output (Pydantic/instructor), LLM Reliability (circuit breakers, provider fallback chains), LLM-as-Judge / DeepEval, Prompt Engineering, MCP
 **Machine Learning & Data:** scikit-learn, XGBoost, SHAP, YOLOv8, OpenCV, Pandas, NumPy, Streamlit, ETL Pipelines
-**Production Engineering:** Python, FastAPI, Java, Spring Boot, Spring Cloud, React, Next.js, TypeScript, .NET/C#
-**Cloud & DevOps:** Docker, Kubernetes, GCP, Alibaba Cloud, CI/CD, GitHub Actions, Prometheus, OpenTelemetry, ELK
-**Databases:** PostgreSQL, MySQL, Redis, MongoDB, Elasticsearch, pgvector, ChromaDB
+**Production Stack:** Python, FastAPI, Go, Java, Spring Boot, Spring Cloud, React, Next.js, TypeScript, .NET/C#
+**Infrastructure:** Docker, Kubernetes, GCP, Alibaba Cloud, CI/CD, GitHub Actions, Prometheus, OpenTelemetry, Grafana, ELK
+**Data Systems:** PostgreSQL, pgvector, MySQL, Redis, MongoDB, Elasticsearch, ChromaDB, SQLite, InfluxDB
 
 ---
 
@@ -30,24 +30,24 @@ AI Engineer with 17 years of production engineering and 2+ years building agenti
 **Industry-AI-Flow — Enterprise RAG Platform**
 - Built intelligent intent recognition and multi-agent orchestration using LangChain with hybrid retrieval (BM25 + pgvector), processing 25K+ lines of enterprise documents with OCR via PaddleOCR
 
-**AgenticAI2026 — AI Agent Architecture Curriculum**
-- Designed interactive learning curriculum for senior developers covering multi-agent patterns, tool orchestration, and production deployment of agentic AI systems
+**AI Ops Control Room — LLM Quality Evaluation**
+- Designed LLM-as-Judge pipeline: Qwen 3.5 simulates customer service, DeepSeek V3 evaluates on 3 dimensions — achieving 0.94/1.00 composite score using DeepEval framework
+
+**Autonomous-AI-Trade — AI-Driven Trading System**
+- Built production-grade automated crypto trading system with AI-driven strategy decisions, multi-layer risk management, and real-time market data processing via InfluxDB and Prometheus monitoring
 
 **ThyroidSentry — Cancer Recurrence Prediction (97.4% Accuracy)**
 - Developed prediction system with 95.5% sensitivity using XGBoost ensemble methods and SHAP interpretability dashboards for medical professionals
 
-**HockeyAI-Tracker — Real-Time Player Tracking**
-- Implemented real-time hockey player and puck tracking using YOLOv8 with BoT-SORT multi-object tracking, generating team statistics at inference speed
-
-**AI Ops Control Room — LLM Quality Evaluation**
-- Designed LLM-as-Judge pipeline: Qwen 3.5 simulates customer service, DeepSeek V3 evaluates on 3 dimensions — achieving 0.94/1.00 composite score
+**CELPIP-Compass — Intelligent Spaced Repetition Learning**
+- Built full-stack AI-powered language learning platform with SM2 algorithm for dynamic review scheduling, featuring Next.js frontend, Prisma + PostgreSQL backend, and comprehensive test coverage
 
 ---
 
 ## Work Experience
 
 **AI Developer** — Havenz Tech, Calgary | Aug 2024 – Present
-- Built enterprise AI workflow platform with LangChain featuring intent recognition, multi-agent orchestration, pgvector hybrid retrieval, and OCR processing
+- Built agentic AI workflow platform with LangChain featuring intent recognition, multi-agent orchestration, pgvector hybrid retrieval, and OCR document processing
 - Developed monorepo BMS: ASP.NET Core 8 backend, Next.js 15 admin panel, React Native mobile app with real-time SignalR communication
 - Implemented CI/CD automation using GitHub Actions with Docker + GCP deployment
 
@@ -65,8 +65,9 @@ AI Engineer with 17 years of production engineering and 2+ years building agenti
 
 ## Education
 
-**Post-Diploma in Data Analytics & Integrated AI** — SAIT, Calgary | Sep 2024 – Apr 2026
+**Post-Diploma in Integrated AI** — SAIT, Calgary | Sep 2024 – Apr 2026
 - 4.0/4.0 GPA | Core: Machine Learning, Deep Learning, Computer Vision (YOLOv8), NLP, Model Deployment
+- Capstone: ThyroidSentry (97.4% cancer recurrence prediction with XGBoost + SHAP)
 
 ---
 
