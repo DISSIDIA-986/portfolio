@@ -70,7 +70,7 @@ Framer Motion is used in section components for scroll-triggered animations. Pat
 
 Project images are served from two sources:
 - Alibaba Cloud OSS: `dissidia.oss-cn-beijing.aliyuncs.com/portfolio/` (configured in `next.config.ts` remotePatterns)
-- Local: `public/images/` (16 SVG architecture diagrams)
+- Local: `public/images/` (17 SVG architecture diagrams)
 
 Featured project images use `ImageLightbox` component for tap-to-zoom (pinch on mobile, scroll on desktop). All architecture SVGs follow a consistent style: 800x500 viewBox, dark teal gradient background, Inter font, colored component boxes.
 
@@ -80,8 +80,8 @@ Featured project images use `ImageLightbox` component for tap-to-zoom (pinch on 
 
 ### Branches
 
-- `nextjs-migration` — Active development branch (current Next.js codebase)
-- `master` — Main branch for PRs
+- `master` — Production branch (auto-deploys to Vercel)
+- `nextjs-migration` — Legacy development branch (migration complete)
 - `legacy-cra` — Old Create React App version
 - `gh-pages` — Previously used for GitHub Pages deployment
 

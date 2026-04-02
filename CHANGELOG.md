@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - Featured projects reordered: JobPilot AI → Industry-AI-Flow → AI Ops Control Room → Trading Bots → Fruit Ninja AI → HavenzHub
 - Non-featured projects reordered with AI-relevant projects first (vox, akm, Local Chat RAG, AgenticAI2026)
 - Hero copy updated: replaced ThyroidSentry "97.4% accuracy" reference with AI Ops "0.94 quality evaluation" score
+- Education section: removed ThyroidSentry project name from SAIT Data Analytics capstone description
 
 ### Removed
 - ThyroidSentry (traditional ML, weak AI Production Engineer signal)
