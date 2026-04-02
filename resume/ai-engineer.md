@@ -33,14 +33,11 @@ AI Engineer who ships production systems. 17 years building distributed platform
 **AI Ops Control Room — LLM Quality Evaluation**
 - Designed LLM-as-Judge pipeline: Qwen 3.5 simulates customer service, DeepSeek V3 evaluates on 3 dimensions — achieving 0.94/1.00 composite score using DeepEval framework
 
-**Autonomous-AI-Trade — AI-Driven Trading System**
-- Built production-grade automated crypto trading system with AI-driven strategy decisions, multi-layer risk management, and real-time market data processing via InfluxDB and Prometheus monitoring
+**Trading Bots — LLM-Driven Automated Trading**
+- Built multi-user SaaS trading system where local LLMs (Qwen 2.5, DeepSeek-R1) make entry/exit decisions via customizable prompts, with TradingView webhook signals executing through IBKR API with per-user/per-symbol configuration
 
-**ThyroidSentry — Cancer Recurrence Prediction (97.4% Accuracy)**
-- Developed prediction system with 95.5% sensitivity using XGBoost ensemble methods and SHAP interpretability dashboards for medical professionals
-
-**CELPIP-Compass — Intelligent Spaced Repetition Learning**
-- Built full-stack AI-powered language learning platform with SM2 algorithm for dynamic review scheduling, featuring Next.js frontend, Prisma + PostgreSQL backend, and comprehensive test coverage
+**Fruit Ninja AI — Hand Gesture Game (Computer Vision)**
+- Built gesture-controlled game using real-time AI hand tracking via MediaPipe with Three.js 3D rendering, fluorescent neon trails, and adaptive performance — deployed on Alibaba Cloud ESA
 
 ---
 
