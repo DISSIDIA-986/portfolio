@@ -37,15 +37,22 @@ describe("projects data", () => {
     expect(yipaiji!.imageUrl).toBe("/images/projects/yipaiji.svg");
   });
 
-  it("has exactly 17 total projects", () => {
-    expect(projects.length).toBe(17);
+  it("has exactly 16 total projects", () => {
+    expect(projects.length).toBe(16);
   });
 
-  it("new AI-native projects exist", () => {
+  it("AI-native projects exist", () => {
     const titles = projects.map((p) => p.title);
     expect(titles).toContain("AI Ops Control Room - LLM Quality Evaluation");
     expect(titles).toContain("Vox - AI Voice-to-Text Pipeline");
     expect(titles).toContain("AKM - AI API Key Manager");
+    expect(titles).toContain("Fruit Ninja AI — Hand Gesture Game");
+  });
+
+  it("removed projects are gone", () => {
+    const titles = projects.map((p) => p.title);
+    expect(titles).not.toContain("ThyroidSentry - Cancer Recurrence Prediction");
+    expect(titles).not.toContain("Polymarket Arbitrage Strategy Analysis");
   });
 
   it("JobPilot AI is first featured project", () => {
@@ -69,6 +76,9 @@ describe("projects data", () => {
     expect(featured[0].title).toContain("JobPilot AI");
     expect(featured[1].title).toContain("Industry-AI-Flow");
     expect(featured[2].title).toContain("AI Ops Control Room");
+    expect(featured[3].title).toContain("Trading Bots");
+    expect(featured[4].title).toContain("Fruit Ninja AI");
+    expect(featured[5].title).toContain("HavenzHub");
   });
 });
 

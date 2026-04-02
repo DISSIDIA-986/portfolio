@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.6.0] - 2026-04-02
+
+### Added
+- Fruit Ninja AI as new featured project — MediaPipe hand gesture game with Three.js, real-time AI hand tracking, deployed on Alibaba Cloud ESA
+- SVG architecture diagram for Fruit Ninja AI following DESIGN.md teal gradient spec
+- GitHub repo created: DISSIDIA-986/fruit-ninja-ai
+- Test assertions: fruit_ninja_game existence, removed project absence, full featured order validation
+
+### Changed
+- Featured projects reordered: JobPilot AI → Industry-AI-Flow → AI Ops Control Room → Trading Bots → Fruit Ninja AI → HavenzHub
+- Non-featured projects reordered with AI-relevant projects first (vox, akm, Local Chat RAG, AgenticAI2026)
+- Hero copy updated: replaced ThyroidSentry "97.4% accuracy" reference with AI Ops "0.94 quality evaluation" score
+
+### Removed
+- ThyroidSentry (traditional ML, weak AI Production Engineer signal)
+- Polymarket Arbitrage Strategy Analysis (speculative concept project)
+
 ## [2.5.0] - 2026-04-02
 
 ### Changed

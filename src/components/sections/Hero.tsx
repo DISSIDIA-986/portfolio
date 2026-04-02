@@ -103,9 +103,10 @@ export default function Hero() {
               className="text-lg text-stone-600 dark:text-stone-400 mb-8 max-w-2xl"
               variants={itemVariants}
             >
-              From enterprise platforms handling 10K concurrent users to ML
-              systems with 97.4% accuracy — I&apos;ve built systems across
-              fintech, e-commerce, smart buildings, and AI. My daily workflow
+              From enterprise platforms handling 10K concurrent users to
+              multi-agent LLM systems scoring 0.94 on quality evaluation —
+              I&apos;ve built production systems across fintech, e-commerce,
+              smart buildings, and AI. My daily workflow
               integrates Claude Code, MCP, and custom AI tools to ship faster
               and solve harder problems.
             </motion.p>

@@ -39,6 +39,14 @@
 - [x] **Add market-demanded skills** — LLM-as-Judge / DeepEval, Go to Full Stack. **Completed:** v2.5.0 (2026-04-02)
 - [ ] **Phase 2: Add new portfolio projects with SVG diagrams** — Autonomous-AI-Trade and CELPIP-Compass added to resume but not yet to portfolio site (need SVG architecture diagrams + data entries in projects.ts). **Deferred** to Phase 2.
 
+## Project Priority Reorganization (2026-04-02)
+
+- [x] **Remove ThyroidSentry + Polymarket from portfolio** — ThyroidSentry (traditional ML) and Polymarket (speculative concept) removed to strengthen AI Production Engineer signal. **Completed:** v2.6.0 (2026-04-02)
+- [x] **Add Fruit Ninja AI as featured project** — MediaPipe hand tracking game adds CV diversity to featured section. Created GitHub repo (DISSIDIA-986/fruit-ninja-ai), SVG architecture diagram, and portfolio data entry. **Completed:** v2.6.0 (2026-04-02)
+- [x] **Reorder featured projects AI-first** — JobPilot AI → Industry-AI-Flow → AI Ops Control Room → Trading Bots → Fruit Ninja AI → HavenzHub. **Completed:** v2.6.0 (2026-04-02)
+- [x] **Update Hero copy** — Replaced ThyroidSentry "97.4% accuracy" reference with AI Ops "0.94 quality evaluation" to match new project lineup. **Completed:** v2.6.0 (2026-04-02)
+- [ ] **Featured projects credibility** — 3/6 featured projects (Trading Bots, HavenzHub, Fruit Ninja AI) have no repoUrl or only recently added repo. Consider adding demo URLs, screenshots, or public repos to strengthen credibility signals.
+
 ## Deferred (out of current scope)
 
 - [ ] **Page layout architecture** — Codex hard rejection: site reads as "stacked cards" instead of composed marketing page. Sections repeat same mood statement. This is a structural redesign (ocean), not a data update. Address in a future sprint.

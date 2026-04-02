@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#042f2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#134e4a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0f766e;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4" />
+      <stop offset="100%" style="stop-color:#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="input" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="ai" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.9" />
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#ccfbf1" font-size="22" font-weight="700">Fruit Ninja AI — Hand Gesture Game</text>
+  <line x1="180" y1="50" x2="620" y2="50" stroke="url(#accent)" stroke-width="2"/>
+
+  <!-- Input Layer -->
+  <rect x="40" y="80" width="160" height="70" rx="8" fill="url(#input)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="120" y="108" text-anchor="middle" fill="#f5f3ff" font-size="14" font-weight="600">Webcam</text>
+  <text x="120" y="125" text-anchor="middle" fill="#ddd6fe" font-size="10">Video Stream</text>
+  <text x="120" y="140" text-anchor="middle" fill="#ddd6fe" font-size="10">30-60 FPS</text>
+
+  <rect x="40" y="170" width="160" height="50" rx="8" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="120" y="195" text-anchor="middle" fill="#ccfbf1" font-size="13" font-weight="600">Mouse / Touch</text>
+  <text x="120" y="210" text-anchor="middle" fill="#5eead4" font-size="10">Fallback Input</text>
+
+  <!-- AI Processing -->
+  <rect x="260" y="75" width="280" height="160" rx="10" fill="none" stroke="#2dd4bf" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="400" y="95" text-anchor="middle" fill="#5eead4" font-size="11" font-weight="600">AI PROCESSING PIPELINE</text>
+
+  <rect x="280" y="105" width="240" height="50" rx="8" fill="url(#ai)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="400" y="128" text-anchor="middle" fill="#451a03" font-size="14" font-weight="700">MediaPipe Hand Tracking</text>
+  <text x="400" y="145" text-anchor="middle" fill="#78350f" font-size="10">21 Landmarks per Hand</text>
+
+  <rect x="280" y="170" width="240" height="50" rx="8" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="400" y="193" text-anchor="middle" fill="#ccfbf1" font-size="13" font-weight="600">Gesture Recognition</text>
+  <text x="400" y="208" text-anchor="middle" fill="#5eead4" font-size="10">Slice Detection + Smoothing</text>
+
+  <!-- Arrows: Input → AI -->
+  <line x1="200" y1="115" x2="278" y2="130" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="200" y1="195" x2="278" y2="195" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Rendering Engine -->
+  <rect x="260" y="260" width="280" height="130" rx="10" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="400" y="280" text-anchor="middle" fill="#c4b5fd" font-size="11" font-weight="600">THREE.JS RENDERING ENGINE</text>
+
+  <rect x="280" y="290" width="110" height="45" rx="6" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="335" y="313" text-anchor="middle" fill="#ccfbf1" font-size="12" font-weight="600">3D Fruits</text>
+  <text x="335" y="328" text-anchor="middle" fill="#5eead4" font-size="9">Physics Engine</text>
+
+  <rect x="410" y="290" width="110" height="45" rx="6" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="465" y="313" text-anchor="middle" fill="#ccfbf1" font-size="12" font-weight="600">Neon Trails</text>
+  <text x="465" y="328" text-anchor="middle" fill="#5eead4" font-size="9">Particle FX</text>
+
+  <rect x="280" y="345" width="240" height="35" rx="6" fill="url(#input)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="400" y="367" text-anchor="middle" fill="#f5f3ff" font-size="12" font-weight="600">WebGL Canvas + Camera Background</text>
+
+  <!-- Arrow: AI → Render -->
+  <line x1="400" y1="222" x2="400" y2="258" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Output / Game State -->
+  <rect x="600" y="80" width="160" height="155" rx="8" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="680" y="105" text-anchor="middle" fill="#ccfbf1" font-size="14" font-weight="600">Game State</text>
+  <line x1="620" y1="112" x2="740" y2="112" stroke="#5eead4" stroke-width="0.5"/>
+  <text x="680" y="132" text-anchor="middle" fill="#5eead4" font-size="11">Score System</text>
+  <text x="680" y="152" text-anchor="middle" fill="#5eead4" font-size="11">60s Timer</text>
+  <text x="680" y="172" text-anchor="middle" fill="#5eead4" font-size="11">Difficulty Ramp</text>
+  <text x="680" y="192" text-anchor="middle" fill="#5eead4" font-size="11">Bomb Avoidance</text>
+  <text x="680" y="212" text-anchor="middle" fill="#5eead4" font-size="11">Performance Stats</text>
+
+  <!-- Arrow: AI → Game State -->
+  <line x1="522" y1="155" x2="598" y2="155" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Deployment -->
+  <rect x="600" y="280" width="160" height="70" rx="8" fill="url(#card)" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="680" y="308" text-anchor="middle" fill="#ccfbf1" font-size="13" font-weight="600">Alibaba Cloud</text>
+  <text x="680" y="325" text-anchor="middle" fill="#5eead4" font-size="11">ESA Edge Deploy</text>
+  <text x="680" y="340" text-anchor="middle" fill="#5eead4" font-size="10">HTTPS + CDN</text>
+
+  <!-- Tech Labels -->
+  <rect x="40" y="420" width="720" height="60" rx="8" fill="rgba(13,148,136,0.15)" stroke="#2dd4bf" stroke-width="0.5"/>
+  <text x="400" y="445" text-anchor="middle" fill="#5eead4" font-size="11" font-weight="600">TECH STACK</text>
+  <text x="400" y="465" text-anchor="middle" fill="#99f6e4" font-size="12">JavaScript  |  Three.js  |  MediaPipe Tasks Vision  |  WebGL  |  Vite  |  Alibaba Cloud ESA</text>
+</svg>
