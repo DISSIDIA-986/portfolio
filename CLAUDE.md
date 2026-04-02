@@ -3,6 +3,8 @@
 ## 语言偏好
 请用中文回复。用户母语是中文，阅读中文更快。代码、命令、技术术语可以保持英文。
 
+## 我最近1年活跃的GitHub项目
+- /Users/niuyp/Documents/github.com/git-project-summary/projects.json
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
@@ -68,7 +70,7 @@ Framer Motion is used in section components for scroll-triggered animations. Pat
 
 Project images are served from two sources:
 - Alibaba Cloud OSS: `dissidia.oss-cn-beijing.aliyuncs.com/portfolio/` (configured in `next.config.ts` remotePatterns)
-- Local: `public/images/` (11 SVG architecture diagrams)
+- Local: `public/images/` (16 SVG architecture diagrams)
 
 Featured project images use `ImageLightbox` component for tap-to-zoom (pinch on mobile, scroll on desktop). All architecture SVGs follow a consistent style: 800x500 viewBox, dark teal gradient background, Inter font, colored component boxes.
 
@@ -94,3 +96,27 @@ In QA mode, flag any code that doesn't match DESIGN.md.
 Use the `/browse` skill from gstack for all web browsing. **Never use `mcp__claude-in-chrome__*` tools directly.**
 
 Available skills: `/office-hours`, `/plan-ceo-review`, `/plan-eng-review`, `/plan-design-review`, `/design-consultation`, `/review`, `/ship`, `/land-and-deploy`, `/canary`, `/benchmark`, `/browse`, `/qa`, `/qa-only`, `/design-review`, `/setup-browser-cookies`, `/setup-deploy`, `/retro`, `/investigate`, `/document-release`, `/codex`, `/cso`, `/autoplan`, `/careful`, `/freeze`, `/guard`, `/unfreeze`, `/gstack-upgrade`.
+
+## 项目规则
+- 更新数据时，检查所有引用同一数据点的文件（JSON数据文件 + 页面组件 + 模板）
+- 硬编码数据必须迁移到 JSON 数据文件
+- 构建后运行 npm run build 验证
+- 每次修改后 curl 所有路由确认 200 响应
+
+## Skill routing
+
+When the user's request matches an available skill, ALWAYS invoke it using the Skill
+tool as your FIRST action. Do NOT answer directly, do NOT use other tools first.
+The skill has specialized workflows that produce better results than ad-hoc answers.
+
+Key routing rules:
+- Product ideas, "is this worth building", brainstorming → invoke office-hours
+- Bugs, errors, "why is this broken", 500 errors → invoke investigate
+- Ship, deploy, push, create PR → invoke ship
+- QA, test the site, find bugs → invoke qa
+- Code review, check my diff → invoke review
+- Update docs after shipping → invoke document-release
+- Weekly retro → invoke retro
+- Design system, brand → invoke design-consultation
+- Visual audit, design polish → invoke design-review
+- Architecture review → invoke plan-eng-review

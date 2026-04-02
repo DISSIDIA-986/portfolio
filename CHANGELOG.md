@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.5.0] - 2026-04-02
+
+### Changed
+- Portfolio repositioned as "AI Production Engineer" with unified narrative across resume and site
+- Featured projects reordered AI-first: JobPilot AI → Industry-AI-Flow → AI Ops Control Room → ThyroidSentry → HavenzHub → Trading Bots
+- HockeyAI-Tracker moved from featured to non-featured; Trading Bots promoted to featured with new "challenge" tag
+- SAIT education split into two accurate entries: Data Analytics (Sep 2024 – Apr 2025, 4.0 GPA) and Integrated AI (Sep 2025 – Apr 2026, In Progress)
+- Havenz Tech experience reworded to lead with "agentic AI workflow platform"
+- SAIT courses reordered AI-first (AI Integration before Data Analytics)
+- Resume unified to single AI Engineer version, targeting Calgary AI job market
+
+### Added
+- LLM-as-Judge / DeepEval skill (level 80) in AI & LLM Systems category
+- Go added to Full Stack skill description
+- New test: featured projects AI-first ordering validation
+- Autonomous-AI-Trade and CELPIP-Compass projects added to resume AI Projects section
+
 ## [2.4.0] - 2026-03-23
 
 ### Added

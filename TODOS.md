@@ -31,6 +31,14 @@
   - **Add** `akm` (API Key Manager, Go + AES-256-GCM + macOS Keychain, AI platform key management)
   Total: 14 → 15 projects. Each new project needs: title, description, technologies array, imageUrl (SVG or OSS), category, and optionally repoUrl/demoUrl. **Why:** Strengthens AI-native signal in project portfolio. **Depends on:** Create SVG architecture diagrams for new projects (follow DESIGN.md SVG spec: 800×500, teal gradient, Inter font).
 
+## AI Production Engineer Repositioning (2026-04-02)
+
+- [x] **Reorder featured projects AI-first** — JobPilot AI → Industry-AI-Flow → AI Ops Control Room → ThyroidSentry → HavenzHub → Trading Bots. HockeyAI unfeatured, Trading Bots featured. **Completed:** v2.5.0 (2026-04-02)
+- [x] **Unify resume to single AI Engineer version** — Rewrote ai-engineer.md with "AI Production Engineer" narrative. Added Autonomous-AI-Trade, CELPIP-Compass, AI Ops Control Room to resume projects. Removed AgenticAI2026 and HockeyAI-Tracker. **Completed:** v2.5.0 (2026-04-02)
+- [x] **Correct SAIT education entries** — Split into two Post-Diploma Certificates: Data Analytics (Sep 2024 – Apr 2025) and Integrated AI (Sep 2025 – Apr 2026). **Completed:** v2.5.0 (2026-04-02)
+- [x] **Add market-demanded skills** — LLM-as-Judge / DeepEval, Go to Full Stack. **Completed:** v2.5.0 (2026-04-02)
+- [ ] **Phase 2: Add new portfolio projects with SVG diagrams** — Autonomous-AI-Trade and CELPIP-Compass added to resume but not yet to portfolio site (need SVG architecture diagrams + data entries in projects.ts). **Deferred** to Phase 2.
+
 ## Deferred (out of current scope)
 
 - [ ] **Page layout architecture** — Codex hard rejection: site reads as "stacked cards" instead of composed marketing page. Sections repeat same mood statement. This is a structural redesign (ocean), not a data update. Address in a future sprint.
