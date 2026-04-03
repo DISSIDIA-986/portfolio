@@ -103,16 +103,15 @@ Available skills: `/office-hours`, `/plan-ceo-review`, `/plan-eng-review`, `/pla
 ```bash
 ./resume/generate-pdfs.sh
 ```
-链条：Markdown → HTML（pandoc + CSS）→ PDF（wkhtmltopdf）→ OSS（myoss.put.sh）
+链条：Markdown → LLM Skill → HTML → PDF（wkhtmltopdf）→ OSS（myoss.put.sh）
 
-此脚本会：
-1. 用 pandoc + resume.css 从 markdown 生成 HTML（保留在 resume/ 目录，可用于检查样式）
-2. 用 wkhtmltopdf 从 HTML 生成 PDF（ai-engineer, fullstack-ai, senior-swe）
-3. 用 `~/Documents/bash/myoss.put.sh` 上传到阿里云 OSS（`dissidia.oss-cn-beijing.aliyuncs.com/portfolio/resume/`）
+两步走：
+1. **`/resume-to-html`**（在 Claude Code 中运行）— LLM 将 markdown 转为专业排版 HTML，内置 6 维度对抗性审查
+2. **`./resume/generate-pdfs.sh`** — 从 HTML 生成 PDF + 上传 OSS
 
-HTML 和 PDF 是生成产物，已在 .gitignore 中排除。源文件是 `resume/*.md` + `resume/resume.css`。
+HTML 和 PDF 是生成产物，已在 .gitignore 中排除。源文件是 `resume/*.md` + `resume/resume-template.css`。
 
-用 `--skip-upload` 跳过上传（仅生成 HTML + PDF）。依赖：`brew install pandoc wkhtmltopdf`。
+`generate-pdfs.sh` 用 `--skip-upload` 跳过上传。依赖：`brew install wkhtmltopdf`。
 
 ## 项目规则
 - 更新数据时，检查所有引用同一数据点的文件（JSON数据文件 + 页面组件 + 模板）

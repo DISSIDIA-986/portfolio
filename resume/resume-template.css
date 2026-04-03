@@ -1,0 +1,188 @@
+/*
+ * Resume PDF Template — wkhtmltopdf compatible
+ *
+ * Constraints:
+ *   - No flexbox, grid, CSS variables, calc()
+ *   - Only hex colors
+ *   - Only pt/px/mm units
+ *   - Safe font stacks only
+ *   - All styles must be inlined in <style> tag
+ *
+ * Target: Single-page A4 with 12mm/8mm/14mm margins
+ */
+
+/* === Page === */
+@page {
+  margin: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.35;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Header === */
+h1.resume-name {
+  font-size: 22pt;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+
+.contact-line {
+  font-size: 9pt;
+  color: #555;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.contact-line a {
+  color: #1a6fb5;
+  text-decoration: none;
+}
+
+.contact-separator {
+  color: #999;
+  padding: 0 3px;
+}
+
+/* === Section Titles === */
+h2.section-title {
+  font-size: 12pt;
+  font-weight: 700;
+  color: #111;
+  border-bottom: 1.5px solid #333;
+  padding-bottom: 2px;
+  margin: 12px 0 6px 0;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* === Experience / Project Entries === */
+.experience-entry {
+  margin-bottom: 6px;
+}
+
+.entry-header {
+  margin-bottom: 1px;
+}
+
+.entry-title {
+  font-size: 10.5pt;
+  font-weight: 700;
+  color: #111;
+}
+
+.entry-meta {
+  font-size: 9pt;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Inline layout: title — company | dates on same line */
+.entry-header-inline {
+  margin-bottom: 1px;
+}
+
+.entry-header-inline .entry-title {
+  display: inline;
+}
+
+.entry-header-inline .entry-meta {
+  display: inline;
+  margin-left: 4px;
+}
+
+/* === Lists === */
+ul.resume-list {
+  margin: 2px 0 0 0;
+  padding-left: 16px;
+  list-style-type: disc;
+}
+
+ul.resume-list li {
+  margin: 1px 0;
+  line-height: 1.3;
+  font-size: 10pt;
+}
+
+ul.resume-list li strong {
+  color: #222;
+}
+
+/* === Skills Section — compact bullet list === */
+ul.skills-list {
+  margin: 2px 0;
+  padding-left: 16px;
+  list-style-type: disc;
+}
+
+ul.skills-list li {
+  margin: 1px 0;
+  line-height: 1.3;
+  font-size: 10pt;
+}
+
+ul.skills-list li strong {
+  color: #111;
+  font-weight: 700;
+}
+
+/* === Summary Paragraph === */
+p.summary {
+  margin: 4px 0;
+  line-height: 1.4;
+  font-size: 10pt;
+}
+
+/* === Education === */
+.education-entry {
+  margin-bottom: 4px;
+}
+
+/* === Links === */
+a {
+  color: #1a6fb5;
+  text-decoration: none;
+}
+
+/* === Horizontal Rule (section separator, use sparingly) === */
+hr.section-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 8px 0;
+}
+
+/* === Footer sections (Work Auth, Languages) === */
+.footer-section {
+  margin-top: 8px;
+}
+
+.footer-section h2.section-title {
+  margin-top: 10px;
+}
+
+.footer-text {
+  font-size: 9.5pt;
+  color: #444;
+  margin: 2px 0;
+}
+
+/* === Page Break Control === */
+h2.section-title,
+.entry-header,
+.entry-header-inline {
+  page-break-after: avoid;
+}
+
+ul.resume-list,
+ul.skills-list,
+.experience-entry,
+.education-entry {
+  page-break-inside: avoid;
+}
