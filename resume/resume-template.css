@@ -23,6 +23,8 @@ body {
   color: #1a1a1a;
   margin: 0;
   padding: 0;
+  max-width: 794px; /* A4 width at 96dpi — makes browser preview match PDF */
+  word-wrap: break-word;
 }
 
 /* === Header === */
@@ -42,7 +44,7 @@ h1.resume-name {
 }
 
 .contact-line a {
-  color: #1a6fb5;
+  color: #0d9488;
   text-decoration: none;
 }
 
@@ -133,11 +135,11 @@ ul.skills-list li strong {
   font-weight: 700;
 }
 
-/* === Summary Paragraph === */
+/* === Summary Paragraph — slightly larger for visual hierarchy === */
 p.summary {
   margin: 4px 0;
   line-height: 1.4;
-  font-size: 10pt;
+  font-size: 10.5pt;
 }
 
 /* === Education === */
@@ -147,7 +149,7 @@ p.summary {
 
 /* === Links === */
 a {
-  color: #1a6fb5;
+  color: #0d9488;
   text-decoration: none;
 }
 
