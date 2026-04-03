@@ -7,7 +7,7 @@ yupoca24@gmail.com | [linkedin.com/in/yupo-niu](https://linkedin.com/in/yupo-niu
 
 ## Professional Summary
 
-AI Engineer who ships production systems. 17 years building distributed platforms (10K+ concurrent users, Kubernetes, observability stacks), now applying that same engineering rigor to agentic AI. Built multi-agent LLM pipelines orchestrating 5 providers with circuit breakers and 1,250+ tests, enterprise RAG with hybrid retrieval, and ML systems achieving 97.4% accuracy. 4.0 GPA in Data Analytics + Integrated AI at SAIT. Canadian work authorization (PGWP).
+AI Engineer who ships production systems. 17 years building distributed platforms (10K+ concurrent users, Kubernetes, observability stacks), now applying that same engineering rigor to agentic AI. Built multi-agent LLM pipelines orchestrating 5 providers with circuit breakers and 1,250+ tests, enterprise RAG with hybrid retrieval, and LLM-as-Judge evaluation scoring 0.94/1.00. 4.0 GPA in Data Analytics + Integrated AI at SAIT (capstone: 97.4% cancer prediction accuracy). Canadian work authorization (PGWP).
 
 ---
 
