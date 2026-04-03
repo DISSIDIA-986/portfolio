@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.7.0] - 2026-04-03
+
+### Added
+- Resume PDF auto-generation pipeline: `./resume/generate-pdfs.sh` converts HTML to PDF and uploads to Alibaba Cloud OSS via `myoss.put.sh`
+- `/resume-to-html` Claude Code skill: LLM-powered markdown-to-HTML conversion with 6-dimension adversarial review (content accuracy, HTML structure, wkhtmltopdf compatibility, page count, visual hierarchy, typography)
+- `resume/resume-template.css`: professional resume CSS template with ATS compatibility (single-column, safe fonts, page-break control, A4 preview width)
+- ATS compatibility rules in skill: standard section headings, single-column layout, no images/icons, content immutability constraint
+- Smart page count support: 1-2 pages based on content length (industry data: 51% recruiters prefer 2-page resumes for senior engineers)
+
+### Changed
+- Edianyun experience reframed as "pre-LLM decision systems engineering" across all 3 resume variants and portfolio
+- Resume Professional Summary: "AI Application Engineer with 17 years... including 8 years building enterprise decision engines, risk models, and workflow automation"
+- Edianyun bullets reorganized by theme: financial algorithm engine (NPV/ACPI/ROC), real-time risk control (DTS + Kafka), decision automation platform, custom Dubbo RPC framework
+- Portfolio HowIThink "Who I am" paragraph synced with decision systems narrative
+- Site meta description updated: "8 years building enterprise decision engines, now building the same class of systems with LLMs, RAG, and agents"
+- Resume link color aligned to portfolio teal (#0d9488)
+- Summary paragraph font increased to 10.5pt for visual hierarchy
+
+### Fixed
+- "reflexive quality gates" → "automated quality gates" (language error in ai-engineer.md)
+- "4.0 GPA in Data Analytics + Integrated AI" → "4.0 GPA across 3 completed terms... (Final Term in progress)" (accuracy: AI program still in progress)
+- "cut API response time 40%" → "significantly reduced API response times" (unverified metric)
+- "4 major platforms" → "8 product platforms" (matches source data)
+- Removed dead `resume/resume.css` (replaced by `resume-template.css`)
+- Resume PDFs removed from git tracking (.gitignored as generated artifacts)
+
+### For contributors
+- Resume pipeline: edit `resume/*.md` → run `/resume-to-html` → preview HTML → run `./resume/generate-pdfs.sh`
+- OSS credentials from `~/.env_secrets` (ALIYUN_OSS_KEY_ID / ALIYUN_OSS_KEY_SECRET)
+- `pandoc` dependency removed, replaced by LLM-based conversion
+
 ## [2.6.0] - 2026-04-02
 
 ### Added
