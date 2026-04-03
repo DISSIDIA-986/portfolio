@@ -128,13 +128,12 @@ export default function HowIThink() {
               <span className="font-semibold text-stone-800 dark:text-white">
                 Who I am:
               </span>{" "}
-              I&apos;m Jason — a developer who&apos;s spent 17 years building
-              enterprise systems in China and now Canada. I led teams at
-              Edianyun (HKEX-listed, 8 years), built blockchain systems at
-              Bitmain, and recently graduated from SAIT with a 4.0 GPA in Data
-              Analytics and Integrated AI. As VP Education in my Toastmasters
-              club, I bridge the gap between engineering thinking and clear
-              communication.
+              I&apos;m Jason — 17 years building production systems, including
+              8 years designing decision engines, risk models, and workflow
+              automation at Edianyun (HKEX-listed). Before LLMs, I built
+              rule-based systems that automated pricing, risk, and approvals.
+              Now I build the same class of systems with LLMs, RAG, and agents.
+              4.0 GPA in Data Analytics and Integrated AI at SAIT.
             </p>
             <p className="text-stone-600 dark:text-stone-300">
               <span className="font-semibold text-stone-800 dark:text-white">

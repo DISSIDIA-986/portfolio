@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   name: "Yupo (Jason) Niu",
   title: "AI Engineer",
   description:
-    "17 years of production engineering, now building agentic AI systems — from multi-agent LLM platforms to computer vision with 97.4% accuracy.",
+    "17 years shipping production systems — 8 years building enterprise decision engines, now building the same class of systems with LLMs, RAG, and agents.",
   url: "https://portfolio.dissidia.tech",
   email: "yupoca24@gmail.com",
   location: "Calgary, AB, Canada",
