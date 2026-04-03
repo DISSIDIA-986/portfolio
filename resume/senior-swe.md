@@ -7,7 +7,7 @@ yupoca24@gmail.com | [linkedin.com/in/yupo-niu](https://linkedin.com/in/yupo-niu
 
 ## Professional Summary
 
-Senior Software Engineer with 17 years building distributed systems, leading development teams, and delivering production platforms at scale. From high-concurrency auction systems handling 10K+ users to Kubernetes migrations and company-wide observability infrastructure. Now integrating AI capabilities — LLM orchestration, RAG, computer vision — into production engineering workflows. 4.0 GPA in AI/Data Analytics at SAIT.
+Senior Software Engineer with 17 years building production systems, including 8 years designing enterprise decision engines, risk control platforms, and workflow automation at a publicly traded company. From financial algorithm engines (NPV, ACPI) to real-time risk pipelines to Kubernetes migrations and company-wide observability infrastructure. Now integrating AI capabilities — LLM orchestration, RAG, computer vision — into production engineering workflows. 4.0 GPA in AI/Data Analytics at SAIT.
 
 ---
 
@@ -29,13 +29,13 @@ Senior Software Engineer with 17 years building distributed systems, leading dev
 - Built AI workflow platform with LangChain: intent recognition, multi-agent orchestration, pgvector hybrid retrieval, and OCR processing
 - Implemented CI/CD automation using GitHub Actions with Docker + GCP Cloud Run deployment
 
-**Senior Full Stack Developer / Team Lead** — Edianyun Inc., Beijing | Mar 2016 – Apr 2024
-- Led 3 development teams (Risk Control, E-commerce, DevOps) responsible for technical design, code review, and delivery across 4 major enterprise platforms
-- Architected high-concurrency bidding system (React + Java) with WebSocket real-time updates, Redis + RocketMQ optimization — cut API response time 40%
-- Built from-scratch risk control system: pre-rental, during-rental, post-rental credit management with third-party credit bureau integrations, MongoDB for schema-flexible audit logs
-- Developed company CMS, rental pricing calculator, and RBAC + Position-Based access control for 1K+ users across multiple business units
-- Built company-wide observability stack: ELK for all web systems (CMS, ERP, CRM, risk control), hot/cold log storage separation, Prometheus + Skywalking APM
-- Migrated to Kubernetes cloud-native infrastructure with Jenkins/GitLab CI/CD, blue-green deployments, and SonarQube code quality gates
+**Senior Full Stack Developer / Team Lead** — Edianyun Inc. (publicly traded), Beijing | Mar 2016 – Apr 2024
+- Built core financial algorithm engine implementing NPV, ACPI, and ROC calculations — the pricing decision engine powering all rental orders, buyout pricing, and risk reserve computations across multiple leasing models
+- Designed real-time risk control system with Alibaba DTS data pipelines + Kafka streaming for multi-dimensional credit scoring, automated risk alerting, and real-time indicator monitoring
+- Architected decision automation platform with multi-level approval workflows (M1→M2→M3→city manager), quota pool management, and 10+ configurable coupon/incentive policy types
+- Led 3 development teams (Risk Control, E-commerce, DevOps), built custom Dubbo RPC framework, Spring Boot Starter library, and unified RBAC permission center for 1K+ users
+- Built company-wide observability stack: ELK for all web systems, hot/cold log storage separation, Prometheus + Skywalking APM, SonarQube quality gates
+- Migrated monolith→Spring Cloud microservices→Kubernetes with Jenkins/GitLab CI/CD and blue-green deployments — 10K+ concurrent users, significantly reduced API response times
 
 **Full Stack Developer** — Bitmain Technologies, Beijing | Jun 2014 – Jun 2015
 - Independently shipped Bitcoin payment system for internal use, optimized blockchain confirmation time 40%

@@ -7,7 +7,7 @@ yupoca24@gmail.com | [linkedin.com/in/yupo-niu](https://linkedin.com/in/yupo-niu
 
 ## Professional Summary
 
-AI Engineer who ships production systems. 17 years building distributed platforms (10K+ concurrent users, Kubernetes, observability stacks), now applying that same engineering rigor to agentic AI. Built multi-agent LLM pipelines orchestrating 5 providers with circuit breakers and 1,250+ tests, enterprise RAG with hybrid retrieval, and LLM-as-Judge evaluation scoring 0.94/1.00. 4.0 GPA in Data Analytics + Integrated AI at SAIT (capstone: 97.4% cancer prediction accuracy). Canadian work authorization (PGWP).
+AI Application Engineer with 17 years shipping production systems, including 8 years building enterprise decision engines, risk models, and workflow automation at a publicly traded company. Now building the same class of systems with LLMs, RAG, and agents. Built multi-agent pipelines orchestrating 5 LLM providers with circuit breakers and 1,250+ tests, enterprise RAG with hybrid retrieval, and LLM-as-Judge evaluation scoring 0.94/1.00. 4.0 GPA across 3 completed terms in Data Analytics + Integrated AI at SAIT (Final Term in progress). Canadian work authorization (PGWP).
 
 ---
 
@@ -24,7 +24,7 @@ AI Engineer who ships production systems. 17 years building distributed platform
 ## AI Projects
 
 **[JobPilot AI — Agentic Job Automation Pipeline](https://github.com/DISSIDIA-986/jobpilot-ai)**
-- Built autonomous multi-agent system orchestrating 5 LLM providers (GLM, Qwen, DeepSeek, GROQ, Ollama) with circuit breakers, structured output via Pydantic, and reflexive quality gates — 1,250+ automated tests, 4 discovery sources, auto-apply via real Chrome
+- Built autonomous multi-agent system orchestrating 5 LLM providers (GLM, Qwen, DeepSeek, GROQ, Ollama) with circuit breakers, structured output via Pydantic, and automated quality gates — 1,250+ automated tests, 4 discovery sources, auto-apply via real Chrome
 - Implemented LLM reliability stack: stamina retries, instructor validation, aiobreaker circuit breakers, provider fallback chains with per-task routing
 
 **[Industry-AI-Flow — Enterprise RAG Platform](https://github.com/DISSIDIA-986/Industry-AI-Flow)**
@@ -48,11 +48,12 @@ AI Engineer who ships production systems. 17 years building distributed platform
 - Developed monorepo BMS: ASP.NET Core 8 backend, Next.js 15 admin panel, React Native mobile app with real-time SignalR communication
 - Implemented CI/CD automation using GitHub Actions with Docker + GCP deployment
 
-**Senior Full Stack Developer / Team Lead** — Edianyun Inc., Beijing | Mar 2016 – Apr 2024
-- Led 3 development teams (Risk Control, E-commerce, DevOps) across 4 major platforms serving 10K+ concurrent users
-- Architected high-concurrency bidding system with React + Java, WebSocket real-time updates, Redis + RocketMQ optimization — cut API response time 40%
-- Built company-wide observability stack with ELK for all web systems, implemented hot/cold log storage separation, deployed Prometheus + Skywalking APM
-- Migrated to Kubernetes cloud-native infrastructure with Jenkins/GitLab CI/CD and blue-green deployments
+**Senior Full Stack Developer / Team Lead** — Edianyun Inc. (publicly traded), Beijing | Mar 2016 – Apr 2024
+- Built core financial algorithm engine (NPV, ACPI, ROC) powering all rental pricing and buyout decisions — the decision engine behind the company's primary revenue stream
+- Designed real-time risk control system with Alibaba DTS data pipelines + Kafka streaming, multi-dimensional credit scoring models, and automated risk alerting
+- Architected decision automation platform with multi-level approval workflows (M1→M2→M3→city manager), quota pool management, and 10+ configurable policy types
+- Led 3 development teams (Risk Control, E-commerce, DevOps), built unified RBAC permission center and custom Dubbo RPC framework serving all internal systems
+- Migrated monolith→microservices→Kubernetes, built observability stack (ELK + Prometheus + Skywalking APM) — 10K+ concurrent users, significantly reduced API response times
 
 **Full Stack Developer** — Bitmain Technologies, Beijing | Jun 2014 – Jun 2015
 - Independently shipped Bitcoin payment system and optimized blockchain confirmation time 40%
