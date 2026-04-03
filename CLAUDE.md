@@ -97,6 +97,23 @@ Use the `/browse` skill from gstack for all web browsing. **Never use `mcp__clau
 
 Available skills: `/office-hours`, `/plan-ceo-review`, `/plan-eng-review`, `/plan-design-review`, `/design-consultation`, `/review`, `/ship`, `/land-and-deploy`, `/canary`, `/benchmark`, `/browse`, `/qa`, `/qa-only`, `/design-review`, `/setup-browser-cookies`, `/setup-deploy`, `/retro`, `/investigate`, `/document-release`, `/codex`, `/cso`, `/autoplan`, `/careful`, `/freeze`, `/guard`, `/unfreeze`, `/gstack-upgrade`.
 
+## Resume PDF 自动化
+
+当 `resume/*.md` 或 `src/data/experiences.ts` 内容变更时，**必须**运行：
+```bash
+./resume/generate-pdfs.sh
+```
+链条：Markdown → HTML（pandoc + CSS）→ PDF（wkhtmltopdf）→ OSS（myoss.put.sh）
+
+此脚本会：
+1. 用 pandoc + resume.css 从 markdown 生成 HTML（保留在 resume/ 目录，可用于检查样式）
+2. 用 wkhtmltopdf 从 HTML 生成 PDF（ai-engineer, fullstack-ai, senior-swe）
+3. 用 `~/Documents/bash/myoss.put.sh` 上传到阿里云 OSS（`dissidia.oss-cn-beijing.aliyuncs.com/portfolio/resume/`）
+
+HTML 和 PDF 是生成产物，已在 .gitignore 中排除。源文件是 `resume/*.md` + `resume/resume.css`。
+
+用 `--skip-upload` 跳过上传（仅生成 HTML + PDF）。依赖：`brew install pandoc wkhtmltopdf`。
+
 ## 项目规则
 - 更新数据时，检查所有引用同一数据点的文件（JSON数据文件 + 页面组件 + 模板）
 - 硬编码数据必须迁移到 JSON 数据文件

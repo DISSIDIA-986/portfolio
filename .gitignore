@@ -33,6 +33,10 @@ oss.md
 *.csv
 *.xlsx
 
+# resume generated artifacts (source is *.md, regenerate with ./resume/generate-pdfs.sh)
+resume/*.html
+resume/*.pdf
+
 # images (allow project architecture SVGs)
 *.png
 *.jpg

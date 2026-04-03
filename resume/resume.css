@@ -1,0 +1,88 @@
+/* Resume PDF stylesheet — used by wkhtmltopdf via pandoc */
+@page {
+  margin: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.4;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 22pt;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: #111;
+}
+
+h2 {
+  font-size: 13pt;
+  font-weight: 700;
+  border-bottom: 1.5px solid #333;
+  padding-bottom: 3px;
+  margin: 16px 0 8px 0;
+  color: #111;
+}
+
+h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  margin: 10px 0 4px 0;
+}
+
+p {
+  margin: 4px 0;
+}
+
+/* Contact line */
+h1 + p {
+  margin-bottom: 0;
+}
+h1 + p + hr {
+  margin-top: 8px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 12px 0;
+}
+
+/* Bullet lists — Work Experience, Projects, Education */
+ul {
+  margin: 4px 0;
+  padding-left: 18px;
+}
+
+li {
+  margin: 2px 0;
+  line-height: 1.35;
+}
+
+/* Bold inline labels in Technical Skills */
+li > strong {
+  color: #222;
+}
+
+/* Project titles with links */
+a {
+  color: #1a6fb5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Keep sections together when possible */
+h2, h3 {
+  page-break-after: avoid;
+}
+
+ul {
+  page-break-inside: avoid;
+}
