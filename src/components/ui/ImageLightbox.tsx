@@ -37,6 +37,13 @@ export default function ImageLightbox({
       ? `${basePath}${src}`
       : src;
 
+  // SVGs have small intrinsic dimensions (e.g. 800x500 viewBox) but are
+  // infinitely scalable. Tell YARL they're large so it fills the viewport.
+  const isSvg = src.endsWith(".svg");
+  const slideProps = isSvg
+    ? { src: resolvedSrc, width: 3200, height: 2000 }
+    : { src: resolvedSrc };
+
   return (
     <>
       <button
@@ -62,7 +69,7 @@ export default function ImageLightbox({
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        slides={[{ src: resolvedSrc }]}
+        slides={[slideProps]}
         plugins={[Zoom]}
         render={{
           buttonPrev: () => null,
