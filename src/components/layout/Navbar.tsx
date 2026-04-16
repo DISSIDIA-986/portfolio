@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <a
-          href="#hero"
+          href="/"
           className="text-2xl font-bold text-primary-700 dark:text-primary-400 hover:text-primary-600"
         >
           {SITE_CONFIG.name}

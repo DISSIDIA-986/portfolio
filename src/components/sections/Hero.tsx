@@ -116,10 +116,10 @@ export default function Hero() {
               className="flex flex-wrap gap-4 mb-8"
               variants={itemVariants}
             >
-              <a href="#contact" className="btn btn-primary">
+              <a href="/#contact" className="btn btn-primary">
                 Get in Touch
               </a>
-              <a href="#projects" className="btn btn-outline">
+              <a href="/#projects" className="btn btn-outline">
                 View My Work
               </a>
             </motion.div>
@@ -180,7 +180,7 @@ export default function Hero() {
 
       {/* Scroll Down Indicator */}
       <motion.a
-        href="#how-i-think"
+        href="/#how-i-think"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-stone-400 dark:text-stone-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

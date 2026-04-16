@@ -149,7 +149,7 @@ export default function HowIThink() {
           {/* CTA */}
           <motion.div className="text-center" variants={itemVariants}>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="#experience" className="btn btn-primary">
+              <a href="/#experience" className="btn btn-primary">
                 View Experience
               </a>
               <a

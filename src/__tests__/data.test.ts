@@ -141,9 +141,15 @@ describe("navigation data", () => {
     expect(navItems.length).toBeGreaterThan(0);
   });
 
-  it("every nav item has an anchor href", () => {
+  it("every nav item has a valid href", () => {
     for (const item of navItems) {
-      expect(item.href).toMatch(/^#/);
+      expect(item.href).toMatch(/^(\/|#)/);
     }
+  });
+
+  it("includes Architecture page link", () => {
+    const arch = navItems.find((item) => item.name === "Architecture");
+    expect(arch).toBeDefined();
+    expect(arch!.href).toBe("/architecture");
   });
 });

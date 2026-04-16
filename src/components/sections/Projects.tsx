@@ -1,11 +1,18 @@
 "use client";
 
+import { useState, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Layers } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageLightbox from "@/components/ui/ImageLightbox";
 import projects from "@/data/projects";
+import { getDiagramsByProjectId } from "@/data/diagrams";
+import type { ProjectDiagram } from "@/data/diagrams";
+
+const DiagramLightbox = lazy(
+  () => import("@/components/ui/DiagramLightbox"),
+);
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -23,6 +30,10 @@ const itemVariants = {
 export default function Projects() {
   const featured = projects.filter((p) => p.featured);
   const other = projects.filter((p) => !p.featured);
+  const [activeDiagrams, setActiveDiagrams] = useState<{
+    diagrams: ProjectDiagram[];
+    slug: string;
+  } | null>(null);
 
   return (
     <section
@@ -115,6 +126,24 @@ export default function Projects() {
                         Demo
                       </a>
                     )}
+                    {(() => {
+                      const pd = getDiagramsByProjectId(project.id);
+                      return pd ? (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setActiveDiagrams({
+                              diagrams: pd.diagrams,
+                              slug: pd.projectSlug,
+                            })
+                          }
+                          className="inline-flex items-center gap-1.5 text-sm text-stone-600 dark:text-stone-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                        >
+                          <Layers className="w-4 h-4" />
+                          Architecture
+                        </button>
+                      ) : null;
+                    })()}
                   </div>
                 </div>
               </motion.div>
@@ -198,6 +227,24 @@ export default function Projects() {
                           Demo
                         </a>
                       )}
+                      {(() => {
+                        const pd = getDiagramsByProjectId(project.id);
+                        return pd ? (
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setActiveDiagrams({
+                                diagrams: pd.diagrams,
+                                slug: pd.projectSlug,
+                              })
+                            }
+                            className="inline-flex items-center gap-1 text-xs text-stone-500 hover:text-primary-600 dark:hover:text-primary-400"
+                          >
+                            <Layers className="w-3.5 h-3.5" />
+                            Architecture
+                          </button>
+                        ) : null;
+                      })()}
                     </div>
                     </div>
                   </motion.div>
@@ -206,6 +253,18 @@ export default function Projects() {
             </>
           )}
         </motion.div>
+
+        {/* Single lightbox instance — lazy loaded */}
+        {activeDiagrams && (
+          <Suspense fallback={null}>
+            <DiagramLightbox
+              open={!!activeDiagrams}
+              onClose={() => setActiveDiagrams(null)}
+              diagrams={activeDiagrams.diagrams}
+              projectSlug={activeDiagrams.slug}
+            />
+          </Suspense>
+        )}
       </Container>
     </section>
   );
