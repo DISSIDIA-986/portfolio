@@ -6,6 +6,10 @@
 ## 我最近1年活跃的GitHub项目
 - /Users/niuyp/Documents/github.com/git-project-summary/projects.json
 
+## 我上家公司:易点云(Edianyun.com)的工作项目
+- /Users/niuyp/Documents/github.com/git-project-summary/edianyun-projects-technical.json
+- /Users/niuyp/Documents/github.com/git-project-summary/edianyun-projects-product.json
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Commands
@@ -34,14 +38,14 @@ Single-page portfolio site built with **Next.js 16 + React 19 + TypeScript + Tai
 
 ### Routing & Layout
 
-Single route (`src/app/page.tsx`) renders 8 sections in order: Hero, HowIThink, HowIBuild, Experience, Projects, Exploring, Skills, Contact. Navigation is anchor-based (`#how-i-think`, `#how-i-build`, `#experience`, etc.). The "Exploring" section is not in the nav — it appears naturally between Projects and Skills.
+Home page (`src/app/page.tsx`) renders 8 sections in order: Hero, HowIThink, HowIBuild, Experience, Projects, Exploring, Skills, Contact. A separate `/architecture` page (`src/app/architecture/page.tsx`) shows technical architecture diagrams for select projects. Navigation uses `/#section` anchors (not `#section`) so links work from sub-pages. The "Exploring" section is not in the nav — it appears naturally between Projects and Skills.
 
 `src/app/layout.tsx` wraps all pages with Navbar, Footer, and ScrollToTop. Fonts: Geist (body), Instrument Serif (headings H1-H2), and JetBrains Mono (mono). Dark mode activates automatically via `prefers-color-scheme` detection.
 
 ### Component Organization
 
 - `src/components/sections/` — Page sections (HowIThink, HowIBuild, Experience, etc.), each self-contained. Most are `"use client"` for framer-motion animations.
-- `src/components/ui/` — Shared primitives: `Container` (max-w-7xl wrapper), `SectionHeader` (title + underline), `TerminalBlock` (reusable terminal chrome), `ImageLightbox` (tap-to-zoom with pinch/scroll support via yet-another-react-lightbox).
+- `src/components/ui/` — Shared primitives: `Container` (max-w-7xl wrapper), `SectionHeader` (title + underline), `TerminalBlock` (reusable terminal chrome), `ImageLightbox` (single-image tap-to-zoom via yet-another-react-lightbox), `DiagramLightbox` (multi-slide lightbox with Zoom + Thumbnails + Captions for architecture diagrams).
 - `src/components/layout/` — Navbar, Footer, ScrollToTop.
 
 ### Data Layer
@@ -50,7 +54,8 @@ All portfolio content lives in `src/data/` as typed arrays/objects. No API calls
 - `projects.ts` — Project entries with `featured` flag and optional `challenge` question tag
 - `experiences.ts` — Work history using Problem/Solution/Impact format (with optional `type: "education"` for badge display)
 - `skills.ts` — Skill categories and levels
-- `navigation.ts` — Nav items (must match section `id` attributes)
+- `diagrams.ts` — Architecture diagram metadata (OSS URLs, insights) with `getDiagramsByProjectId` helper
+- `navigation.ts` — Nav items (anchors use `/#section` format; includes `/architecture` page link)
 
 Types are in `src/types/index.ts`. Constants (site name, URLs, social links) in `src/lib/constants.ts`.
 
@@ -70,9 +75,11 @@ Framer Motion is used in section components for scroll-triggered animations. Pat
 
 Project images are served from two sources:
 - Alibaba Cloud OSS: `dissidia.oss-cn-beijing.aliyuncs.com/portfolio/` (configured in `next.config.ts` remotePatterns)
-- Local: `public/images/` (17 SVG architecture diagrams)
+  - `/portfolio/projects/` — project thumbnail SVGs
+  - `/portfolio/diagrams/{slug}/` — system + product architecture diagrams (SVG + PNG)
+- Local: `public/images/` (17 SVG architecture diagrams for project cards)
 
-Featured project images use `ImageLightbox` component for tap-to-zoom (pinch on mobile, scroll on desktop). All architecture SVGs follow a consistent style: 800x500 viewBox, dark teal gradient background, Inter font, colored component boxes.
+Featured project images use `ImageLightbox` component for tap-to-zoom. Architecture diagrams use `DiagramLightbox` with Thumbnails + Captions. PNG URLs include `?v=1` for Vercel cache busting (SVGs bypass Image Optimization). Upload diagrams via `scripts/upload-diagrams.sh`.
 
 ### Path Aliases
 

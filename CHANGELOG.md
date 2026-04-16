@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.8.0] - 2026-04-16
+
+### Added
+- Technical Architecture gallery at `/architecture` — browse system and product architecture diagrams for 6 projects, each with a one-line insight annotation explaining what the architecture demonstrates
+- `DiagramLightbox` component with Zoom, Thumbnails, Captions, and SVG download button (yet-another-react-lightbox plugins)
+- "Architecture" button on project cards for projects with diagrams, opening a lazy-loaded lightbox directly from the Projects section
+- Architecture link in Navbar for direct access to the gallery page
+- `scripts/upload-diagrams.sh` — batch upload tool for pushing diagram images to Alibaba Cloud OSS
+- Data integrity tests for diagram metadata (projectId mapping, OSS URL convention, cache-busting rules)
+- DiagramLightbox component tests with full YARL plugin mocking
+
+### Changed
+- All internal anchor links updated from `#section` to `/#section` format so navigation works correctly from sub-pages like `/architecture`
+- Navbar logo changed from `#hero` to `/` for proper home navigation from any page
+- Navigation test updated to accept both `/path` and `/#anchor` href formats
+
+### For contributors
+- Architecture diagrams stored on OSS at `portfolio/diagrams/{slug}/{type}-architecture.{svg|png}`
+- PNG URLs use `?v=1` query param for Vercel Image Optimization cache busting (SVGs bypass the optimizer)
+- To add diagrams for a new project: add entry to `src/data/diagrams.ts`, upload files via `scripts/upload-diagrams.sh`
+
 ## [2.7.0] - 2026-04-03
 
 ### Added
