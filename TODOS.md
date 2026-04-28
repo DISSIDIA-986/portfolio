@@ -57,9 +57,14 @@
 ## Architecture Gallery (2026-04-15)
 
 - [x] **Architecture diagram gallery** — `/architecture` page with 6 projects × 2 diagrams, DiagramLightbox with Zoom + Thumbnails + Captions, Layers button on project cards, all images on OSS. **Completed:** 2026-04-15
+- [x] **Add Industry-AI-Flow to architecture gallery** — IAF (project #1) added with system + product diagrams from drawio. Reordered: JobPilot AI first, IAF second. Grid expanded to `xl:grid-cols-3`. **Completed:** v2.8.2 (2026-04-27)
+- [x] **Lightbox correctness pass** — `initialIndex` prop so clicking thumb #2 opens product slide (not always system); removed hardcoded 3200×2000 slide dims (was wrong for IAF's 4050×1172); rail thumbnails use `pngUrl` instead of full SVG masters; `priority`/`sizes` corrected for `xl:grid-cols-3` layout; SVG URLs gained `?v=1` cache buster. **Completed:** v2.8.3 (2026-04-27)
 - [ ] **GH Pages basePath for internal page links** — `navigation.ts` uses raw `/architecture` href. On GH Pages (basePath="/portfolio"), this resolves to the wrong URL. Need to use `NEXT_PUBLIC_BASE_PATH` env var to construct internal page links dynamically. Vercel is unaffected (basePath is empty).
-- [ ] **OSS CORS for diagram download** — Alibaba Cloud OSS has no CORS headers. YARL Download plugin degrades to opening SVG in new tab. Configure OSS CORS rules or switch to `<a href download>` pattern for proper file downloads.
-- [ ] **Add diagrams for remaining projects** — Only 6/15 projects have architecture diagrams. Generate diagrams for remaining projects using fireworks-tech-graph and update `diagrams.ts`.
+- [ ] **OSS CORS for diagram download** — Alibaba Cloud OSS has no CORS headers. The lightbox download button cannot do a real cross-origin blob download — currently labelled "Open image in new tab" (ExternalLink icon) which is honest about what happens. To enable a true save-as-with-custom-filename, configure CORS rules on the OSS bucket for the `portfolio/diagrams/` path.
+- [ ] **Add diagrams for remaining projects** — Only 7/16 projects have architecture diagrams (jobpilot-ai, industry-ai-flow, ai-ops-control-room, trading-bots, vox, akm, ATV-Bilibili-demo). Generate diagrams for remaining projects using fireworks-tech-graph or drawio and update `diagrams.ts`.
+- [ ] **`object-cover` crops architecture thumbnails** — Cards use `aspect-[8/5]` + `object-cover`. For 2200×1200 source diagrams, ~12.7% of width gets cropped horizontally; edge labels may be lost. Consider `object-contain` + neutral background.
+- [ ] **7 cards leave an orphan in the grid** — Both `md:grid-cols-2` (2+2+2+1) and `xl:grid-cols-3` (3+3+1) leave a single isolated card on the last row. Resolves naturally once an 8th project gets diagrams; or feature one card to span 2 cols.
+- [ ] **`featured` flag inconsistent with `diagrams` entries** — Featured projects 18 (Fruit Ninja AI) and 5 (HavenzHub) have no architecture diagrams, while non-featured 11/15/12 do. The Architecture button on home cards therefore shows on some lower-tier projects and not on top-tier ones. Either add diagrams for 18/5 or accept that `featured` and `has architecture` are independent curation axes.
 
 ## Deferred (out of current scope)
 

@@ -79,7 +79,7 @@ Project images are served from two sources:
   - `/portfolio/diagrams/{slug}/` — system + product architecture diagrams (SVG + PNG)
 - Local: `public/images/` (17 SVG architecture diagrams for project cards)
 
-Featured project images use `ImageLightbox` component for tap-to-zoom. Architecture diagrams use `DiagramLightbox` with Thumbnails + Captions. PNG URLs include `?v=1` for Vercel cache busting (SVGs bypass Image Optimization). Upload diagrams via `scripts/upload-diagrams.sh`.
+Featured project images use `ImageLightbox` component for tap-to-zoom. Architecture diagrams use `DiagramLightbox` (Zoom + Thumbnails + Captions plugins, with `initialIndex` prop so clicking a thumbnail opens the corresponding slide directly). The bottom thumbnail rail uses `slide.thumbnail = pngUrl` so the rail loads the lightweight PNG instead of the full SVG master. Both PNG and SVG URLs carry `?v=1` cache busters. The lightbox toolbar button is "Open image in new tab" (ExternalLink icon) since OSS lacks CORS, so true blob downloads aren't possible. Upload diagrams via `scripts/upload-diagrams.sh`.
 
 ### Path Aliases
 
