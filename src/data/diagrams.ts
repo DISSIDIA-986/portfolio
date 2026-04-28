@@ -44,14 +44,7 @@ const projectDiagrams: ProjectDiagrams[] = [
     projectSlug: "industry-ai-flow",
     insight:
       "11-node LangGraph intent classifier routing 3 paths: hybrid RAG QA, CatBoost+SHAP cost ML, and sandboxed code-gen data analysis",
-    diagrams: [
-      {
-        type: "system",
-        label: "System Architecture",
-        svgUrl: `${OSS}/industry-ai-flow/system-architecture.svg`,
-        pngUrl: `${OSS}/industry-ai-flow/system-architecture.png?v=1`,
-      },
-    ],
+    diagrams: diagramPair("industry-ai-flow"),
   },
   {
     projectId: 13,

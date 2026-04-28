@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.8.2] - 2026-04-27
+
+### Changed
+- Industry-AI-Flow architecture diagrams replaced with cleaner drawio exports — system architecture is now 2200×1200 (was 4050×1172, mostly empty space) and product architecture is restored as a genuinely distinct view (3-path capability flow vs. C4 container layout), addressing the redundancy concern raised in adversarial review
+- IAF now uses the standard `diagramPair()` helper like every other project (no more PNG-as-SVG hack)
+
 ## [2.8.1] - 2026-04-27
 
 ### Added
