@@ -19,13 +19,13 @@ function diagramPair(slug: string): ProjectDiagram[] {
     {
       type: "system",
       label: "System Architecture",
-      svgUrl: `${OSS}/${slug}/system-architecture.svg`,
+      svgUrl: `${OSS}/${slug}/system-architecture.svg?v=1`,
       pngUrl: `${OSS}/${slug}/system-architecture.png?v=1`,
     },
     {
       type: "product",
       label: "Product Architecture",
-      svgUrl: `${OSS}/${slug}/product-architecture.svg`,
+      svgUrl: `${OSS}/${slug}/product-architecture.svg?v=1`,
       pngUrl: `${OSS}/${slug}/product-architecture.png?v=1`,
     },
   ];

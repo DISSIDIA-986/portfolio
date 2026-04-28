@@ -8,7 +8,7 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/captions.css";
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import type { ProjectDiagram } from "@/data/diagrams";
 
 interface DiagramLightboxProps {
@@ -34,24 +34,19 @@ export default function DiagramLightbox({
 
   const slides = diagrams.map((d) => ({
     src: d.svgUrl,
+    // Use the smaller PNG for the bottom thumbnail rail; main slide stays SVG.
+    thumbnail: d.pngUrl,
     title: d.label,
     description: `${projectSlug} — ${d.label}`,
   }));
 
-  const handleDownload = () => {
+  const openInNewTab = () => {
     const diagram = diagrams[slideIndex];
     if (!diagram) return;
-    const ext = diagram.svgUrl.split("?")[0].toLowerCase().endsWith(".png")
-      ? "png"
-      : "svg";
-    const filename = `${projectSlug}-${diagram.type}-architecture.${ext}`;
-    // OSS has no CORS, so we open in new tab instead of blob download
-    const link = document.createElement("a");
-    link.href = diagram.svgUrl;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.download = filename;
-    link.click();
+    // OSS bucket has no CORS, so we cannot blob-download cross-origin.
+    // The browser will open the asset inline with its remote filename;
+    // user can right-click to save with a custom name.
+    window.open(diagram.svgUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -69,13 +64,14 @@ export default function DiagramLightbox({
       toolbar={{
         buttons: [
           <button
-            key="download"
+            key="open"
             type="button"
             className="yarl__button"
-            onClick={handleDownload}
-            aria-label="Download SVG"
+            onClick={openInNewTab}
+            aria-label="Open image in new tab"
+            title="Open image in new tab"
           >
-            <Download className="w-6 h-6" />
+            <ExternalLink className="w-6 h-6" />
           </button>,
           "close",
         ],

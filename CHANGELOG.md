@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.8.3] - 2026-04-27
+
+### Fixed
+- Architecture lightbox thumbnail rail now uses the lightweight PNG (`d.pngUrl`) instead of the full SVG, saving ~150-360KB per project on the rail (`DiagramLightbox.tsx:35-40`)
+- `priority` flag on architecture gallery thumbnails moved from `idx < 2` (which marked 4 thumbnails priority across 2 projects) to `idx === 0` (correctly marks only the first project's 2 thumbnails)
+- `sizes` attribute on architecture gallery thumbnails now reflects the `xl:grid-cols-3` breakpoint: `(max-width: 768px) 45vw, (max-width: 1280px) 22vw, 15vw` — desktop no longer over-fetches thumbnail rasters
+- SVG URLs now carry `?v=1` cache buster matching PNG URLs, preventing stale lightbox content after diagram re-exports
+
+### Changed
+- Lightbox toolbar download button replaced with honest "Open image in new tab" (ExternalLink icon) — the previous "Download SVG" label misled users since OSS lacks CORS, making cross-origin blob downloads impossible. The button now correctly describes what happens: image opens inline, user saves manually with right-click
+
 ## [2.8.2] - 2026-04-27
 
 ### Changed

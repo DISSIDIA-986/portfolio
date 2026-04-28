@@ -105,8 +105,8 @@ export default function ArchitectureGallery() {
                             alt={`${project.title} — ${diagram.label}`}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
-                            sizes="(max-width: 768px) 45vw, 22vw"
-                            priority={idx < 2}
+                            sizes="(max-width: 768px) 45vw, (max-width: 1280px) 22vw, 15vw"
+                            priority={idx === 0}
                           />
                         </div>
                         <div className="px-2 py-1.5 text-xs text-stone-500 dark:text-stone-400 text-center bg-stone-50 dark:bg-stone-800">
