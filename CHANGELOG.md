@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.8.1] - 2026-04-27
+
+### Added
+- Industry-AI-Flow project added to architecture gallery (project #1) with C4 container system architecture diagram (Apr 27 PlantUML/drawio export)
+
+### Fixed
+- `DiagramLightbox` now opens the clicked thumbnail's slide instead of always slide 0 (`initialIndex` prop wired through `ArchitectureGallery` per-thumbnail click)
+- `DiagramLightbox` no longer hardcodes 3200×2000 slide dimensions — yet-another-react-lightbox auto-detects from natural image size, so non-16:10 diagrams (e.g. IAF's 4050×1172 C4 diagram) zoom correctly
+- `DiagramLightbox` download filename now matches actual asset extension (svg vs png) instead of always claiming `.svg`
+- PlantUML SVG uploads now strip the leading `<?plantuml ?>` processing instruction so OSS detects MIME as `image/svg+xml` instead of `text/html` (prevented browser image render)
+
+### Changed
+- Architecture gallery grid expanded to `xl:grid-cols-3` for denser layout on wide screens
+- JobPilot AI moved to first position in the architecture gallery; Industry-AI-Flow second
+- Gallery thumbnail click handler passes the clicked diagram's index to the lightbox
+
 ## [2.8.0] - 2026-04-16
 
 ### Added

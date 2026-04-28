@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
@@ -16,6 +16,7 @@ interface DiagramLightboxProps {
   onClose: () => void;
   diagrams: ProjectDiagram[];
   projectSlug: string;
+  initialIndex?: number;
 }
 
 export default function DiagramLightbox({
@@ -23,13 +24,16 @@ export default function DiagramLightbox({
   onClose,
   diagrams,
   projectSlug,
+  initialIndex = 0,
 }: DiagramLightboxProps) {
-  const [slideIndex, setSlideIndex] = useState(0);
+  const [slideIndex, setSlideIndex] = useState(initialIndex);
+
+  useEffect(() => {
+    if (open) setSlideIndex(initialIndex);
+  }, [open, initialIndex]);
 
   const slides = diagrams.map((d) => ({
     src: d.svgUrl,
-    width: 3200,
-    height: 2000,
     title: d.label,
     description: `${projectSlug} — ${d.label}`,
   }));
@@ -37,7 +41,10 @@ export default function DiagramLightbox({
   const handleDownload = () => {
     const diagram = diagrams[slideIndex];
     if (!diagram) return;
-    const filename = `${projectSlug}-${diagram.type}-architecture.svg`;
+    const ext = diagram.svgUrl.split("?")[0].toLowerCase().endsWith(".png")
+      ? "png"
+      : "svg";
+    const filename = `${projectSlug}-${diagram.type}-architecture.${ext}`;
     // OSS has no CORS, so we open in new tab instead of blob download
     const link = document.createElement("a");
     link.href = diagram.svgUrl;

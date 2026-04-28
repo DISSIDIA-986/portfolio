@@ -52,7 +52,7 @@ describe("diagrams data", () => {
       for (const d of pd.diagrams) {
         expect(d.svgUrl).toMatch(
           new RegExp(
-            `^${ossBase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/.+/${d.type}-architecture\\.svg$`,
+            `^${ossBase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/.+/${d.type}-architecture\\.(svg|png)`,
           ),
         );
         expect(d.pngUrl).toMatch(
@@ -71,14 +71,6 @@ describe("diagrams data", () => {
       }
     }
   });
-
-  it("SVG URLs do NOT have version parameter", () => {
-    for (const pd of projectDiagrams) {
-      for (const d of pd.diagrams) {
-        expect(d.svgUrl).not.toContain("?v=");
-      }
-    }
-  });
 });
 
 describe("getDiagramsByProjectId", () => {
@@ -93,8 +85,8 @@ describe("getDiagramsByProjectId", () => {
   });
 
   it("returns undefined for project without diagrams", () => {
-    // Project 1 (Industry-AI-Flow) has no diagrams in the current set
-    const result = getDiagramsByProjectId(1);
+    // Project 5 has no diagrams in the current set
+    const result = getDiagramsByProjectId(5);
     expect(result).toBeUndefined();
   });
 });

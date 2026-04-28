@@ -27,6 +27,7 @@ export default function ArchitectureGallery() {
   const [activeLightbox, setActiveLightbox] = useState<{
     diagrams: ProjectDiagram[];
     slug: string;
+    index: number;
   } | null>(null);
 
   return (
@@ -57,7 +58,7 @@ export default function ArchitectureGallery() {
           </motion.div>
 
           {/* Project Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {projectDiagrams.map((pd, idx) => {
               const project = projects.find((p) => p.id === pd.projectId);
               if (!project) return null;
@@ -85,7 +86,7 @@ export default function ArchitectureGallery() {
 
                   {/* Diagram Thumbnails */}
                   <div className="grid grid-cols-2 gap-3 px-6 pb-6">
-                    {pd.diagrams.map((diagram) => (
+                    {pd.diagrams.map((diagram, dIdx) => (
                       <button
                         key={diagram.type}
                         type="button"
@@ -93,6 +94,7 @@ export default function ArchitectureGallery() {
                           setActiveLightbox({
                             diagrams: pd.diagrams,
                             slug: pd.projectSlug,
+                            index: dIdx,
                           })
                         }
                         className="group relative rounded-lg overflow-hidden border border-stone-200 dark:border-stone-600 hover:border-primary-400 dark:hover:border-primary-500 transition-colors cursor-zoom-in"
@@ -127,6 +129,7 @@ export default function ArchitectureGallery() {
           onClose={() => setActiveLightbox(null)}
           diagrams={activeLightbox.diagrams}
           projectSlug={activeLightbox.slug}
+          initialIndex={activeLightbox.index}
         />
       )}
     </section>
