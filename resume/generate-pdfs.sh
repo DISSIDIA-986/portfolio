@@ -18,7 +18,7 @@ OSS_PREFIX="portfolio/resume"
 MYOSS="$HOME/Documents/bash/myoss.put.sh"
 SKIP_UPLOAD="${1:-}"
 
-RESUMES=("ai-engineer" "fullstack-ai" "senior-swe")
+RESUMES=("ai-engineer" "fullstack-ai" "senior-swe" "java-backend" "fullstack-dev" "data-analyst" "python-developer" "backend-k8s")
 
 echo "=== Resume PDF Generation ==="
 
