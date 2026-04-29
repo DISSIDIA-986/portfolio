@@ -107,10 +107,11 @@ const experiences: Experience[] = [
       "Deepen AI specialization — computer vision, predictive modeling, AI governance, and applied AI project delivery",
     solution: [
       "Core courses: Computer Vision, Predictive Analytics & Modeling, AI Governance & Ethics, Human-Centred AI, AI Management & Maintenance",
-      "Capstone: Applied AI Projects — production-grade AI system development",
+      "Capstone: Applied AI Projects (PROJ-407-A) — production-grade AI system development",
+      "Graduated April 2026 with 3.92 program GPA (7 A+ across 8 courses)",
     ],
     impact:
-      "In Progress (Final Term) — building on Data Analytics foundation with AI specialization",
+      "Completed — 3.92 GPA. Combined with Data Analytics, total 16 courses, 15/16 A+, overall 3.96 GPA across 54 credits",
     technologies: [
       "Python",
       "Computer Vision",

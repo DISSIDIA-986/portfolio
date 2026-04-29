@@ -7,7 +7,7 @@ yupoca24@gmail.com | [linkedin.com/in/yupo-niu](https://linkedin.com/in/yupo-niu
 
 ## Professional Summary
 
-Full Stack AI Engineer with 17 years shipping production systems, including 8 years building enterprise decision engines, risk models, and workflow automation at a publicly traded company. I deliver end-to-end: from React/Next.js frontends to Python/Java backends to AI pipelines with LangChain and pgvector. Before LLMs, I built systems that automated pricing, risk, and approvals. Now I build the same class of systems with LLMs, RAG, and agents. 4.0 GPA in AI/Data Analytics at SAIT.
+Full Stack AI Engineer with 17 years shipping production systems, including 8 years building enterprise decision engines, risk models, and workflow automation at a publicly traded company. I deliver end-to-end: from React/Next.js frontends to Python/Java backends to AI pipelines with LangChain and pgvector. Before LLMs, I built systems that automated pricing, risk, and approvals. Now I build the same class of systems with LLMs, RAG, and agents. Graduated SAIT in April 2026 — 3.96 GPA across Post-Diploma Certificates in Data Analytics + Integrated AI.
 
 ---
 

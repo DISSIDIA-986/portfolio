@@ -1,0 +1,88 @@
+{
+  "student": {
+    "name": "Jason (Yupo) Niu",
+    "institution": "Southern Alberta Institute of Technology (SAIT)",
+    "overall_gpa": 3.96,
+    "total_credits": 54.0,
+    "total_courses": 16,
+    "a_plus_ratio": "15/16",
+    "graduation_date": "2026-04-24",
+    "status": "Graduated"
+  },
+  "programs": [
+    {
+      "program_name": "Post-Diploma Certificate in Data Analytics",
+      "duration": "Fall 2024 - Winter 2025",
+      "completion_date": "2025-04-26",
+      "program_gpa": 4.0,
+      "status": "Completed",
+      "capstone": "Cancer recurrence prediction system (97.4% accuracy)",
+      "terms": [
+        {
+          "term": "Fall 2024",
+          "gpa": 4.0,
+          "outcome": "4 A+",
+          "courses": [
+            { "code": "ORNT-118-DAN", "name": "Orientation", "end_date": "2024-08-28" },
+            { "code": "PREP-100-ADB", "name": "The SAIT Experience", "end_date": "2025-01-06" },
+            { "code": "PERS-050-DAN", "name": "Student Rights and Responsibilities", "end_date": "2024-12-16" },
+            { "code": "DATA-401-DAA", "name": "Data Literacy", "end_date": "2024-12-16" },
+            { "code": "DATA-410-DAA", "name": "Business Context for Data Analysis", "end_date": "2024-12-16" },
+            { "code": "DATA-415-DAA", "name": "Statistical Analysis of Data", "end_date": "2024-12-16" },
+            { "code": "DATA-420-DAA", "name": "Predictive Analytics", "end_date": "2024-12-16" }
+          ]
+        },
+        {
+          "term": "Winter 2025",
+          "gpa": 4.0,
+          "outcome": "4 A+",
+          "courses": [
+            { "code": "DATA-445-DAA", "name": "Business Analytics", "end_date": "2025-04-26" },
+            { "code": "DATA-460-DAA", "name": "Business Intelligence Reporting", "end_date": "2025-04-26" },
+            { "code": "DATA-475-DAA", "name": "Advanced Concepts in Data Analytics", "end_date": "2025-04-26" },
+            { "code": "PROJ-406-DAA", "name": "Data Analytics Capstone Project", "end_date": "2025-04-24" }
+          ]
+        }
+      ]
+    },
+    {
+      "program_name": "Post-Diploma Certificate in Integrated Artificial Intelligence",
+      "duration": "Fall 2025 - Winter 2026",
+      "completion_date": "2026-04-27",
+      "program_gpa": 3.92,
+      "status": "Completed",
+      "capstone": "Applied AI Projects (PROJ-407-A)",
+      "terms": [
+        {
+          "term": "Fall 2025",
+          "gpa": 4.0,
+          "outcome": "4 A+",
+          "courses": [
+            { "code": "ORNT-118-IAI", "name": "Orientation", "end_date": "2025-08-29" },
+            { "code": "PREP-100-ADB", "name": "The SAIT Experience", "end_date": "2025-12-17" },
+            { "code": "STAT-400-A", "name": "Applied Statistics", "end_date": "2025-12-17" },
+            { "code": "ETHI-401-A", "name": "AI Governance and Ethics", "end_date": "2025-12-17" },
+            { "code": "DATA-440-A", "name": "Predictive Analytics and Modeling Fundamentals", "end_date": "2025-12-20" },
+            { "code": "ARTI-406-A", "name": "Human-Centred AI", "end_date": "2025-12-22" }
+          ]
+        },
+        {
+          "term": "Winter 2026",
+          "gpa": 3.83,
+          "outcome": "3 A+, 1 B+",
+          "courses": [
+            { "code": "DATA-480-A", "name": "Predictive Analytics and Modeling", "end_date": "2026-04-23" },
+            { "code": "ARTI-408-A", "name": "Introduction to Computer Vision", "end_date": "2026-04-23" },
+            { "code": "ARTI-409-A", "name": "AI Management and Maintenance", "end_date": "2026-04-23" },
+            { "code": "PROJ-407-A", "name": "Capstone: Applied Projects", "end_date": "2026-04-27" }
+          ]
+        }
+      ]
+    }
+  ],
+  "strengths": [
+    "Full-stack AI development",
+    "Predictive modeling",
+    "High-precision Capstone delivery"
+  ]
+}

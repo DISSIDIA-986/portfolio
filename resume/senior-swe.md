@@ -7,7 +7,7 @@ yupoca24@gmail.com | [linkedin.com/in/yupo-niu](https://linkedin.com/in/yupo-niu
 
 ## Professional Summary
 
-Senior Software Engineer with 17 years building production systems, including 8 years designing enterprise decision engines, risk control platforms, and workflow automation at a publicly traded company. From financial algorithm engines (NPV, ACPI) to real-time risk pipelines to Kubernetes migrations and company-wide observability infrastructure. Now integrating AI capabilities — LLM orchestration, RAG, computer vision — into production engineering workflows. 4.0 GPA in AI/Data Analytics at SAIT.
+Senior Software Engineer with 17 years building production systems, including 8 years designing enterprise decision engines, risk control platforms, and workflow automation at a publicly traded company. From financial algorithm engines (NPV, ACPI) to real-time risk pipelines to Kubernetes migrations and company-wide observability infrastructure. Now integrating AI capabilities — LLM orchestration, RAG, computer vision — into production engineering workflows. Graduated SAIT in April 2026 — 3.96 GPA across Post-Diploma Certificates in Data Analytics + Integrated AI.
 
 ---
 

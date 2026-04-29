@@ -7,7 +7,7 @@ yupoca24@gmail.com | [linkedin.com/in/yupo-niu](https://linkedin.com/in/yupo-niu
 
 ## Professional Summary
 
-AI Application Engineer with 17 years shipping production systems, including 8 years building enterprise decision engines, risk models, and workflow automation at a publicly traded company. Now building the same class of systems with LLMs, RAG, and agents. Built multi-agent pipelines orchestrating 5 LLM providers with circuit breakers and 1,250+ tests, enterprise RAG with hybrid retrieval, and LLM-as-Judge evaluation scoring 0.94/1.00. 4.0 GPA across 3 completed terms in Data Analytics + Integrated AI at SAIT (Final Term in progress). Canadian work authorization (PGWP).
+AI Application Engineer with 17 years shipping production systems, including 8 years building enterprise decision engines, risk models, and workflow automation at a publicly traded company. Now building the same class of systems with LLMs, RAG, and agents. Built multi-agent pipelines orchestrating 5 LLM providers with circuit breakers and 1,250+ tests, enterprise RAG with hybrid retrieval, and LLM-as-Judge evaluation scoring 0.94/1.00. Graduated SAIT in April 2026 with 3.96 overall GPA (15/16 courses A+) across Post-Diploma Certificates in Data Analytics (4.0) and Integrated AI (3.92). Canadian work authorization (PGWP).
 
 ---
 
@@ -64,7 +64,7 @@ AI Application Engineer with 17 years shipping production systems, including 8 y
 ## Education
 
 **Post-Diploma Certificate in Integrated Artificial Intelligence** — SAIT, Calgary | Sep 2025 – Apr 2026
-- In Progress (Final Term) | Computer Vision, Predictive Analytics, AI Governance, Human-Centred AI
+- 3.92/4.0 GPA | Computer Vision, Predictive Analytics, AI Governance, Human-Centred AI
 - Capstone: Applied AI Projects
 
 **Post-Diploma Certificate in Data Analytics** — SAIT, Calgary | Sep 2024 – Apr 2025
