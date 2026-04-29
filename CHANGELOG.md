@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.8.4] - 2026-04-29
+
+### Changed
+- SAIT Integrated AI Post-Diploma Certificate marked as graduated (Apr 2026, 3.92 program GPA). Education entry on portfolio now shows completed status with combined 3.96 overall GPA across both programs (15/16 courses A+ across 54 credits).
+- All three resume tracks (`ai-engineer.md`, `fullstack-ai.md`, `senior-swe.md`) updated to reflect graduation; PDFs regenerated and uploaded to OSS.
+
+### Added
+- `resume/sait-learning.json` — canonical academic record (both programs, 16 courses with codes/dates, per-term GPA breakdown). Source of truth for portfolio + resume content updates.
+
 ## [2.8.3] - 2026-04-27
 
 ### Fixed
