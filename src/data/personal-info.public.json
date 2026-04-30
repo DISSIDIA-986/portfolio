@@ -1,0 +1,445 @@
+{
+  "_meta": {
+    "source": "jobpilot-ai/data/profiles/default",
+    "exportedAt": "2026-04-30T00:45:34.516508Z",
+    "variant": "public",
+    "schemaTarget": "src/types/index.ts",
+    "piiStripped": [
+      "email",
+      "phone",
+      "workAuthorization",
+      "driverLicense",
+      "location.province"
+    ],
+    "note": "experience[] uses Experience-compatible shape (company/position/period/type) so portfolio components written for src/types/index.ts can consume it directly. Education entries carry type:'education'. SAIT is one merged entry here; src/data/experiences.ts splits it into two programs (Data Analytics 2024-2025, Integrated AI 2025-2026) — that file is authoritative for rendering.",
+    "narrativeFieldsTodo": "problem and impact are empty strings on all work entries — JobPilot source has only bullet text (mapped to solution[]). Fill these in manually for portfolio rendering, or let the portfolio fall back to solution-only display."
+  },
+  "basics": {
+    "fullName": "Jason Yupo Niu",
+    "preferredName": "Jason",
+    "headline": "AI Engineer & Builder — 17+ years software, 2+ years AI/LLM",
+    "tagline": "Builder, not theorist. Ships AI tools daily across 5+ providers.",
+    "summary": "AI Engineer with 17+ years of software development experience and 2+ years focused on AI/LLM engineering. Builder of 15+ shipped AI projects spanning multi-agent orchestration, RAG, computer vision, and ASR. Senior Java/backend background from Beijing tech (Bitmain, fintech, e-commerce, telecom). Currently completing Post-Diploma in Data Analytics & Integrated AI at SAIT (4.0 GPA).",
+    "location": {
+      "city": "Calgary",
+      "country": "Canada"
+    },
+    "languages": [
+      {
+        "name": "Chinese",
+        "proficiency": "Native"
+      },
+      {
+        "name": "English",
+        "proficiency": "Professional working"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/yupo-niu/",
+      "github": "https://github.com/DISSIDIA-986",
+      "website": null,
+      "resume": null
+    },
+    "targetRoles": [
+      "AI Engineer",
+      "ML Engineer",
+      "AI/ML Developer",
+      "LLM Engineer",
+      "Full Stack Developer (AI-focused)",
+      "Software Engineer (AI/ML)"
+    ]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "company": "Independent AI Projects",
+      "position": "AI Engineer / Builder",
+      "location": "Calgary, AB",
+      "period": "Sep 2024 - Present",
+      "startDate": "2024-09",
+      "endDate": null,
+      "solution": [
+        "Built JobPilot AI — agentic job automation pipeline orchestrating 5 LLM providers (GLM, Qwen, DeepSeek, GROQ, Ollama) with circuit breakers, structured output via Pydantic, and reflexive quality gates across 1,250+ automated tests, 4 discovery sources, and auto-apply via real Chrome",
+        "Developed Industry-AI-Flow — enterprise RAG platform with 4 specialized AI agents, hybrid retrieval (BM25 + vector search + reranking), and LangChain 1.0 orchestration across 25K+ lines of Python",
+        "Created Talk2Type — macOS voice dictation tool integrating 8 ASR services (OpenAI, Groq, Alibaba, Tencent, Baidu, iFlytek, AssemblyAI, Speechmatics) with intelligent provider routing achieving 90%+ cost savings",
+        "Built vox — Go-based voice-to-clipboard tool with dual ASR providers (Groq Whisper + SiliconFlow SenseVoice), LLM correction pipeline with fallback chain, and A/B testing framework",
+        "Developed Claude-Code-Remote — remote control system for AI coding agents via 3 channels (email, Discord, Telegram) enabling autonomous task execution",
+        "Created akm — lightweight encrypted API Key Manager in Go for 7 LLM providers (OpenAI, Anthropic, Gemini, GROQ, DeepSeek, Qwen, GLM) with AES-256-GCM encryption and Unix socket API",
+        "Built ai-code-reviewer — automated code review tool orchestrating 4 collaborative AI models (Claude, Gemini, Qwen, GLM) for multi-perspective analysis",
+        "Developed multi-agent cross-validated research system with 4 independent AI agents investigating Canadian immigration policy across Federal, Provincial, Legal, and Community evidence sources",
+        "Created AI-powered trading platform with 3 autonomous strategies (Funding Rate Arbitrage, Spot Trend Following, On-chain Signal Trading) and TradingView webhook integration",
+        "Built MacOS AI Disk Cleaner — Swift native app using AI analysis for intelligent disk space management on macOS",
+        "Designed AgenticAI2026 — interactive AI agent architecture curriculum for senior developers covering multi-agent patterns, tool orchestration, MCP integration, and production deployment of agentic systems"
+      ],
+      "technologies": [
+        "Python",
+        "Multi-Agent",
+        "LLM Integration",
+        "LLM Reliability",
+        "Structured Output",
+        "LLM Evaluation",
+        "FastAPI",
+        "SQLite",
+        "Docker",
+        "RAG",
+        "LangChain",
+        "NLP",
+        "ChromaDB",
+        "PostgreSQL",
+        "PaddleOCR",
+        "Prompt Engineering",
+        "Swift",
+        "Go",
+        "OAuth",
+        "Redis",
+        "MCP"
+      ],
+      "url": null,
+      "type": "work",
+      "problem": "",
+      "impact": ""
+    },
+    {
+      "id": 2,
+      "company": "Havenz Tech",
+      "position": "AI Developer",
+      "location": "Calgary, AB",
+      "period": "Aug 2024 - Present",
+      "startDate": "2024-08",
+      "endDate": null,
+      "solution": [
+        "Built AI workflow platform with LangChain featuring intent recognition and multi-agent orchestration",
+        "Created document knowledge base (Zhub) implementing RAG system with vector search",
+        "Developed enterprise building management system as monorepo with ASP.NET Core 8, Next.js 15, and React Native",
+        "Developed cross-platform mobile apps using React Native with Redux, Firebase, and biometric authentication",
+        "Implemented CI/CD automation with GitHub Actions for multi-platform deployment"
+      ],
+      "technologies": [
+        "Python",
+        "LangChain",
+        "Multi-Agent",
+        "RAG",
+        "Prompt Engineering",
+        "ChromaDB",
+        "NLP",
+        "PostgreSQL",
+        "C#",
+        "ASP.NET Core",
+        "Next.js",
+        "React Native",
+        "TypeScript",
+        "Redux",
+        "OAuth",
+        "GitHub Actions",
+        "CI/CD",
+        "Docker"
+      ],
+      "url": null,
+      "type": "work",
+      "problem": "",
+      "impact": ""
+    },
+    {
+      "id": 3,
+      "company": "SAIT Capstone & Academic Projects",
+      "position": "AI Developer / Data Analyst",
+      "location": "Calgary, AB",
+      "period": "Sep 2024 - Apr 2026",
+      "startDate": "2024-09",
+      "endDate": "2026-04",
+      "solution": [
+        "Developed HockeyAI-Tracker comparing 4 vision models (RF-DETR, RT-DETR, YOLO11, YOLO-World) for real-time player and puck tracking with cross-platform benchmarking (NVIDIA + Apple Silicon)",
+        "Built ThyroidSentry cancer prediction system achieving 97.4% accuracy with SHAP interpretability using XGBoost and scikit-learn",
+        "Created Canada Unemployment Analysis Dashboard with interactive data visualization and ML-based predictions",
+        "Developed automated ETL workflows and data quality pipelines using Python for enterprise data processing",
+        "Achieved 4.0/4.0 GPA across all semesters while working part-time as a developer"
+      ],
+      "technologies": [
+        "Python",
+        "Computer Vision",
+        "OpenCV",
+        "scikit-learn",
+        "XGBoost",
+        "SHAP",
+        "Pandas",
+        "NumPy",
+        "React",
+        "Streamlit",
+        "Power BI",
+        "ETL",
+        "SQL"
+      ],
+      "url": null,
+      "type": "work",
+      "problem": "",
+      "impact": ""
+    },
+    {
+      "id": 4,
+      "company": "Edianyun Inc. (HKEX: 02416)",
+      "position": "Senior Java Backend Developer / Team Lead",
+      "location": "Beijing, China",
+      "period": "Mar 2016 - Apr 2024",
+      "startDate": "2016-03",
+      "endDate": "2024-04",
+      "solution": [
+        "Built customer scoring models with Python and Scikit-learn, improving automated approval rate by 40%",
+        "Leveraged Python (Pandas, NumPy) to analyze transaction data, identifying bottlenecks and increasing conversion rate by 22%",
+        "Designed and implemented rule-based risk evaluation engine handling 5K+ daily risk assessments, improving automation rate by 40%",
+        "Architected high-concurrency bidding and flash sale system with 10K+ concurrent users using RocketMQ and Redis caching",
+        "Improved order processing system handling 10K+ daily transactions, optimized API response time by 40% through query tuning and caching",
+        "Designed and implemented RBAC + Position-Based Access Control for 1K+ users with Redis caching for permission lookup",
+        "Led migration from traditional VM architecture to Kubernetes-based cloud-native infrastructure",
+        "Built automated CI/CD pipelines with Jenkins and GitLab, reducing deployment time by 50%",
+        "Implemented blue-green deployments for zero-downtime releases with comprehensive monitoring using SkyWalking and Pinpoint",
+        "Designed business intelligence dashboards using Python and visualization libraries for real-time KPI tracking",
+        "Developed ETL processes in Python to unify data from multiple enterprise systems",
+        "Led multiple development teams overseeing technical design and project delivery for enterprise clients"
+      ],
+      "technologies": [
+        "Python",
+        "scikit-learn",
+        "Risk Control",
+        "MySQL",
+        "Pandas",
+        "NumPy",
+        "ETL",
+        "Java",
+        "Spring Boot",
+        "Dubbo",
+        "Kafka",
+        "RocketMQ",
+        "Redis",
+        "High Concurrency",
+        "E-commerce",
+        "RBAC",
+        "Kubernetes",
+        "Docker",
+        "Nginx",
+        "Alibaba Cloud",
+        "CI/CD",
+        "Jenkins",
+        "GitLab CI",
+        "Groovy",
+        "SkyWalking",
+        "Prometheus",
+        "Grafana",
+        "Power BI",
+        "Elasticsearch",
+        "Microservices",
+        "Nacos"
+      ],
+      "url": "https://www.edianyun.com",
+      "type": "work",
+      "problem": "",
+      "impact": ""
+    },
+    {
+      "id": 5,
+      "company": "Bitmain Technologies",
+      "position": "Senior Java Developer",
+      "location": "Beijing, China",
+      "period": "Jun 2014 - Jun 2015",
+      "startDate": "2014-06",
+      "endDate": "2015-06",
+      "solution": [
+        "Developed high-performance Bitcoin trading API integrating Bitcoind RPC for mining pool and wallet payment systems",
+        "Designed UTXO-based transaction model for efficient blockchain interactions",
+        "Implemented Redis + MySQL infrastructure for high-throughput cryptocurrency transaction processing",
+        "Integrated Google Authenticator and OAuth for antpool.com marketplace security",
+        "Designed REST API for mobile app and integrated JSON-RPC for cross-exchange platform connectivity"
+      ],
+      "technologies": [
+        "Java",
+        "API Gateway",
+        "Blockchain",
+        "High Concurrency",
+        "MySQL",
+        "Redis",
+        "OAuth"
+      ],
+      "url": "https://bitmain.com",
+      "type": "work",
+      "problem": "",
+      "impact": ""
+    },
+    {
+      "id": 6,
+      "company": "九零后信用 (P2P Fintech)",
+      "position": "Senior Java Developer",
+      "location": "Beijing, China",
+      "period": "Jun 2015 - Mar 2016",
+      "startDate": "2015-06",
+      "endDate": "2016-03",
+      "solution": [
+        "Independently designed and implemented payment system integration for P2P lending platform, handling transaction settlement and reconciliation",
+        "Refactored payment security module applying cryptographic best practices (AES, RSA) for transaction signing and verification",
+        "Built RESTful API layer for P2P backend services following API design best practices",
+        "Managed Alibaba Cloud infrastructure: application deployment, Linux server administration, and environment configuration",
+        "Developed custom MyBatis code generator using Velocity templates to accelerate development workflow",
+        "Performed database query optimization including SQL tuning, index optimization, and MySQL configuration for high-performance queries"
+      ],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "API Gateway",
+        "OAuth",
+        "Alibaba Cloud",
+        "Nginx",
+        "MyBatis",
+        "SQL"
+      ],
+      "url": null,
+      "type": "work",
+      "problem": "",
+      "impact": ""
+    },
+    {
+      "id": 7,
+      "company": "Beijing GoHigh Softone Technology (北京高鸿软通)",
+      "position": "Senior Java Developer",
+      "location": "Zhengzhou / Beijing, China",
+      "period": "Jul 2011 - Jun 2014",
+      "startDate": "2011-07",
+      "endDate": "2014-06",
+      "solution": [
+        "Served as lead developer for China Mobile Henan Online Business Hall (河南移动网上营业厅), handling new feature development and system optimization for millions of subscribers",
+        "Led multiple system refactoring initiatives for the online business hall, improving code quality and system maintainability",
+        "Developed and maintained telecom business modules on Oracle + SSH (Struts/Spring/Hibernate) + WebSphere/Resin stack",
+        "Gained deep expertise in telecom industry business logic, compliance requirements, and development standards"
+      ],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "High Concurrency",
+        "Microservices",
+        "Hibernate",
+        "SQL"
+      ],
+      "url": null,
+      "type": "work",
+      "problem": "",
+      "impact": ""
+    },
+    {
+      "id": 8,
+      "company": "Beijing GoHigh Softone Technology (北京高鸿软通)",
+      "position": "Java Developer",
+      "location": "Zhengzhou, China",
+      "period": "Jul 2007 - Jul 2011",
+      "startDate": "2007-07",
+      "endDate": "2011-07",
+      "solution": [
+        "Developed China Mobile Henan Online and Mobile Business Hall (网上营业厅/掌上营业厅) serving millions of mobile subscribers across Henan province",
+        "Built and maintained telecom self-service features including billing queries, plan management, and value-added service ordering",
+        "Worked with Oracle database, SSH framework (Struts/Spring/Hibernate), and Linux server environments"
+      ],
+      "technologies": [
+        "Java",
+        "Hibernate",
+        "SQL",
+        "High Concurrency",
+        "E-commerce"
+      ],
+      "url": null,
+      "type": "work",
+      "problem": "",
+      "impact": ""
+    },
+    {
+      "id": 9,
+      "company": "Southern Alberta Institute of Technology (SAIT)",
+      "position": "Post-Diploma, Data Analytics & Integrated AI",
+      "location": "Calgary, AB",
+      "period": "Sep 2024 – Apr 2026",
+      "startDate": "2024-09",
+      "endDate": "2026-04",
+      "gpa": "4.0/4.0",
+      "coursework": "Machine Learning, Deep Learning, Computer Vision, NLP, Python, SQL, Power BI",
+      "url": "https://www.sait.ca",
+      "type": "education"
+    },
+    {
+      "id": 10,
+      "company": "Northwest University (中国西北大学)",
+      "position": "Diploma, Software Technology (软件技术)",
+      "location": "Xi'an, Shaanxi, China",
+      "period": "2005 – 2007",
+      "startDate": "2005-09",
+      "endDate": "2007-07",
+      "gpa": null,
+      "coursework": null,
+      "url": null,
+      "type": "education"
+    }
+  ],
+  "certifications": [
+    "Cisco: Data Analytics Essentials (Mar 2025)",
+    "Cisco: Creating Compelling Reports (Feb 2025)",
+    "Cisco: Python Essentials 1 (Feb 2025)",
+    "Microsoft: T-SQL Querying, Data Analytics, Power BI Reports"
+  ],
+  "activities": [
+    {
+      "organization": "Toastmasters International",
+      "club": "Spoken Word Club",
+      "role": "VP Education",
+      "current": true,
+      "pathway": "Team Collaboration",
+      "level": 3
+    }
+  ],
+  "skills": {
+    "aiAndLlm": [
+      "Agentic AI / Multi-Agent Orchestration",
+      "LLM Integration (Claude, GPT, GLM, Qwen, DeepSeek, GROQ, Ollama)",
+      "LangChain / RAG / Vector Search / Prompt Engineering",
+      "Structured Output (Pydantic, instructor, JSON/TOOLS mode)",
+      "LLM Reliability (circuit breakers, retry/backoff, provider fallback chains)"
+    ],
+    "machineLearning": [
+      "scikit-learn / XGBoost / PyCaret",
+      "Computer Vision (YOLOv8, OpenCV, BoT-SORT)",
+      "NLP / Text Classification / Sentiment Analysis",
+      "SHAP / Model Interpretability"
+    ],
+    "languages": [
+      "Python (10+ years)",
+      "Java 8/11 (17+ years)",
+      "Go",
+      "JavaScript/TypeScript",
+      "Swift/SwiftUI",
+      "Rust",
+      "SQL"
+    ],
+    "backendAndInfra": [
+      "Spring Boot / Spring Cloud",
+      "FastAPI / Django",
+      "ASP.NET Core",
+      "React / Next.js / React Native",
+      "Docker / Kubernetes / Helm",
+      "AWS / GCP / Alibaba Cloud"
+    ],
+    "dataAndOps": [
+      "PostgreSQL / MySQL / Redis / MongoDB / SQLite",
+      "RocketMQ / Kafka / RabbitMQ",
+      "Pandas / NumPy / Power BI / Tableau",
+      "Jenkins / GitLab CI / GitHub Actions / Terraform",
+      "SkyWalking / Pinpoint / Prometheus / Grafana"
+    ]
+  },
+  "highlights": {
+    "yearsTotalExperience": 17,
+    "yearsAiFocus": 2,
+    "shippedAiProjects": 15,
+    "currentGpa": 4.0,
+    "primaryDifferentiators": [
+      "Daily LLM development across 5+ providers (Claude, GPT, GLM, Qwen, DeepSeek, GROQ, Ollama)",
+      "Multi-agent orchestration with circuit breakers, structured output, fallback chains",
+      "Builds AND uses AI tools daily — builder, not theorist",
+      "Enterprise production experience with high-concurrency systems"
+    ]
+  }
+}

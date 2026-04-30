@@ -73,15 +73,3 @@ Data Analyst with a SAIT Post-Diploma Certificate in Data Analytics (4.0/4.0 GPA
 **Full Stack Developer** — Bitmain Technologies, Beijing | Jun 2014 – Jun 2015
 - Built blockchain analytics: PoW revenue distribution algorithm with high-concurrency hashrate statistics
 - Integrated with major exchange APIs (Huobi, Binance, OKEx) — analytics on cross-exchange spreads for automated arbitrage
-
----
-
-## Work Authorization
-
-Canadian work authorization (PGWP) — available for full-time employment in Canada
-
----
-
-## Languages
-
-Chinese (Native) · English (Fluent)

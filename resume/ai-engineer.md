@@ -71,14 +71,3 @@ AI Application Engineer with 17 years shipping production systems, including 8 y
 - 4.0/4.0 GPA | Statistical Analysis, Predictive Analytics, Business Intelligence
 - Capstone: ThyroidSentry (97.4% cancer recurrence prediction with XGBoost + SHAP)
 
----
-
-## Work Authorization
-
-Canadian work authorization (PGWP) — available for full-time employment in Canada
-
----
-
-## Languages
-
-Chinese (Native) · English (Fluent)

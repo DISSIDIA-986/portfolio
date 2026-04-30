@@ -68,15 +68,3 @@ Senior Full Stack Developer with 17 years shipping production systems across web
 
 **Post-Diploma Certificate in Integrated Artificial Intelligence** — SAIT, Calgary | Sep 2025 – Apr 2026 | 3.92/4.0 GPA
 **Post-Diploma Certificate in Data Analytics** — SAIT, Calgary | Sep 2024 – Apr 2025 | 4.0/4.0 GPA
-
----
-
-## Work Authorization
-
-Canadian work authorization (PGWP) — available for full-time employment in Canada
-
----
-
-## Languages
-
-Chinese (Native) · English (Fluent)

@@ -58,3 +58,6 @@ next-env.d.ts
 !.claude/
 !.claude/**
 .gstack/
+
+# Personal info — contains PII (email, phone, work auth, etc.)
+src/data/personal-info.private.json
