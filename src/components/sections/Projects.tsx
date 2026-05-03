@@ -6,6 +6,7 @@ import { ExternalLink, Github, Layers } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageLightbox from "@/components/ui/ImageLightbox";
+import ProjectVideo from "@/components/ui/ProjectVideo";
 import projects from "@/data/projects";
 import { getDiagramsByProjectId } from "@/data/diagrams";
 import type { ProjectDiagram } from "@/data/diagrams";
@@ -64,13 +65,22 @@ export default function Projects() {
               >
                 {project.imageUrl && (
                   <div className="relative w-full h-40 bg-stone-100 dark:bg-stone-700">
-                    <ImageLightbox
-                      src={project.imageUrl}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
+                    {project.videoUrl ? (
+                      <ProjectVideo
+                        src={project.videoUrl}
+                        poster={project.imageUrl}
+                        title={project.title}
+                        durationLabel="1:23"
+                      />
+                    ) : (
+                      <ImageLightbox
+                        src={project.imageUrl}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    )}
                   </div>
                 )}
                 <div className="p-6">

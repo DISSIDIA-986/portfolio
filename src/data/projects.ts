@@ -41,7 +41,9 @@ const projects: Project[] = [
       "RAG",
     ],
     imageUrl:
-      "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/projects/industry-ai-flow.svg",
+      "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/demos/iai-thumbnail.jpg",
+    videoUrl:
+      "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/demos/iai-demo-v1.mp4",
     demoUrl: null,
     repoUrl: "https://github.com/DISSIDIA-986/Industry-AI-Flow",
     featured: true,
