@@ -17,7 +17,10 @@ const projects: Project[] = [
       "bb-browser",
       "SQLite",
     ],
-    imageUrl: "/images/projects/jobpilot-ai.svg",
+    imageUrl:
+      "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/demos/jobpilot-thumbnail.jpg",
+    videoUrl:
+      "https://dissidia.oss-cn-beijing.aliyuncs.com/portfolio/demos/jobpilot-demo-v1.mp4",
     demoUrl: null,
     repoUrl: "https://github.com/DISSIDIA-986/jobpilot-ai",
     featured: true,
